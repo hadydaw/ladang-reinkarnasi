@@ -888,12 +888,16 @@ html[data-orient="landscape"] #npc-menu .nm-box { margin: auto; }
 #energy-note[hidden] { display: none; }
 #energy-note.en-show { animation: enIn .35s ease-out forwards; }
 #energy-note.en-out { animation: enOut .6s ease-in forwards; }
-#energy-note img { width: 26px; height: 26px; object-fit: contain; opacity: 0; animation: enHeart .35s ease-out forwards; }
-#energy-note .en-more { margin-left: 4px; color: #ffd76b; }
+#energy-note .en-h { position: relative; width: 26px; height: 26px; display: inline-block; flex: none; }
+#energy-note .en-h img { width: 26px; height: 26px; max-width: none; display: block; }
+#energy-note .en-bg { position: absolute; left: 0; top: 0; opacity: .22; filter: grayscale(1); }
+#energy-note .en-fg { position: absolute; left: 0; top: 0; height: 26px; width: 0; overflow: hidden; animation: enFill .45s ease-out forwards; }
+#energy-note .en-fg img { width: 26px; height: 26px; max-width: none; }
+#energy-note .en-lbl { margin-left: 6px; font-size: .85rem; color: #ffd76b; }
 #energy-note .en-full { color: #ffd76b; }
 @keyframes enIn { from { opacity: 0; transform: translate(-50%, -8px); } to { opacity: 1; transform: translate(-50%, 0); } }
 @keyframes enOut { from { opacity: 1; transform: translate(-50%, 0); } to { opacity: 0; transform: translate(-50%, -14px); } }
-@keyframes enHeart { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: scale(1); } }
+@keyframes enFill { from { width: 0; } to { width: var(--w); } }
 </style>
 
 <main class="screen" id="menu-screen">
@@ -1967,10 +1971,17 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
     let stay = 1500;
     if (full) el.innerHTML = '<span class="en-full">' + L("Energi Penuh!", "Energy Full!") + '</span>';
     else {
-      const n = Math.min(gained, 10);
-      let h = ""; for (let i = 0; i < n; i++) h += '<img src="' + UI_ART.hati + '" alt="" style="animation-delay:' + (i * 0.12).toFixed(2) + 's">';
-      el.innerHTML = '<span class="en-plus">+</span>' + h + (gained > 10 ? '<span class="en-more">' + gained + '</span>' : '');
-      stay = 1500 + n * 120;
+      // skala HUD: 1 hati = HEART_E energi. Hati terakhir boleh terisi sebagian (mis. 3 energi = 0,3 hati)
+      const hearts = gained / HEART_E, full = Math.floor(hearts + 1e-9), frac = Math.max(0, hearts - full);
+      const count = Math.ceil(hearts - 1e-9);
+      let h = "";
+      for (let k = 0; k < count; k++) {
+        const f = k < full ? 1 : frac, w = (f * 26).toFixed(1) + "px";
+        h += '<span class="en-h"><img class="en-bg" src="' + UI_ART.hati + '" alt=""><span class="en-fg" style="--w:' + w + ';animation-delay:' + (0.15 + k * 0.22).toFixed(2) + 's"><img src="' + UI_ART.hati + '" alt=""></span></span>';
+      }
+      const hatiTxt = String(Math.round(hearts * 10) / 10).replace(".", ",");
+      el.innerHTML = '<span class="en-plus">+</span>' + h + '<span class="en-lbl">' + gained + ' ' + L("energi", "energy") + ' · ' + hatiTxt + ' ' + L("hati", "hearts") + '</span>';
+      stay = 1500 + count * 220 + 300;
     }
     el.hidden = false;
     void el.offsetWidth; el.classList.add("en-show");
