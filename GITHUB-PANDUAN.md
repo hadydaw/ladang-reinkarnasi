@@ -59,19 +59,37 @@ Catatan untuk komputer Anda: folder proyek berada di server, jadi Anda perlu men
 2. Jika diminta, klik **I understand my workflows, go ahead and enable them**.
 3. Pilih **Build APK** di sisi kiri, lalu klik **Run workflow** dan konfirmasi.
 4. Tunggu sekitar 10–20 menit pada build pertama (lebih cepat untuk build berikutnya).
-5. Jika berhasil, buka hasil build (klik nama run), lalu di bagian **Artifacts** unduh `ladang-reinkarnasi-debug-apk`.
+5. Jika berhasil, buka hasil build (klik nama run), lalu di bagian **Artifacts** unduh `ladang-reinkarnasi-apk`.
 
 Jika build gagal, buka langkah yang merah, salin pesan errornya, dan kirim kepada saya.
 
 ## 7. Pasang APK di HP Android
 
-1. Pindahkan file `app-debug.apk` ke HP (dari komputer, lewat kabel, atau dikirim ke diri sendiri).
+1. Pindahkan file `ladang-reinkarnasi.apk` ke HP (dari komputer, lewat kabel, atau dikirim ke diri sendiri).
 2. Buka file itu di HP. Jika diminta, izinkan **Pasang aplikasi dari sumber ini**.
 3. Pasang, lalu buka **Ladang Reinkarnasi**.
 
-APK debug hanya untuk pengujian pribadi. Untuk Google Play diperlukan build rilis dengan kunci penandatangan. Itu langkah terpisah dan belum disiapkan.
+APK sudah ditandatangani dengan kunci tetap. Untuk Google Play diperlukan format AAB dan pendaftaran akun Google Play Developer, yang belum disiapkan.
 
 ## Hal yang belum diuji
 
 - Build GitHub Actions belum pernah dijalankan. Bisa saja ada kesalahan kecil pada langkah Gradle atau versi Capacitor. Itu wajar pada build pertama dan akan saya perbaiki dari log.
 - Versi Capacitor (`^7.0.0`) belum saya verifikasi, karena registri npm tidak bisa dijangkau dari sesi ini.
+
+
+## 8. Isi secret penandatanganan (wajib sebelum build berhasil)
+
+1. Buka repositori, lalu **Settings → Secrets and variables → Actions**.
+2. Tekan **New repository secret** untuk setiap entri di `secrets-github.txt`:
+   - `ANDROID_KEYSTORE_BASE64` (isi dari `keystore-base64.txt`, satu baris)
+   - `ANDROID_KEYSTORE_PASSWORD`
+   - `ANDROID_KEY_ALIAS`
+   - `ANDROID_KEY_PASSWORD`
+3. Setelah semua terisi, hapus salinan `secrets-github.txt` dari perangkat yang Anda pakai untuk menyalin.
+4. Jalankan ulang workflow **Build APK**.
+
+Jangan pernah mengunggah kunci atau password ke repositori.
+
+## 9. Pemulihan kunci
+
+Simpan `ladang-release.jks` (cadangan kunci), `secrets-github.txt`, dan `RESTORE.txt` di tempat aman. Jika secret hilang, isi ulang empat secret dari file tersebut. Kunci yang sama harus dipakai selamanya.

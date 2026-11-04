@@ -52,7 +52,7 @@ Build APK membutuhkan Node.js, JDK 17 atau lebih baru, dan Android SDK. Di kompu
 
 1. Push proyek ini ke repositori GitHub (repositori pribadi atau publik).
 2. Buka tab **Actions**, pilih **Build APK**, lalu klik **Run workflow**.
-3. Setelah selesai, unduh artefak `ladang-reinkarnasi-debug-apk`, lalu pasang `app-debug.apk` di HP. Aktifkan "Pasang aplikasi tidak dikenal" di pengaturan HP saat pertama kali memasang.
+3. Setelah selesai, unduh artefak `ladang-reinkarnasi-apk`, lalu pasang `ladang-reinkarnasi.apk` di HP. Aktifkan "Pasang aplikasi tidak dikenal" di pengaturan HP saat pertama kali memasang.
 
 Atau secara lokal dengan Android Studio:
 
@@ -68,9 +68,15 @@ npm run build:android
 - Semua aset ikut terpasang di APK. Game berjalan offline setelah dipasang.
 - Save game tersimpan di penyimpanan WebView (localStorage) dan bertahan setelah aplikasi ditutup.
 
-### Build rilis (belum disiapkan)
+### Penandatanganan (kunci tetap)
 
-APK debug cukup untuk pengujian. Untuk rilis atau Google Play, dibutuhkan kunci penandatangan (keystore) yang disimpan terpisah dan tidak dimasukkan ke repositori. Langkah ini dikerjakan setelah pengujian selesai.
+APK selalu ditandatangani dengan kunci tetap. Kunci tidak pernah ada di repositori. Isinya disimpan sebagai GitHub Secrets:
+
+- `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`
+
+Kunci yang sama harus dipakai untuk setiap build. Jika kunci berubah, pembaruan tidak bisa dipasang di atas versi lama dan data save ikut hilang. Cadangan kunci disimpan di luar repositori.
+
+Pemulihan kunci: jika secret hilang, isi ulang empat secret di atas dari cadangan. Jangan membuat kunci baru kecuali benar-benar terpaksa.
 
 ## Batas ukuran
 
@@ -81,6 +87,13 @@ APK debug cukup untuk pengujian. Untuk rilis atau Google Play, dibutuhkan kunci 
 
 - HP (layar sentuh): layout mengikuti arah layar secara otomatis (portrait atau landscape). Orientasi perangkat tidak dikunci.
 - PC: tetap seperti sebelumnya. Pengaturan Vertikal/Horizontal di menu masih tersedia.
+
+## Memasang pembaruan di HP
+
+1. Buka tautan rilis terbaru: https://github.com/hadydaw/ladang-reinkarnasi/releases/latest/download/ladang-reinkarnasi.apk
+2. Unduh dan pasang di atas aplikasi yang sudah ada. Jangan hapus aplikasi lama, karena data save ikut tersimpan.
+
+Setiap rilis baru memiliki nomor versi yang lebih tinggi, sehingga bisa dipasang di atas versi sebelumnya.
 
 ## Panduan GitHub
 

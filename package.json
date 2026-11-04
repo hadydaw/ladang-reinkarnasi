@@ -8,7 +8,7 @@
     "cap:init-android": "npx cap add android",
     "cap:sync": "npx cap sync android",
     "patch:android": "python3 build/android_patch.py",
-    "build:android": "npm run build:web && (test -d android || npm run cap:init-android) && npm run cap:sync && npm run patch:android && cd android && ./gradlew assembleDebug"
+    "build:android": "npm run build:web && (test -d android || npm run cap:init-android) && npm run cap:sync && npm run patch:android && cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "@capacitor/android": "^7.0.0",
