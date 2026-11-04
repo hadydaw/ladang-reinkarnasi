@@ -898,6 +898,28 @@ html[data-orient="landscape"] #npc-menu .nm-box { margin: auto; }
 @keyframes enIn { from { opacity: 0; transform: translate(-50%, -8px); } to { opacity: 1; transform: translate(-50%, 0); } }
 @keyframes enOut { from { opacity: 1; transform: translate(-50%, 0); } to { opacity: 0; transform: translate(-50%, -14px); } }
 @keyframes enFill { from { width: 0; } to { width: var(--w); } }
+
+/* ===== Pilihan aksi di depan NPC: bingkai dan pita seperti panel lain, tombol X merah ===== */
+#npc-choice .nc-panel { position: relative; width: min(88vw, 340px); box-sizing: border-box; background: none; border-style: solid; border-width: 44px; border-image-slice: 120 fill; border-image-width: 44px; border-image-repeat: stretch; padding: 18px 14px 16px; text-align: center; color: #4a2a10; }
+#npc-choice .nc-ribbon { position: relative; height: 64px; display: flex; align-items: center; justify-content: center; margin: -8px 0 6px; }
+#npc-choice .nc-ribbon img { height: 64px; width: auto; max-width: 100%; display: block; }
+#npc-choice .nc-ribbon span { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center; font-size: 1.05rem; font-weight: 900; color: #fff6dc; text-shadow: 0 2px 0 #4a2a0e; text-transform: uppercase; }
+#npc-choice .nc-x { position: absolute; top: 6px; right: 6px; z-index: 3; width: 42px; height: 42px; padding: 0; border: 0; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+#npc-choice .nc-x img { width: 38px; height: 38px; object-fit: contain; }
+#npc-choice .nc-btn { display: block; width: 100%; font: inherit; font-weight: 900; font-size: 1rem; border-radius: 12px; border: 3px solid #e0b25a; padding: 12px; margin-top: 10px; cursor: pointer; color: #fff3cf; text-shadow: 0 2px 0 #3a1e08; background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); box-shadow: 0 3px 0 #3a1e08, inset 0 1px 0 rgba(255,230,170,.5); }
+
+/* ===== Pengaturan: kartu bingkai emas, pita judul, tombol krem dan coklat ===== */
+#settings-panel .panel-card { width: min(400px, 94vw); max-width: min(400px, 94vw); padding: 18px 14px 16px; box-sizing: border-box; background: none; border-style: solid; border-width: 40px; border-image-source: url('assets/images/lainnya/ui_art_bingkai_panel_001.webp'); border-image-slice: 120 fill; border-image-width: 40px; border-image-repeat: stretch; box-shadow: none; color: #4a2a10; }
+#settings-panel .panel-card h2 { height: 64px; margin: -8px 0 10px; display: flex; align-items: center; justify-content: center; background: url('assets/images/lainnya/ui_art_pita_001.webp') center / contain no-repeat; color: #fff6dc; font-size: 1.05rem; font-weight: 900; text-transform: uppercase; text-shadow: 0 2px 0 #4a2a0e; }
+#settings-panel .panel-card label { color: #4a2a10; font-weight: 800; }
+#settings-panel .panel-card select { background: linear-gradient(#fff4d8, #f0d9a8); color: #4a2a10; border: 2px solid #c9934a; border-radius: 12px; font-weight: 800; box-shadow: 0 3px 0 #8a5a2a; }
+#settings-panel .toggle-row { border-bottom: 2px solid rgba(139, 94, 40, .25); color: #4a2a10; font-weight: 800; }
+#settings-panel .toggle-row input { width: 26px; height: 26px; accent-color: #c17a3a; }
+#settings-panel .ctl-mode > span { color: #4a2a10; font-weight: 800; }
+#settings-panel .ctl-mode .seg button { background: linear-gradient(#fff4d8, #f0d9a8); color: #4a2a10; border: 2px solid #c9934a; border-radius: 12px; box-shadow: 0 3px 0 #8a5a2a; font-weight: 900; }
+#settings-panel .ctl-mode .seg button[aria-pressed="true"] { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; border-color: #e0b25a; box-shadow: 0 3px 0 #3a1e08; text-shadow: 0 2px 0 #3a1e08; }
+#settings-panel .btn-primary { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; border: 3px solid #e0b25a; box-shadow: 0 4px 0 #3a1e08; text-shadow: 0 2px 0 #3a1e08; font-weight: 900; }
+#settings-panel .btn-ghost { background: linear-gradient(#fff4d8, #f0d9a8); color: #5a2e12; border: 2px solid #c9934a; box-shadow: 0 3px 0 #8a5a2a; font-weight: 900; }
 </style>
 
 <main class="screen" id="menu-screen">
@@ -9703,14 +9725,11 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
       document.body.appendChild(box);
       box.addEventListener("click", (e) => { if (e.target === box) box.style.display = "none"; });
     }
-    const panel = "position:relative;width:min(88vw,330px);box-sizing:border-box;border-style:solid;border-width:44px;border-image-source:url('" + UI_ART.bingkai_panel + "');border-image-slice:120 fill;border-image-width:44px;border-image-repeat:stretch;padding:18px 14px 16px;text-align:center;color:#3a2410";
-    const title = "position:relative;height:64px;display:flex;align-items:center;justify-content:center;margin:-8px 0 6px";
-    const btn = "display:block;width:100%;font:inherit;font-weight:900;border-radius:12px;border:3px solid #e0b25a;padding:10px;margin-top:10px;cursor:pointer;color:#fff3cf;text-shadow:0 2px 0 #3a1e08;background:linear-gradient(#c17a3a,#7a4219 60%,#6a3814);box-shadow:0 3px 0 #3a1e08,inset 0 1px 0 rgba(255,230,170,.5)";
-    box.innerHTML = '<div style="' + panel + '">' +
-      '<div style="' + title + '"><img src="' + UI_ART.pita + '" alt="" style="height:64px;width:auto;max-width:100%;display:block"><span style="position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-size:1.05rem;font-weight:900;color:#fff6dc;text-shadow:0 2px 0 #4a2a0e">Rose</span></div>' +
-      '<button type="button" data-c="talk" style="' + btn + '">' + L("Ngobrol", "Talk") + '</button>' +
-      '<button type="button" data-c="profile" style="' + btn + '">' + L("Profil Rose", "Rose Profile") + '</button>' +
-      '<button type="button" data-c="close" style="' + btn + ';background:linear-gradient(#8a7a66,#5a4c3a 60%,#4a3e2e);border-color:#c9b48a">' + L("Tutup", "Close") + '</button></div>';
+    box.innerHTML = '<div class="nc-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')">' +
+      '<button type="button" class="nc-x" data-c="close" aria-label="' + L("Tutup", "Close") + '"><img src="assets/ui/close.png" alt=""></button>' +
+      '<div class="nc-ribbon"><img src="' + UI_ART.pita + '" alt=""><span>' + charName(npcGender()) + '</span></div>' +
+      '<button type="button" class="nc-btn" data-c="talk">' + L("Ngobrol", "Talk") + '</button>' +
+      '<button type="button" class="nc-btn" data-c="profile">' + L("Profil " + charName(npcGender()), charName(npcGender()) + " Profile") + '</button></div>';
     box.style.display = "flex";
     box.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
       const c = b.getAttribute("data-c");
