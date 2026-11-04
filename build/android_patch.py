@@ -74,7 +74,7 @@ if 'GITHUB_RUN_NUMBER' not in g:
     vn = re.search(r'versionName\s+"[^"]*"', g)
     if vc is None or vn is None:
         fail('versionCode/versionName tidak ditemukan di app/build.gradle')
-    g = g.replace(vc.group(0), 'versionCode (System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInteger()', 1)
+    g = g.replace(vc.group(0), 'versionCode Integer.parseInt(System.getenv("GITHUB_RUN_NUMBER") ?: "1")', 1)
     g = g.replace(vn.group(0), 'versionName "1.0." + (System.getenv("GITHUB_RUN_NUMBER") ?: "0")', 1)
     print('versionCode/versionName dari nomor run')
 open(bg, 'w', encoding='utf-8').write(g)
