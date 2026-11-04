@@ -275,6 +275,20 @@ jobs:
           ls -l ../artifacts/
           exit $RC
 
+      - name: Diagnostik verbose export debug (Docker)
+        if: always()
+        working-directory: godot
+        env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ runner.temp }}/debug.keystore
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
+        run: |
+          set +e
+          godot --headless --verbose --export-debug "Android" ../artifacts/diag-debug.apk > ../artifacts/docker-verbose-debug.txt 2>&1
+          echo "VERBOSE_DEBUG_EXIT=$?"
+          grep -vE "fontconfig|get_system_font_path|^\s*$" ../artifacts/docker-verbose-debug.txt | grep -iE "android|export|keystore|sign|gradle|error|cannot|valid|template|jdk|sdk|java" | head -80
+          exit 0
+
       - name: Bukti APK (ukuran, isi, tanda tangan, tanpa WebView)
         if: always()
         run: |
