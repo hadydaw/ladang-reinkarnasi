@@ -9723,13 +9723,14 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
       box = document.createElement("div"); box.id = "npc-choice";
       box.style.cssText = "position:fixed;inset:0;background:rgba(20,10,2,.55);display:flex;align-items:center;justify-content:center;z-index:9000;padding:16px;box-sizing:border-box";
       document.body.appendChild(box);
-      box.addEventListener("click", (e) => { if (e.target === box) box.style.display = "none"; });
+      box.addEventListener("click", (e) => { if (e.target === box && Date.now() - (box._t || 0) > 600) box.style.display = "none"; }); // klik susulan dari tombol Pakai tidak langsung menutup panel
     }
     box.innerHTML = '<div class="nc-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')">' +
       '<button type="button" class="nc-x" data-c="close" aria-label="' + L("Tutup", "Close") + '"><img src="assets/ui/close.png" alt=""></button>' +
       '<div class="nc-ribbon"><img src="' + UI_ART.pita + '" alt=""><span>' + charName(npcGender()) + '</span></div>' +
       '<button type="button" class="nc-btn" data-c="talk">' + L("Ngobrol", "Talk") + '</button>' +
       '<button type="button" class="nc-btn" data-c="profile">' + L("Profil " + charName(npcGender()), charName(npcGender()) + " Profile") + '</button></div>';
+    box._t = Date.now();
     box.style.display = "flex";
     box.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
       const c = b.getAttribute("data-c");
