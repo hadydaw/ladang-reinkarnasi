@@ -845,6 +845,35 @@ html[data-orient="landscape"] #npc-menu .nm-box { margin: auto; }
 #wb-pick .wb-info { text-align: center; width: 100%; }
 #wb-pick .wb-row > div:last-child { flex-direction: row !important; width: 100%; }
 #wb-pick .wb-row > div:last-child button { flex: 1; }
+
+/* ===== Tempat Tidur: bingkai dan pita seperti panel lain ===== */
+#bed-pick .tp-panel { width: min(372px, 92vw); background: none; border-style: solid; border-width: 34px; border-image-slice: 120 fill; border-image-width: 34px; border-image-repeat: stretch; padding: 12px 6px 10px; box-sizing: border-box; color: #4a2a10; text-align: center; position: relative; }
+#bed-pick .tp-ribbon { position: relative; height: 56px; display: flex; align-items: center; justify-content: center; margin: -6px 0 8px; }
+#bed-pick .tp-ribbon img { height: 56px; width: auto; max-width: 100%; display: block; }
+#bed-pick .tp-ribbon .tp-title { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); margin: 0; text-align: center; color: #fff6dc; text-transform: uppercase; font-size: .95rem; font-weight: 900; text-shadow: 0 2px 0 #4a2a0e; }
+#bed-pick .bag-x { position: absolute; top: 6px; right: 6px; z-index: 3; width: 42px; height: 42px; padding: 0; border: 0; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+#bed-pick .bag-x img { width: 38px; height: 38px; object-fit: contain; }
+#bed-pick .bp-list { display: flex; flex-direction: column; gap: 8px; padding: 4px 4px 2px; }
+#bed-pick .bp-list button { font-family: inherit; display: block; width: 100%; padding: 10px 8px; border-radius: 12px; border: 2px solid #c9934a; background: linear-gradient(#fff4d8, #f0d9a8); color: #4a2a10; box-shadow: 0 3px 0 #8a5a2a, inset 0 1px 0 rgba(255,255,255,.7); font-size: 1rem; font-weight: 800; text-align: center; cursor: pointer; }
+#bed-pick .bp-list button small { color: #7a3d0a; font-size: .8rem; font-weight: 600 !important; }
+#bed-pick .bp-list button.bp-sleep, #bed-pick .bp-list button.bp-rest { background: linear-gradient(#fff4d8, #f0d9a8); }
+#bed-pick .bp-cancel { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814) !important; color: #fff3cf !important; border-color: #e0b25a !important; box-shadow: 0 3px 0 #3a1e08 !important; text-shadow: 0 2px 0 #3a1e08; font-weight: 900 !important; }
+
+/* ===== Tombol Putar arah, Batal, Hancurkan, dan ▲▼ dibuat seperti tombol game ===== */
+#place-bar button, #lift-pad button { font-family: inherit; font-weight: 900; font-size: 1rem; border: 3px solid #e0b25a; background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; text-shadow: 0 2px 0 #3a1e08; box-shadow: 0 4px 0 #3a1e08, inset 0 1px 0 rgba(255,230,170,.5); cursor: pointer; }
+#place-bar button { width: 124px; padding: 11px 0; border-radius: 14px; }
+#place-bar .pb-rot { background: linear-gradient(#fff4d8, #f0d9a8); color: #4a2a10; border-color: #c9934a; box-shadow: 0 4px 0 #8a5a2a; text-shadow: none; }
+#place-bar .pb-cancel { background: linear-gradient(#b8553f, #7a2a22 60%, #5e1f19); color: #fff3cf; border-color: #e08a7a; box-shadow: 0 4px 0 #3e1410; }
+#place-bar .pb-del { background: linear-gradient(#b8553f, #7a2a22 60%, #5e1f19); color: #fff3cf; border-color: #e08a7a; box-shadow: 0 4px 0 #3e1410; }
+#lift-pad button { width: 62px; height: 62px; border-radius: 50%; font-size: 1.3rem; line-height: 1; }
+
+/* ===== Full layar: Makanan, Buat Alat, Meja Kerja, Dekorasi ===== */
+#eat-pick, #craft-pick, #wb-pick, #decor-pick { padding: 0; }
+#eat-pick .tp-panel, #craft-pick .tp-panel, #wb-pick .tp-panel, #decor-pick .dc-panel { width: 100%; height: 100%; max-width: none; max-height: none; border-width: 28px; padding: 12px 8px 16px; box-sizing: border-box; overflow-y: auto; }
+#eat-pick .tp-list { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+#craft-pick .cr-list { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+#wb-pick .wb-list { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+#decor-pick .dp-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
 </style>
 
 <main class="screen" id="menu-screen">
@@ -5825,12 +5854,12 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
       box = document.createElement("div"); box.id = "bed-pick"; box.hidden = true;
       box.style.cssText = "position:fixed;inset:0;z-index:70;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.55)";
       const bs = "display:block;width:100%;margin:8px 0 0;padding:12px;border-radius:14px;border:2px solid #d9a441;background:#3a2e56;color:#ffe9a8;font-size:17px;font-weight:700;text-align:center";
-      box.innerHTML = '<div style="width:min(88vw,340px);background:#2a2040;border:2px solid #d9a441;border-radius:18px;padding:16px;color:#ffd76b;text-align:center"><p class="bp-title" style="margin:0 0 4px;font-size:19px;font-weight:700"></p>'
-        + '<button type="button" class="bp-sleep" style="' + bs + '"></button><button type="button" class="bp-rest" style="' + bs + '"></button><button type="button" class="bp-rose" style="' + bs + '"></button><button type="button" class="bp-cancel" style="' + bs + ';background:transparent;font-weight:400"></button></div>';
+      box.innerHTML = '<div class="tp-card tp-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')"><button type="button" class="bag-x bp-x" aria-label="Tutup"><img src="assets/ui/close.png" alt=""></button><div class="tp-ribbon"><img src="' + UI_ART.pita + '" alt=""><span class="tp-title bp-title"></span></div><div class="bp-list"><button type="button" class="bp-sleep"></button><button type="button" class="bp-rest"></button><button type="button" class="bp-rose"></button><button type="button" class="bp-cancel"></button></div></div>';
       document.body.appendChild(box);
       const fresh = () => Date.now() - (box._t || 0) < 600; // abaikan ketukan susulan dari tombol Pakai yang membuka menu
       box.addEventListener("click", (e) => { if (e.target === box && !fresh()) box.hidden = true; });
       box.querySelector(".bp-cancel").addEventListener("click", () => { if (!fresh()) box.hidden = true; });
+      box.querySelector(".bp-x").addEventListener("click", (e) => { e.stopPropagation(); if (!fresh()) box.hidden = true; });
       box.querySelector(".bp-sleep").addEventListener("click", () => { if (fresh()) return; box.hidden = true; doSleep(); });
       box.querySelector(".bp-rest").addEventListener("click", () => { if (fresh()) return; box.hidden = true; doRest(); });
       box.querySelector(".bp-rose").addEventListener("click", () => { // tempat tidur ini jadi milik Rose; pilihannya hilang setelah dipakai
