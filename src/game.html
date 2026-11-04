@@ -795,6 +795,35 @@ html[data-orient="landscape"] #farm-screen .hud-energy > #minimap { grid-column:
 html[data-orient="landscape"] #farm-screen .pp-list { position: absolute; left: calc(100% + 110px); top: 0; margin: 0; width: 170px; max-height: 70vh; z-index: 6; box-shadow: 0 4px 12px rgba(0,0,0,.35); }
 html[data-orient="landscape"] #npc-menu { --bw: min(80vh, 380px); overflow-y: auto; align-items: safe center; padding: 6px 0; box-sizing: border-box; }
 html[data-orient="landscape"] #npc-menu .nm-box { margin: auto; }
+
+/* ===== Panel pilih (Bibit, Makanan, Buat Alat, Meja Kerja): bingkai & pita sama seperti Pilih alat ===== */
+#seed-pick .tp-panel, #eat-pick .tp-panel, #craft-pick .tp-panel, #wb-pick .tp-panel { position: relative; width: min(372px, 96vw); max-height: 96vh; overflow-y: auto; background: none; border-style: solid; border-width: 34px; border-image-slice: 120 fill; border-image-width: 34px; border-image-repeat: stretch; padding: 10px 6px 10px; box-sizing: border-box; color: #4a2a10; text-align: center; }
+#seed-pick .bag-x, #eat-pick .bag-x, #craft-pick .bag-x, #wb-pick .bag-x { position: absolute; top: 6px; right: 6px; z-index: 3; width: 42px; height: 42px; padding: 0; border: 0; background: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+#seed-pick .bag-x img, #eat-pick .bag-x img, #craft-pick .bag-x img, #wb-pick .bag-x img { width: 38px; height: 38px; object-fit: contain; }
+#eat-pick .tp-ribbon, #craft-pick .tp-ribbon, #wb-pick .tp-ribbon { position: relative; height: 56px; display: flex; align-items: center; justify-content: center; margin: -6px 0 6px; }
+#eat-pick .tp-ribbon img, #craft-pick .tp-ribbon img, #wb-pick .tp-ribbon img { height: 56px; width: auto; max-width: 100%; display: block; }
+#eat-pick .tp-ribbon .tp-title, #craft-pick .tp-ribbon .tp-title, #wb-pick .tp-ribbon .tp-title { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); margin: 0; text-align: center; color: #fff6dc; text-transform: uppercase; font-size: .95rem; font-weight: 900; text-shadow: 0 2px 0 #4a2a0e; }
+/* tombol dan baris krem */
+#eat-pick .tp-list { padding: 4px 4px 2px; }
+#eat-pick .tp-list button { background: linear-gradient(#fff4d8, #f0d9a8); color: #4a2a10; border: 2px solid #c9934a; border-radius: 12px; box-shadow: 0 3px 0 #8a5a2a, inset 0 1px 0 rgba(255,255,255,.7); font-weight: 800; font-size: .85rem; padding: 8px 10px; text-align: left; }
+#eat-pick .tp-list button:active { transform: translateY(2px); box-shadow: 0 1px 0 #8a5a2a; }
+#craft-pick .cr-list { padding: 4px 4px 2px; }
+#craft-pick .cr-row { background: linear-gradient(#fff4d8, #f0d9a8); border: 2px solid #c9934a; border-radius: 12px; box-shadow: 0 3px 0 #8a5a2a, inset 0 1px 0 rgba(255,255,255,.7); color: #4a2a10; padding: 8px; }
+#craft-pick .cr-ico { font-size: 2rem; }
+#craft-pick .cr-info { color: #4a2a10; font-weight: 700; }
+#craft-pick .cr-info b { color: #4a2a10; font-weight: 900; }
+#craft-pick .bd-item { display: inline-flex; align-items: center; gap: 3px; background: #fff8e6; border: 1px solid #c9934a; border-radius: 8px; padding: 2px 6px; font-size: .75rem; font-weight: 800; color: #4a2a10; }
+#craft-pick .bd-item img { width: 1.2rem; height: 1.2rem; object-fit: contain; }
+#craft-pick .bd-item.bd-lack { color: #b3261e; border-color: #d9735a; }
+#craft-pick .cr-go { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; border: 2px solid #e0b25a; border-radius: 12px; box-shadow: 0 3px 0 #3a1e08; text-shadow: 0 2px 0 #3a1e08; font-weight: 900; font-size: .85rem; padding: 7px 12px; }
+#craft-pick .cr-go:disabled { opacity: .45; }
+#wb-pick .wb-row { background: linear-gradient(#fff4d8, #f0d9a8); border: 2px solid #c9934a; border-radius: 12px; box-shadow: 0 3px 0 #8a5a2a, inset 0 1px 0 rgba(255,255,255,.7); color: #4a2a10; }
+#wb-pick .wb-info { color: #4a2a10; font-weight: 900; }
+#wb-pick .wb-info small { color: #7a3d0a; font-weight: 700; }
+#wb-pick .wb-req { color: #4a2a10; font-weight: 700; }
+#wb-pick .wb-req.lack { color: #b3261e; }
+#wb-pick .wb-btn { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; border: 2px solid #e0b25a; border-radius: 10px; box-shadow: 0 3px 0 #3a1e08; text-shadow: 0 2px 0 #3a1e08; font-weight: 900; font-size: .85rem; }
+#wb-pick .wb-close { background: linear-gradient(#fff4d8, #f0d9a8); color: #5a2e12; border: 2px solid #c9934a; border-radius: 12px; box-shadow: 0 3px 0 #8a5a2a; font-weight: 900; font-size: 1rem; padding: 10px; }
 </style>
 
 <main class="screen" id="menu-screen">
@@ -6979,8 +7008,9 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     if (!box) {
       box = document.createElement("div");
       box.id = "craft-pick"; box.hidden = true;
-      box.innerHTML = '<div class="tp-card"><p class="tp-title"></p><div class="cr-list"></div></div>';
+      box.innerHTML = '<div class="tp-card tp-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')"><button type="button" class="bag-x" aria-label="Tutup"><img src="assets/ui/close.png" alt=""></button><div class="tp-ribbon"><img src="' + UI_ART.pita + '" alt=""><span class="tp-title"></span></div><div class="cr-list"></div></div>';
       document.body.appendChild(box);
+      box.querySelector(".bag-x").addEventListener("click", (e) => { e.stopPropagation(); box.hidden = true; });
       box.addEventListener("click", (e) => { if (e.target === box && Date.now() - (box._t || 0) > 600) box.hidden = true; });
       box.addEventListener("click", (e) => { // ketuk ikon bahan: tampilkan namanya
         const it = e.target.closest && e.target.closest(".bd-item");
@@ -7137,8 +7167,9 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     if (!box) {
       box = document.createElement("div");
       box.id = "eat-pick"; box.hidden = true;
-      box.innerHTML = '<div class="tp-card"><p class="tp-title"></p><div class="tp-list"></div></div>';
+      box.innerHTML = '<div class="tp-card tp-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')"><button type="button" class="bag-x" aria-label="Tutup"><img src="assets/ui/close.png" alt=""></button><div class="tp-ribbon"><img src="' + UI_ART.pita + '" alt=""><span class="tp-title"></span></div><div class="tp-list"></div></div>';
       document.body.appendChild(box);
+      box.querySelector(".bag-x").addEventListener("click", (e) => { e.stopPropagation(); box.hidden = true; });
       box.addEventListener("click", (e) => { if (e.target === box) box.hidden = true; });
     }
     box.querySelector(".tp-title").textContent = L("Makanan", "Food");
@@ -7219,10 +7250,11 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     let box = document.getElementById("wb-pick");
     if (!box) {
       box = document.createElement("div"); box.id = "wb-pick"; box.hidden = true;
-      box.innerHTML = '<div class="tp-card"><p class="tp-title"></p><div class="wb-list"></div><button type="button" class="wb-close"></button></div>';
+      box.innerHTML = '<div class="tp-card tp-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')"><button type="button" class="bag-x" aria-label="Tutup"><img src="assets/ui/close.png" alt=""></button><div class="tp-ribbon"><img src="' + UI_ART.pita + '" alt=""><span class="tp-title"></span></div><div class="wb-list"></div><button type="button" class="wb-close"></button></div>';
       document.body.appendChild(box);
       box.addEventListener("click", (e) => { if (e.target === box && Date.now() - (box._t || 0) > 600) box.hidden = true; });
       box.querySelector(".wb-close").addEventListener("click", (e) => { e.stopPropagation(); box.hidden = true; });
+      box.querySelector(".bag-x").addEventListener("click", (e) => { e.stopPropagation(); box.hidden = true; });
     }
     box._t = Date.now();
     box.querySelector(".tp-title").textContent = L("Meja Kerja", "Workbench");
@@ -7608,9 +7640,10 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
       box = document.createElement("div");
       box.id = "seed-pick";
       box.hidden = true;
-      box.innerHTML = '<div class="tp-card tp-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')"><div class="tp-ribbon"><img src="' + UI_ART.pita + '" alt=""><span class="tp-title"></span></div><div class="tp-list tp-seeds"></div></div>';
+      box.innerHTML = '<div class="tp-card tp-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')"><button type="button" class="bag-x" aria-label="Tutup"><img src="assets/ui/close.png" alt=""></button><div class="tp-ribbon"><img src="' + UI_ART.pita + '" alt=""><span class="tp-title"></span></div><div class="tp-list tp-seeds"></div></div>';
       document.body.appendChild(box);
       box.addEventListener("click", (e) => { if (e.target === box) box.hidden = true; });
+      box.querySelector(".bag-x").addEventListener("click", (e) => { e.stopPropagation(); box.hidden = true; });
     }
     box.querySelector(".tp-title").textContent = L("Pilih bibit", "Choose a seed");
     const list = box.querySelector(".tp-list");
