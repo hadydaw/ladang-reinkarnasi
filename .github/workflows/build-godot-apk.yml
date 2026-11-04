@@ -88,17 +88,39 @@ jobs:
           $G --headless --import
           $G --headless -s res://tests/smoke_test.gd
 
+      - name: Keystore debug sementara (hanya untuk validasi Godot, bukan kunci rilis)
+        run: |
+          keytool -genkey -v -keystore "$RUNNER_TEMP/debug.keystore" -storepass android -keypass android \
+            -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US" >/dev/null 2>&1
+          test -s "$RUNNER_TEMP/debug.keystore"
+
+      - name: Diagnostik SDK dan Java
+        run: |
+          echo "JAVA: $(java -version 2>&1 | head -1)"
+          ls -la "$ANDROID_HOME/build-tools/${BUILD_TOOLS}/" | head -20
+          ls -la "$ANDROID_HOME/platform-tools/" | head -5
+          "$ANDROID_HOME/build-tools/${BUILD_TOOLS}/apksigner" --version 2>&1 | head -3 || true
+
       - name: Build APK rilis
         working-directory: godot
         env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ runner.temp }}/debug.keystore
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
           GODOT_ANDROID_KEYSTORE_RELEASE_PATH: ${{ runner.temp }}/ladang-release.jks
           GODOT_ANDROID_KEYSTORE_RELEASE_USER: ${{ secrets.ANDROID_KEY_ALIAS }}
           GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
         run: |
           G=~/godot-cache/Godot_v${GODOT_VERSION}-stable_linux.x86_64
           mkdir -p ../build
-          $G --headless --export-release "Android" ../build/ladang-reinkarnasi-godot.apk
+          set +e
+          $G --headless --verbose --export-release "Android" ../build/ladang-reinkarnasi-godot.apk > ../build/export-log.txt 2>&1
+          RC=$?
+          set -e
+          grep -vE "^\s*$" ../build/export-log.txt | tail -80
           ls -l ../build/
+          exit $RC
 
       - name: Bukti APK (ukuran, isi, tanda tangan, tanpa WebView)
         run: |
@@ -115,10 +137,12 @@ jobs:
           } | tee "$BUKTI"
 
       - name: Unggah artefak
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ladang-reinkarnasi-godot-apk
           path: |
             build/ladang-reinkarnasi-godot.apk
             build/bukti-apk.txt
-          if-no-files-found: error
+            build/export-log.txt
+          if-no-files-found: warn
