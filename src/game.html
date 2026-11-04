@@ -383,19 +383,17 @@ button.birth-btn { text-align: left; cursor: pointer; color: var(--ink); }
 #inside-bar img { width: 100%; height: 100%; object-fit: contain; display: block; }
 #seed-pick { position: fixed; inset: 0; z-index: 60; background: rgba(10,8,20,.6); display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; }
 #seed-pick[hidden] { display: none; }
-#seed-pick .tp-card { width: min(360px, 100%); background: #2a2040; border: 2px solid #d9a441; border-radius: 16px; padding: 14px; color: #fff; box-sizing: border-box; }
-#seed-pick .tp-title { text-align: center; color: #ffd76b; font-weight: 700; margin: 0 0 10px; }
-#seed-pick .tp-card { width: min(390px, 100%); padding: 12px 10px; }
-#seed-pick .tp-list { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
-#seed-pick { padding: 6px; }
-#seed-pick .tp-list { gap: 3px; }
-#seed-pick .tp-list button { padding: 6px 0; font-size: clamp(.4rem, 2vw, .55rem); letter-spacing: -.03em; min-width: 0; white-space: nowrap; overflow: hidden; }
-#seed-pick .tp-list button .tp-ico { width: 1.9rem; height: 1.9rem; }
-#seed-pick .tp-list button .tp-cnt { font-size: .8rem; line-height: 1; color: #ffd76b; font-weight: 800; }
-#seed-pick .tp-list button span:last-child { font-size: clamp(.4rem, 2vw, .55rem); letter-spacing: -.03em; white-space: nowrap; }
-#seed-pick .tp-list button { font-family: inherit; border-radius: 12px; border: 1px solid #6b5a8a; background: #3a2e56; color: #fff; padding: 8px 2px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: .72rem; font-weight: 700; }
-#seed-pick .tp-list button .tp-ico { width: 2.6rem; height: 2.6rem; display: flex; align-items: center; justify-content: center; }
-#seed-pick .tp-list button.tp-on { background: #f2b84b; color: #3a2100; border-color: #f2b84b; }
+#seed-pick .tp-panel { width: min(372px, 96vw); background: none; border-style: solid; border-width: 34px; border-image-slice: 120 fill; border-image-width: 34px; border-image-repeat: stretch; padding: 12px 6px 10px; box-sizing: border-box; color: #fff; }
+#seed-pick .tp-ribbon { position: relative; height: 56px; display: flex; align-items: center; justify-content: center; margin: -6px 0 4px; }
+#seed-pick .tp-ribbon img { height: 56px; width: auto; max-width: 100%; display: block; }
+#seed-pick .tp-ribbon .tp-title { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); margin: 0; text-align: center; color: #fff6dc; text-transform: uppercase; font-size: .95rem; font-weight: 900; text-shadow: 0 2px 0 #4a2a0e; }
+#seed-pick .tp-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 4px 4px 2px; }
+#seed-pick .tp-list button { font-family: inherit; background: linear-gradient(#fff4d8, #f0d9a8); color: #4a2a10; border: 2px solid #c9934a; border-radius: 12px; box-shadow: 0 3px 0 #8a5a2a, inset 0 1px 0 rgba(255,255,255,.7); font-weight: 800; font-size: .72rem; line-height: 1.15; padding: 4px 2px 6px; min-height: 84px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-width: 0; white-space: nowrap; overflow: hidden; }
+#seed-pick .tp-list button.tp-on { background: linear-gradient(#ffe38a, #e8a93a); color: #3a2100; border-color: #8a5a1a; box-shadow: 0 3px 0 #6a3e10, inset 0 0 0 2px #fff2b8; }
+#seed-pick .tp-list button .tp-cnt { font-size: .8rem; line-height: 1.2; color: #7a3d0a; font-weight: 900; }
+#seed-pick .tp-list button.tp-on .tp-cnt { color: #5a2a00; }
+#seed-pick .tp-list button .tp-ico { width: 2.6rem; height: 2.6rem; display: flex; align-items: center; justify-content: center; margin: 2px 0; }
+#seed-pick .tp-empty { grid-column: 1 / -1; text-align: center; color: #4a2a10; font-weight: 700; margin: 12px 0; }
 #tool-pick .tp-list button.tp-on { background: #f2b84b; color: #3a2100; border-color: #f2b84b; }
 #tool-pick .tp-panel { width: min(372px, 96vw); background: none; border-style: solid; border-width: 34px; border-image-slice: 120 fill; border-image-width: 34px; border-image-repeat: stretch; padding: 12px 6px 10px; }
 #tool-pick .tp-ribbon { position: relative; height: 56px; display: flex; align-items: center; justify-content: center; margin: -6px 0 4px; }
@@ -7610,7 +7608,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
       box = document.createElement("div");
       box.id = "seed-pick";
       box.hidden = true;
-      box.innerHTML = '<div class="tp-card"><p class="tp-title"></p><div class="tp-list tp-seeds"></div></div>';
+      box.innerHTML = '<div class="tp-card tp-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')"><div class="tp-ribbon"><img src="' + UI_ART.pita + '" alt=""><span class="tp-title"></span></div><div class="tp-list tp-seeds"></div></div>';
       document.body.appendChild(box);
       box.addEventListener("click", (e) => { if (e.target === box) box.hidden = true; });
     }
