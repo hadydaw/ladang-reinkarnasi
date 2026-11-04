@@ -874,6 +874,26 @@ html[data-orient="landscape"] #npc-menu .nm-box { margin: auto; }
 #craft-pick .cr-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 #wb-pick .wb-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 #decor-pick .dp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+
+/* ===== Auto pause dan notifikasi energi ===== */
+#pause-ov { position: fixed; inset: 0; z-index: 95; background: rgba(10,8,20,.72); display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; }
+#pause-ov[hidden] { display: none; }
+#pause-ov .pz-panel { position: relative; width: min(372px, 92vw); background: none; border-style: solid; border-width: 34px; border-image-slice: 120 fill; border-image-width: 34px; border-image-repeat: stretch; padding: 12px 6px 10px; box-sizing: border-box; color: #4a2a10; text-align: center; }
+#pause-ov .tp-ribbon { position: relative; height: 56px; display: flex; align-items: center; justify-content: center; margin: -6px 0 8px; }
+#pause-ov .tp-ribbon img { height: 56px; width: auto; max-width: 100%; display: block; }
+#pause-ov .tp-ribbon .tp-title { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); margin: 0; text-align: center; color: #fff6dc; text-transform: uppercase; font-size: .95rem; font-weight: 900; text-shadow: 0 2px 0 #4a2a0e; }
+#pause-ov .pz-note { margin: 4px 6px 16px; font-weight: 700; font-size: .95rem; }
+#pause-ov .pz-go { width: 100%; font-family: inherit; font-weight: 900; font-size: 1.05rem; padding: 12px; border-radius: 14px; border: 3px solid #e0b25a; background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; text-shadow: 0 2px 0 #3a1e08; box-shadow: 0 4px 0 #3a1e08; cursor: pointer; }
+#energy-note { position: fixed; left: 50%; top: 46%; transform: translateX(-50%); z-index: 80; pointer-events: none; display: flex; align-items: center; gap: 4px; padding: 8px 14px; border-radius: 16px; background: rgba(42,26,10,.82); border: 2px solid #e0b25a; box-shadow: 0 4px 0 rgba(0,0,0,.35); color: #fff3cf; font-weight: 900; font-size: 1.1rem; white-space: nowrap; opacity: 0; }
+#energy-note[hidden] { display: none; }
+#energy-note.en-show { animation: enIn .35s ease-out forwards; }
+#energy-note.en-out { animation: enOut .6s ease-in forwards; }
+#energy-note img { width: 26px; height: 26px; object-fit: contain; opacity: 0; animation: enHeart .35s ease-out forwards; }
+#energy-note .en-more { margin-left: 4px; color: #ffd76b; }
+#energy-note .en-full { color: #ffd76b; }
+@keyframes enIn { from { opacity: 0; transform: translate(-50%, -8px); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes enOut { from { opacity: 1; transform: translate(-50%, 0); } to { opacity: 0; transform: translate(-50%, -14px); } }
+@keyframes enHeart { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: scale(1); } }
 </style>
 
 <main class="screen" id="menu-screen">
@@ -1479,9 +1499,10 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
   ];
   const PERIOD_MS = 5 * 60 * 1000;
   const CYCLE_MS = PERIOD_MS * 5;
+  let PAUSED = false, pausedAt = 0; // auto pause: saat PAUSED jam dunia dan aktivitas berhenti
   function clockOf() {
     const anchor = (S && typeof S.clockAnchor === "number") ? S.clockAnchor : Date.now();
-    return clockAt(Date.now() - anchor);
+    return clockAt((PAUSED ? pausedAt : Date.now()) - anchor); // saat PAUSED, jam dunia berhenti di saat pause
   }
   // Satu hari game = 24 jam dunia dalam 25 menit nyata (1 jam game = 62,5 detik). Jam tidak diulang, hanya tidur atau Akhiri Hari yang memulai hari baru.
   const GAME_DAY_MS = CYCLE_MS;
@@ -1896,11 +1917,78 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
       if (S && S.pos && !$("#farm-screen").hidden) window.__ladang.store.set(persistData()); // simpan jam dunia yang beku, bukan jam nyata
     } catch (e) {}
   }
-  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") saveNow(); });
+  // ===== Auto pause: game berhenti saat aplikasi ke latar belakang, dan baru jalan lagi setelah "Lanjutkan" =====
+  function gamePause() {
+    if (PAUSED || !S || !S.pos || $("#farm-screen").hidden) { saveNow(); return; }
+    PAUSED = true; pausedAt = Date.now(); running = false;
+    saveNow();
+    buildPauseOv();
+    const pe = document.getElementById("pause-ov"); if (pe) pe.hidden = false;
+  }
+  function gameResume() {
+    if (!PAUSED) return;
+    const d = Math.max(0, Date.now() - pausedAt);
+    PAUSED = false;
+    // geser semua penanda waktu nyata sebesar lama pause: jam dunia, barang jatuh, masakan, dan NPC tidak ikut berjalan
+    if (typeof S.clockAnchor === "number") S.clockAnchor += d;
+    (S.drops || []).forEach((dr) => { if (typeof dr.born === "number") dr.born += d; });
+    (S.decor || []).forEach((dc) => { if (dc.cook && typeof dc.cook.until === "number") dc.cook.until += d; });
+    if (S.npc) {
+      if (typeof S.npc.arriveAt === "number" && isFinite(S.npc.arriveAt)) S.npc.arriveAt += d;
+      if (S.npc.bl) Object.keys(S.npc.bl).forEach((k) => { S.npc.bl[k] += d; });
+    }
+    const pe = document.getElementById("pause-ov"); if (pe) pe.hidden = true;
+    running = true; last = performance.now();
+    if (!loopOn) { loopOn = true; requestAnimationFrame(frame); }
+    save();
+  }
+  function buildPauseOv() {
+    if (document.getElementById("pause-ov")) return;
+    const ov = document.createElement("div"); ov.id = "pause-ov"; ov.hidden = true;
+    ov.innerHTML = '<div class="tp-card tp-panel pz-panel" style="border-image-source:url(\'' + UI_ART.bingkai_panel + '\')"><div class="tp-ribbon"><img src="' + UI_ART.pita + '" alt=""><span class="tp-title">PAUSE</span></div><p class="pz-note">' + L("Game dijeda. Waktu dan aktivitas berhenti sampai kamu menekan Lanjutkan.", "Game paused. Time and activity stop until you press Continue.") + '</p><button type="button" class="pz-go">' + L("Lanjutkan", "Continue") + '</button></div>';
+    document.body.appendChild(ov);
+    ov.querySelector(".pz-go").addEventListener("click", (e) => { e.stopPropagation(); gameResume(); });
+  }
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") gamePause(); else saveNow(); });
+  window.addEventListener("pagehide", gamePause);
+  window.addEventListener("blur", gamePause);
+  try { // Android (Capacitor): event pause dari lifecycle aplikasi
+    const CapApp = window.Capacitor && window.Capacitor.registerPlugin ? window.Capacitor.registerPlugin("App") : null;
+    if (CapApp && CapApp.addListener) { const pr = CapApp.addListener("pause", () => gamePause()); if (pr && pr.catch) pr.catch(() => {}); }
+  } catch (e) {}
+
+  // ===== Pemulihan energi dari makanan: hati muncul sesuai energi yang benar-benar pulih =====
+  let enT = null;
+  function energyNote(gained, full) {
+    let el = document.getElementById("energy-note");
+    if (!el) { el = document.createElement("div"); el.id = "energy-note"; el.hidden = true; document.body.appendChild(el); }
+    clearTimeout(enT);
+    el.classList.remove("en-show", "en-out");
+    let stay = 1500;
+    if (full) el.innerHTML = '<span class="en-full">' + L("Energi Penuh!", "Energy Full!") + '</span>';
+    else {
+      const n = Math.min(gained, 10);
+      let h = ""; for (let i = 0; i < n; i++) h += '<img src="' + UI_ART.hati + '" alt="" style="animation-delay:' + (i * 0.12).toFixed(2) + 's">';
+      el.innerHTML = '<span class="en-plus">+</span>' + h + (gained > 10 ? '<span class="en-more">' + gained + '</span>' : '');
+      stay = 1500 + n * 120;
+    }
+    el.hidden = false;
+    void el.offsetWidth; el.classList.add("en-show");
+    enT = setTimeout(() => { el.classList.remove("en-show"); el.classList.add("en-out"); setTimeout(() => { el.hidden = true; el.classList.remove("en-out"); }, 650); }, stay);
+  }
+  // menambah energi dari makanan; hanya selisih yang benar-benar pulih yang ditampilkan
+  function eatGain(amount) {
+    const before = S.energy;
+    S.energy = Math.min(maxEnergy(), before + amount);
+    const gained = Math.max(0, Math.round(S.energy - before));
+    energyNote(gained, false);
+    return gained;
+  }
   window.addEventListener("pagehide", saveNow);
   // Data simpanan memuat jam dunia saat itu (clockFrozen), supaya waktu game berhenti selama pemain tidak bermain
   function persistData() {
-    return Object.assign({}, S, { clockFrozen: typeof S.clockAnchor === "number" ? Math.max(0, Date.now() - S.clockAnchor) : 0, savedAt: Date.now() });
+    const nowRef = PAUSED ? pausedAt : Date.now();
+    return Object.assign({}, S, { clockFrozen: typeof S.clockAnchor === "number" ? Math.max(0, nowRef - S.clockAnchor) : 0, savedAt: Date.now() });
   }
   function save() {
     clearTimeout(saveTimer);
@@ -4624,8 +4712,9 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     eat.style.cssText = btnBase + "background:#c2412d";
     eat.addEventListener("click", () => {
       if (!S.bag || !(S.bag.ikan_bakar > 0)) { toastMsg(L("Ikan Bakar habis.", "No grilled fish left.")); return; }
+      if (S.energy >= maxEnergy()) { energyNote(0, true); return; }
       S.bag.ikan_bakar -= 1;
-      S.energy = Math.min(maxEnergy(), S.energy + IKAN_BAKAR_HEARTS * HEART_E);
+      eatGain(IKAN_BAKAR_HEARTS * HEART_E);
       toastMsg(L("Ikan Bakar dimakan. Energi +3 hati.", "Ate Grilled Fish. +3 hearts of energy."));
       render(); save(); openBagPick();
     });
@@ -4637,7 +4726,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     card.appendChild(row);
   }
   function frameBody() {
-    if (!running) { loopOn = false; return; }
+    if (!running || PAUSED) { loopOn = false; return; }
     const now = performance.now();
     const dt = Math.max(0, Math.min(0.05, (now - last) / 1000));
     last = now;
@@ -4959,7 +5048,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
   }
   function autoHave(k) { return ((S.bag || {})[k] || 0) + autoDrops(k).reduce((a, d) => a + d.n, 0); }
   function autoTick() {
-    if (!AUTO || !S || !S.pos) return;
+    if (!AUTO || !S || !S.pos || PAUSED) return;
     const farmEl = document.getElementById("farm-screen");
     if (farmEl.hidden || FAINT || sleepView || INTERIOR_ON || storyOn) return autoStop(null);
     if (joy.active || joy.vx || joy.vy) return autoStop(L("Dihentikan karena kamu bergerak sendiri.", "Stopped because you moved."));
@@ -6351,7 +6440,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
       f.src.stop(ac.currentTime + 0.35);
     }
     setInterval(() => { // pantau tungku tiap 200 ms; tidak ada aktivitas memasak = tidak ada bunyi
-      const want = sfxOn() && cookingNow();
+      const want = !PAUSED && sfxOn() && cookingNow();
       if (want && !fireOn && ctx()) { if (ac.state === "suspended") ac.resume().catch(() => {}); fireStart(ac); } // Android: konteks audio bisa suspended, harus di-resume
       else if (!want && fireOn) fireStop();
     }, 200);
@@ -6363,7 +6452,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     // ---- Langkah Rose: hanya saat Rose berjalan di luar dan cukup dekat dengan pemain (9 petak)
     let npcSX = null, npcSY = null, npcLastMove = 0, npcLastPlay = 0;
     setInterval(() => {
-      const n = (typeof S !== "undefined" && S) ? S.npc : null;
+      const n = (typeof S !== "undefined" && S && !PAUSED) ? S.npc : null;
       if (!n || n.inside || INTERIOR_ON || n.sleeping || FAINT || !sfxOn()) { npcSX = null; stopNodes(npcNodes); return; }
       const now = performance.now();
       const moved = npcSX !== null && Math.hypot(n.x - npcSX, n.y - npcSY) > 0.004; npcSX = n.x; npcSY = n.y;
@@ -6920,7 +7009,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
   }
   // Hari berganti otomatis setiap siklus nyata (dini hari -> pagi)
   function cycleCheck() {
-    if (!S || typeof S.clockAnchor !== "number" || $("#farm-screen").hidden || sleepView) return; // saat tidur atau istirahat tidak ada penalti
+    if (!S || typeof S.clockAnchor !== "number" || $("#farm-screen").hidden || sleepView || PAUSED) return; // saat tidur atau istirahat tidak ada penalti
     // Terjaga lebih dari 24 jam dunia tanpa tidur: energi berkurang 1 hati tiap 1 jam game
     const awakeH = Math.max(0, Date.now() - S.clockAnchor - (S.restMs || 0)) / (GAME_DAY_MS / 24);
     const due = awakeH >= 24 ? Math.floor(awakeH - 24) + 1 : 0;
@@ -7203,14 +7292,15 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
   function edibleList() { return Object.keys(EDIBLE).filter((k) => ((S.bag || {})[k] || 0) > 0); }
   function eatItem(k) {
     if (!((S.bag || {})[k] > 0)) return;
-    if (S.energy >= maxEnergy()) { // energi sudah penuh (batas sakit juga dihitung): makanan tidak terpakai
+    if (S.energy >= maxEnergy()) { // energi penuh: makanan tidak dikonsumsi dan tidak berkurang di tas
       const eb = document.getElementById("eat-pick"); if (eb) eb.hidden = true;
-      showBubble("😮‍💨 " + L("Udah kenyang", "I'm full"));
+      energyNote(0, true);
       return;
     }
-    S.bag[k] -= 1;
-    S.energy = Math.min(maxEnergy(), S.energy + EDIBLE[k].energy); PP_EAT_FLAG = true; // makan: bubble Pupus yang menunggu boleh ditutup
-    toastMsg(L(itemInfo(k).name + " dimakan. Energi +" + EDIBLE[k].energy + ".", "Ate " + itemInfo(k).name + ". Energy +" + EDIBLE[k].energy + "."));
+    S.bag[k] -= 1; // makanan berkurang hanya saat benar-benar dimakan
+    PP_EAT_FLAG = true; // makan: bubble Pupus yang menunggu boleh ditutup
+    const gained = eatGain(EDIBLE[k].energy);
+    toastMsg(L(itemInfo(k).name + " dimakan. Energi +" + gained + ".", "Ate " + itemInfo(k).name + ". Energy +" + gained + "."));
     save(); render();
   }
   function openEatPick() {
@@ -7535,8 +7625,9 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     eat.style.cssText = "font-family:inherit;font-weight:800;border-radius:12px;border:1px solid #6b5a8a;background:#c2412d;color:#fff;padding:8px 14px;cursor:pointer";
     eat.addEventListener("click", () => {
       if (!S.bag || !(S.bag[food] > 0)) { toastMsg(isRab ? L("Kelinci Bakar habis.", "No grilled rabbit left.") : L("Ayam Bakar habis.", "No grilled chicken left.")); return; }
+      if (S.energy >= maxEnergy()) { energyNote(0, true); return; }
       S.bag[food] -= 1;
-      S.energy = Math.min(maxEnergy(), S.energy + 4 * HEART_E);
+      eatGain(4 * HEART_E);
       toastMsg(isRab ? L("Kelinci Bakar dimakan. Energi +4 hati.", "Ate Grilled Rabbit. +4 hearts of energy.") : L("Ayam Bakar dimakan. Energi +4 hati.", "Ate Grilled Chicken. +4 hearts of energy."));
       render(); save();
       openBagPick();
@@ -7563,8 +7654,9 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     eat.style.cssText = "font-family:inherit;font-weight:800;border-radius:12px;border:1px solid #6b5a8a;background:#c2412d;color:#fff;padding:8px 14px;cursor:pointer";
     eat.addEventListener("click", () => {
       if (!S.bag || !(S.bag.ceri > 0)) { toastMsg(L("Ceri habis.", "No cherries left.")); return; }
+      if (S.energy >= maxEnergy()) { energyNote(0, true); return; }
       S.bag.ceri -= 1;
-      S.energy = Math.min(maxEnergy(), S.energy + 3);
+      eatGain(3);
       toastMsg(L("Ceri dimakan. Energi +3.", "Ate a cherry. +3 energy."));
       render(); save();
       openBagPick();
