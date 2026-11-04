@@ -955,6 +955,17 @@ body { min-height: 0 !important; padding-block: 0 !important; }
   #settings-panel .btn { min-height: 36px; }
   #settings-panel .panel-card label { margin-bottom: 2px; }
 }
+
+/* ===== Ekspor / Impor Save ===== */
+#saveio-panel .panel-card { width: min(400px,94vw); max-width: min(400px,94vw); padding: 14px 12px; box-sizing: border-box; background: none; border-style: solid; border-width: 34px; border-image-source: url('assets/images/lainnya/ui_art_bingkai_panel_001.webp'); border-image-slice: 120 fill; border-image-width: 34px; border-image-repeat: stretch; color: #4a2a10; }
+#saveio-panel .panel-card h2 { height: 56px; margin: -6px 0 8px; display: flex; align-items: center; justify-content: center; background: url('assets/images/lainnya/ui_art_pita_001.webp') center / contain no-repeat; color: #fff6dc; font-size: .8rem; letter-spacing: 0; font-weight: 900; text-transform: uppercase; text-shadow: 0 2px 0 #4a2a0e; }
+#saveio-panel .saveio-hint, #saveio-panel .saveio-msg { font-size: 13px; font-weight: 800; margin: 6px 0; line-height: 1.35; }
+#saveio-panel .saveio-text { width: 100%; height: 96px; box-sizing: border-box; border: 2px solid #c9934a; border-radius: 10px; background: #fff8e6; color: #4a2a10; font: 12px monospace; padding: 6px; resize: none; user-select: text; -webkit-user-select: text; }
+#saveio-panel .saveio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+#saveio-panel .saveio-wide { grid-column: 1 / -1; }
+#saveio-panel .btn { min-height: 44px; font-size: .9rem; padding: 6px 8px; }
+#saveio-panel .btn-primary { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; border: 3px solid #e0b25a; box-shadow: 0 4px 0 #3a1e08; text-shadow: 0 2px 0 #3a1e08; font-weight: 900; }
+#saveio-panel .btn-ghost { background: linear-gradient(#fff4d8, #f0d9a8); color: #5a2e12; border: 2px solid #c9934a; box-shadow: 0 3px 0 #8a5a2a; font-weight: 900; }
 </style>
 
 <main class="screen" id="menu-screen">
@@ -1034,7 +1045,28 @@ body { min-height: 0 !important; padding-block: 0 !important; }
     <div class="ctl-mode orient-mode"><span data-i18n="orientLabel"></span><div class="seg"><button type="button" data-orient="portrait" data-i18n="orientPortrait"></button><button type="button" data-orient="landscape" data-i18n="orientLandscape"></button></div></div>
     <div class="panel-actions" style="flex-direction:column;gap:10px">
       <button class="btn btn-primary" id="btn-layout"><span data-i18n="layoutBtn"></span></button>
+      <button class="btn btn-primary" data-action="saveio"><span data-i18n="saveBtn"></span></button>
     </div>
+    <div class="panel-actions">
+      <button class="btn btn-ghost" data-action="back" data-i18n="back"></button>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="saveio-panel" hidden>
+  <div class="panel-card">
+    <h2 data-i18n="saveTitle"></h2>
+    <p class="saveio-hint" data-i18n="saveHint"></p>
+    <textarea id="saveio-text" class="saveio-text" spellcheck="false"></textarea>
+    <p class="saveio-msg" id="saveio-msg"></p>
+    <div class="panel-actions saveio-grid">
+      <button class="btn btn-primary" data-action="saveio-make"><span data-i18n="saveMake"></span></button>
+      <button class="btn btn-ghost" data-action="saveio-copy"><span data-i18n="saveCopy"></span></button>
+      <button class="btn btn-ghost" data-action="saveio-down"><span data-i18n="saveDown"></span></button>
+      <button class="btn btn-ghost" data-action="saveio-pick"><span data-i18n="savePick"></span></button>
+      <button class="btn btn-primary saveio-wide" data-action="saveio-import"><span data-i18n="saveImport"></span></button>
+    </div>
+    <input type="file" id="saveio-file" accept=".json,application/json" hidden>
     <div class="panel-actions">
       <button class="btn btn-ghost" data-action="back" data-i18n="back"></button>
     </div>
@@ -1095,7 +1127,7 @@ body { min-height: 0 !important; padding-block: 0 !important; }
   const $ = (s) => document.querySelector(s);
   const menu = $("#menu-screen");
   const createScreen = $("#create-screen");
-  const panels = { settings: $("#settings-panel"), load: $("#load-panel"), confirm: $("#confirm-panel") };
+  const panels = { settings: $("#settings-panel"), load: $("#load-panel"), confirm: $("#confirm-panel"), saveio: $("#saveio-panel") };
   const settingIds = { music: "#set-music", sfx: "#set-sfx", vibrate: "#set-vibrate" };
   const SETTINGS_KEY = "ladangReinkarnasi.settings";
   const OUTFIT_COUNT = 4;
@@ -1111,7 +1143,7 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
       subtitle: "Hidup kedua di dunia yang asing",
       ctlMode: "Mode kontrol", ctlJoy: "Joystick", ctlTouch: "Sentuh",
       orientLabel: "Orientasi layar", orientPortrait: "Vertikal (Portrait)", orientLandscape: "Horizontal (Landscape)",
-      layoutBtn: "Atur Posisi Tombol", layoutTitle: "Atur Tombol", layoutHint: "Geser joystick dan tombol Pakai ke posisi yang nyaman, lalu atur ukurannya.", layoutJoy: "Ukuran joystick", layoutAct: "Ukuran tombol Pakai", layoutSave: "Simpan", layoutReset: "Reset", pakai: "Pakai",
+      saveBtn: "Ekspor / Impor Save", saveTitle: "Ekspor / Impor Save", saveHint: "Ekspor menyalin seluruh progres ke teks JSON. Simpan teks itu (misalnya di Catatan atau WhatsApp). Impor membaca file atau teks yang sudah disalin. Save lama otomatis dicadangkan di perangkat.", saveMake: "Buat Ekspor", saveCopy: "Salin", saveDown: "Unduh file", savePick: "Pilih file", saveImport: "Impor", saveDone: "Teks ekspor sudah dibuat. Salin atau unduh.", saveCopied: "Tersalin ke papan klip.", saveNoText: "Belum ada teks untuk diimpor.", saveBad: "File tidak valid: ", saveConfirm: "Impor akan mengganti save di perangkat ini. Save lama disimpan sebagai cadangan. Lanjutkan?", saveOk: "Impor berhasil. Game dimuat ulang.", saveFail: "Impor gagal. Save lama tidak diubah.", saveBlocked: "Keluar ke menu utama dulu sebelum impor.", layoutBtn: "Atur Posisi Tombol", layoutTitle: "Atur Tombol", layoutHint: "Geser joystick dan tombol Pakai ke posisi yang nyaman, lalu atur ukurannya.", layoutJoy: "Ukuran joystick", layoutAct: "Ukuran tombol Pakai", layoutSave: "Simpan", layoutReset: "Reset", pakai: "Pakai",
       menuAccount: "Akun", menuNew: "Game Baru", menuLoad: "Lanjutkan", menuSettings: "Pengaturan",
       accountTitle: "Akun Petani", displayName: "Nama Petani (opsional)", saveName: "Simpan nama",
       back: "Kembali", settingsTitle: "Pengaturan", language: "Bahasa",
@@ -1139,7 +1171,7 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
       subtitle: "A second life in a strange world",
       ctlMode: "Control mode", ctlJoy: "Joystick", ctlTouch: "Touch",
       orientLabel: "Screen orientation", orientPortrait: "Portrait", orientLandscape: "Landscape",
-      layoutBtn: "Set Button Position", layoutTitle: "Set Buttons", layoutHint: "Drag the joystick and Use button where you like, then set their size.", layoutJoy: "Joystick size", layoutAct: "Use button size", layoutSave: "Save", layoutReset: "Reset", pakai: "Use",
+      saveBtn: "Export / Import Save", saveTitle: "Export / Import Save", saveHint: "Export copies all progress as JSON text. Keep that text (for example in Notes or WhatsApp). Import reads a file or copied text. The old save is backed up on the device automatically.", saveMake: "Make Export", saveCopy: "Copy", saveDown: "Download file", savePick: "Pick file", saveImport: "Import", saveDone: "Export text is ready. Copy or download it.", saveCopied: "Copied to clipboard.", saveNoText: "No text to import yet.", saveBad: "Invalid file: ", saveConfirm: "Import will replace the save on this device. The old save is kept as a backup. Continue?", saveOk: "Import successful. The game will reload.", saveFail: "Import failed. The old save was not changed.", saveBlocked: "Go back to the main menu before importing.", layoutBtn: "Set Button Position", layoutTitle: "Set Buttons", layoutHint: "Drag the joystick and Use button where you like, then set their size.", layoutJoy: "Joystick size", layoutAct: "Use button size", layoutSave: "Save", layoutReset: "Reset", pakai: "Use",
       menuAccount: "Account", menuNew: "New Game", menuLoad: "Continue", menuSettings: "Settings",
       accountTitle: "Farmer Account", displayName: "Farmer Name (optional)", saveName: "Save name",
       back: "Back", settingsTitle: "Settings", language: "Language",
@@ -1437,6 +1469,95 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
     saveSettings();
   });
 
+  // ===== Ekspor / Impor Save =====
+  const SAVEIO_FORMAT = "ladang-reinkarnasi-save";
+  const SAVEIO_KEY_CTL = "ladangReinkarnasi.control", SAVEIO_KEY_ORIENT = "ladangReinkarnasi.orient", SAVEIO_KEY_LAYOUT = "ladangReinkarnasi.layout";
+  function rawGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function rawSet(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } }
+  function buildExport() {
+    if (window.__ladang.saveioHooks.inFarm()) window.__ladang.store.set(window.__ladang.saveioHooks.persist()); // pastikan save terakhir ikut
+    const slots = {};
+    for (let n = 1; n <= 3; n++) { const r = readJSON(SLOT_KEY + n, null); if (r) slots[n] = r; }
+    return { format: SAVEIO_FORMAT, formatVersion: 1, exportedAt: new Date().toISOString(), game: storeGet(), slots: slots, settings: rawGet(SETTINGS_KEY), control: rawGet(SAVEIO_KEY_CTL), orient: rawGet(SAVEIO_KEY_ORIENT), layout: rawGet(SAVEIO_KEY_LAYOUT) };
+  }
+  function validateImport(o) {
+    if (!o || typeof o !== "object" || Array.isArray(o)) return "bukan objek JSON";
+    if (o.format !== SAVEIO_FORMAT) return "bukan save Ladang Reinkarnasi";
+    if (o.formatVersion !== 1) return "versi format tidak didukung";
+    const g = o.game;
+    if (g !== null && g !== undefined) {
+      if (typeof g !== "object" || Array.isArray(g)) return "data permainan rusak";
+      if (!(Number.isFinite(g.day) && g.day >= 1)) return "hari tidak valid";
+      if (!Number.isFinite(g.energy)) return "energi tidak valid";
+      if (typeof g.name !== "string" || !g.name) return "nama karakter tidak valid";
+      if (g.grid !== undefined && !Array.isArray(g.grid)) return "data ladang rusak";
+      if (g.pos !== undefined && !(g.pos && Number.isFinite(g.pos.x) && Number.isFinite(g.pos.y))) return "posisi tidak valid";
+      if (g.bag !== undefined && (!g.bag || typeof g.bag !== "object")) return "tas rusak";
+    } else if (!o.slots || typeof o.slots !== "object" || !Object.keys(o.slots).length) {
+      return "tidak ada data permainan";
+    }
+    return null;
+  }
+  function saveioMsg(txt) { $("#saveio-msg").textContent = txt; }
+  function saveioOpen() { $("#saveio-text").value = ""; saveioMsg(""); showPanel("saveio"); }
+  function saveioMake() {
+    const txt = JSON.stringify(buildExport());
+    $("#saveio-text").value = txt;
+    saveioMsg(t("saveDone") + " (" + Math.round(txt.length / 1024) + " KB)");
+    return txt;
+  }
+  async function saveioCopy() {
+    const ta = $("#saveio-text");
+    if (!ta.value) saveioMake();
+    try { await navigator.clipboard.writeText(ta.value); saveioMsg(t("saveCopied")); }
+    catch (e) { ta.focus(); ta.select(); try { document.execCommand("copy"); saveioMsg(t("saveCopied")); } catch (e2) {} }
+  }
+  function saveioDown() {
+    const ta = $("#saveio-text");
+    if (!ta.value) saveioMake();
+    const stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([$("#saveio-text").value], { type: "application/json" }));
+    a.download = "ladang-reinkarnasi-save-" + stamp + ".json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  }
+  function saveioPicked(file) {
+    const fr = new FileReader();
+    fr.onload = () => { $("#saveio-text").value = String(fr.result || ""); saveioMsg(file.name); };
+    fr.onerror = () => saveioMsg(t("saveBad") + "gagal membaca file");
+    fr.readAsText(file);
+  }
+  function backupCurrent() {
+    const stamp = new Date().toISOString().replace(/[:.]/g, "-");
+    return rawSet("ladangReinkarnasi.backup." + stamp, JSON.stringify(buildExport()));
+  }
+  function applyImport(o) {
+    if (!backupCurrent()) return false;                 // cadangan gagal: save lama tidak disentuh
+    if (o.game && !storeSet(o.game)) return false;
+    Object.keys(o.slots || {}).forEach((n) => rawSet(SLOT_KEY + n, JSON.stringify(o.slots[n])));
+    if (typeof o.settings === "string") rawSet(SETTINGS_KEY, o.settings);
+    if (typeof o.control === "string") rawSet(SAVEIO_KEY_CTL, o.control);
+    if (typeof o.orient === "string") rawSet(SAVEIO_KEY_ORIENT, o.orient);
+    if (typeof o.layout === "string") rawSet(SAVEIO_KEY_LAYOUT, o.layout);
+    return true;
+  }
+  async function saveioImport() {
+    const raw = $("#saveio-text").value.trim();
+    if (!raw) { saveioMsg(t("saveNoText")); return; }
+    let o = null;
+    try { o = JSON.parse(raw); } catch (e) { saveioMsg(t("saveBad") + "teks JSON rusak"); return; }
+    const err = validateImport(o);
+    if (err) { saveioMsg(t("saveBad") + err); return; }
+    if (window.__ladang.saveioHooks.inFarm()) { saveioMsg(t("saveBlocked")); return; }
+    const ok = await ask(t("saveConfirm"));
+    if (!ok) { showPanel("saveio"); return; }
+    window.__ladang.saveioHooks.dropS();                 // cegah simpan dari state lama saat halaman dimuat ulang
+    if (applyImport(o)) { toast(t("saveOk")); setTimeout(() => location.reload(), 900); }
+    else { showPanel("saveio"); saveioMsg(t("saveFail")); }
+  }
+  $("#saveio-file").addEventListener("change", (e) => { const f = e.target.files && e.target.files[0]; if (f) saveioPicked(f); e.target.value = ""; });
+
   document.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-action]");
     if (!btn || btn.disabled) return;
@@ -1471,6 +1592,12 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
       }
       case "load-submit": window.__ladang.startFarm(); break;
       case "settings": loadSettings(); showPanel("settings"); break;
+      case "saveio": saveioOpen(); break;
+      case "saveio-make": saveioMake(); break;
+      case "saveio-copy": saveioCopy(); break;
+      case "saveio-down": saveioDown(); break;
+      case "saveio-pick": $("#saveio-file").click(); break;
+      case "saveio-import": saveioImport(); break;
       case "pick-f": draft.gender = "female"; renderGender(); break;
       case "pick-m": draft.gender = "male"; renderGender(); break;
       case "outfit": draft.outfit = Number(btn.dataset.outfit); renderOutfits(); renderPreview(); break;
@@ -2058,6 +2185,11 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
     const nowRef = PAUSED ? pausedAt : Date.now();
     return Object.assign({}, S, { clockFrozen: typeof S.clockAnchor === "number" ? Math.max(0, nowRef - S.clockAnchor) : 0, savedAt: Date.now() });
   }
+  window.__ladang.saveioHooks = {
+    persist: () => persistData(),
+    inFarm: () => !!(S && S.pos && !$("#farm-screen").hidden),
+    dropS: () => { clearTimeout(saveTimer); S = null; }
+  };
   function save() {
     clearTimeout(saveTimer);
     saveTimer = setTimeout(() => {
