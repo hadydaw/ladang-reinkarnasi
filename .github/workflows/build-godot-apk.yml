@@ -28,13 +28,14 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Pasang build-tools dan platform
+      - name: Android SDK bawaan runner - pasang build-tools dan platform
         run: |
-          yes | sdkmanager --licenses >/dev/null
-          sdkmanager --install "build-tools;${BUILD_TOOLS}" "platforms;android-35" "platform-tools"
+          SDK="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          SDKMANAGER=$(ls -d "$SDK"/cmdline-tools/*/bin | head -1)/sdkmanager
+          yes | "$SDKMANAGER" --licenses >/dev/null 2>&1 || true
+          "$SDKMANAGER" --install "build-tools;${BUILD_TOOLS}" "platforms;android-35" "platform-tools"
+          ls "$SDK/build-tools/${BUILD_TOOLS}/apksigner"
 
       - name: Cache Godot dan export templates
         id: cache-godot
