@@ -14,3 +14,4 @@ backup/
 
 # Godot (cache impor dan build lokal)
 godot/.godot/
+godot/android/

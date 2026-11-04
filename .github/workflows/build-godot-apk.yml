@@ -58,6 +58,15 @@ jobs:
           cp -r /tmp/tpl/templates/. "$TPL"/
           ls "$TPL" | head -20
 
+      - name: Pasang template build Android (Gradle) dari export templates
+        run: |
+          TPL="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p godot/android/build
+          unzip -o -q "$TPL/android_source.zip" -d godot/android/build
+          touch godot/android/build/.gdignore
+          echo "${GODOT_VERSION}.stable" > godot/android/.build_version
+          cat godot/android/.build_version
+
       - name: Konfigurasi editor Godot untuk export Android
         run: |
           mkdir -p ~/.config/godot
