@@ -114,6 +114,32 @@ jobs:
           "$ANDROID_HOME/platform-tools/adb" start-server 2>&1 | tail -2 || true
           "$ANDROID_HOME/platform-tools/adb" version 2>&1 | head -2 || true
 
+      - name: Diagnosa export (varian konfigurasi, tidak menentukan hasil)
+        continue-on-error: true
+        env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ runner.temp }}/debug.keystore
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
+        run: |
+          G=~/godot-cache/Godot_v${GODOT_VERSION}-stable_linux.x86_64
+          for v in A B C D; do
+            rm -rf /tmp/gd && cp -r godot /tmp/gd && cd /tmp/gd
+            case $v in
+              A) ;;
+              B) sed -i 's/^package\/signed=true/package\/signed=false/' export_presets.cfg ;;
+              C) sed -i 's/^runnable=true/runnable=false/' export_presets.cfg ;;
+              D) sed -i 's/^gradle_build\/use_gradle_build=true/gradle_build\/use_gradle_build=false/' export_presets.cfg ;;
+            esac
+            mkdir -p /tmp/gdout
+            set +e
+            $G --headless --export-debug "Android" /tmp/gdout/$v.apk > /tmp/gdout/$v.log 2>&1
+            RC=$?
+            set -e
+            echo "=== varian $v rc=$RC"
+            grep -E "Cannot export|configuration|mismatch|not installed|Missing|Invalid|Could not|ERROR" /tmp/gdout/$v.log | head -5
+            cd "$GITHUB_WORKSPACE"
+          done
+
       - name: Build APK rilis
         working-directory: godot
         env:
