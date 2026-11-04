@@ -301,6 +301,8 @@ jobs:
             unzip -l "$APK" | grep -iE "index\.html|capacitor|webview|cordova" || echo "(tidak ada)"
             echo "--- Pustaka native Godot ---"
             unzip -l "$APK" | grep -E "lib/.*\.so" || echo "(tidak ada)"
+            echo "--- Tanda tangan (apksigner) ---"
+            "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --print-certs "$APK" 2>&1 || echo "apksigner gagal"
           } | tee "$BUKTI"
 
       - name: Unggah artefak (Docker)
