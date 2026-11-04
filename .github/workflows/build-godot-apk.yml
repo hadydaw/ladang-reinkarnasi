@@ -188,12 +188,43 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Lingkungan image (Godot, SDK, JDK)
+      - name: Lingkungan image dan SDK/JDK/template (Docker)
+        env:
+          GODOT_VERSION: "4.6.3"
         run: |
-          command -v godot || true
-          godot --version || true
-          echo "ANDROID_HOME=${ANDROID_HOME:-}  ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT:-}  JAVA_HOME=${JAVA_HOME:-}"
-          ls "${ANDROID_HOME:-/opt/android-sdk}" 2>&1 | head -20 || true
+          echo "HOME=$HOME  ANDROID_HOME=${ANDROID_HOME:-}  ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT:-}  JAVA_HOME=${JAVA_HOME:-}"
+          command -v godot && godot --version 2>/dev/null | head -1
+          JAVAC=$(command -v javac); echo "javac=$JAVAC"
+          JDK="${JAVA_HOME:-$(dirname $(dirname $(readlink -f "$JAVAC")))}"
+          SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/opt/android-sdk}}"
+          echo "SDK=$SDK  JDK=$JDK"
+          SDKM=$(command -v sdkmanager || ls "$SDK"/cmdline-tools/*/bin/sdkmanager | head -1)
+          echo "sdkmanager=$SDKM"
+          yes | "$SDKM" --sdk_root="$SDK" --licenses >/dev/null 2>&1 || true
+          "$SDKM" --sdk_root="$SDK" --install "build-tools;35.0.0" "platforms;android-35" "platform-tools" | tail -3
+          ls "$SDK/build-tools/35.0.0/apksigner"
+          mkdir -p ~/.config/godot
+          cat > ~/.config/godot/editor_settings-4.6.tres <<EOT
+          [gd_resource type="EditorSettings" format=3]
+
+          [resource]
+          export/android/android_sdk_path = "$SDK"
+          export/android/java_sdk_path = "$JDK"
+          EOT
+          cat ~/.config/godot/editor_settings-4.6.tres
+          TPL="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          if [ ! -f "$TPL/android_source.zip" ]; then
+            mkdir -p "$TPL" && cd "$RUNNER_TEMP"
+            curl -fsSL -o templates.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+            unzip -o -q templates.tpz -d tpl && cp -r tpl/templates/. "$TPL"/
+            cd "$GITHUB_WORKSPACE"
+          fi
+          ls "$TPL" | head -30
+          mkdir -p godot/android/build
+          unzip -o -q "$TPL/android_source.zip" -d godot/android/build
+          touch godot/android/build/.gdignore
+          echo "${GODOT_VERSION}.stable" > godot/android/.build_version
+          cat godot/android/.build_version
 
       - name: Keystore rilis (dari GitHub Secrets)
         env:
