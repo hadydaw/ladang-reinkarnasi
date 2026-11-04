@@ -920,6 +920,41 @@ html[data-orient="landscape"] #npc-menu .nm-box { margin: auto; }
 #settings-panel .ctl-mode .seg button[aria-pressed="true"] { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; border-color: #e0b25a; box-shadow: 0 3px 0 #3a1e08; text-shadow: 0 2px 0 #3a1e08; }
 #settings-panel .btn-primary { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; border: 3px solid #e0b25a; box-shadow: 0 4px 0 #3a1e08; text-shadow: 0 2px 0 #3a1e08; font-weight: 900; }
 #settings-panel .btn-ghost { background: linear-gradient(#fff4d8, #f0d9a8); color: #5a2e12; border: 2px solid #c9934a; box-shadow: 0 3px 0 #8a5a2a; font-weight: 900; }
+
+/* ===== Tampilan aplikasi (APK): tidak ada halaman yang bisa digulir, tidak ada scrollbar browser ===== */
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; overscroll-behavior: none; position: fixed; inset: 0; background: #2b2140; touch-action: manipulation; }
+body { min-height: 0 !important; padding-block: 0 !important; }
+*, *::before, *::after { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.screen, .panel, #farm-screen { overscroll-behavior: contain; }
+.screen { padding-top: max(6vh, env(safe-area-inset-top, 0px)); padding-bottom: max(4vh, env(safe-area-inset-bottom, 0px)); }
+#farm-screen { overflow: hidden !important; }
+/* panel: isi yang lebih tinggi dari layar tetap bisa dilihat, tidak terpotong di atas */
+.panel { align-items: flex-start; }
+.panel > .panel-card { margin: auto; }
+/* Pengaturan muat tanpa digulir di HP portrait */
+#settings-panel { padding: 8px; }
+#settings-panel .panel-card { border-width: 30px; border-image-width: 30px; padding: 8px 6px 8px; }
+#settings-panel .panel-card h2 { height: 52px; margin: -6px 0 4px; font-size: .95rem; }
+#settings-panel .panel-card label { margin-bottom: 4px; }
+#settings-panel .toggle-row { padding: 6px 0; }
+#settings-panel .toggle-row input { width: 22px; height: 22px; }
+#settings-panel .panel-card select { padding: 8px 10px; }
+#settings-panel .ctl-mode { margin: 2px 0; gap: 6px; }
+#settings-panel .ctl-mode .seg button { min-height: 40px; font-size: 15px; }
+#settings-panel .panel-actions { gap: 6px; margin-top: 2px; }
+#settings-panel .btn { min-height: 44px; font-size: 1rem; }
+#settings-panel .btn-primary, #settings-panel .btn-ghost { padding: 6px 10px; }
+
+@media (orientation: landscape) and (max-height: 500px) {
+  #settings-panel { padding: 4px; }
+  #settings-panel .panel-card { border-width: 22px; border-image-width: 22px; padding: 4px 6px; }
+  #settings-panel .panel-card h2 { height: 40px; margin: -4px 0 2px; font-size: .85rem; }
+  #settings-panel .toggle-row { padding: 3px 0; }
+  #settings-panel .ctl-mode .seg button { min-height: 34px; font-size: 13px; }
+  #settings-panel .btn { min-height: 36px; }
+  #settings-panel .panel-card label { margin-bottom: 2px; }
+}
 </style>
 
 <main class="screen" id="menu-screen">
