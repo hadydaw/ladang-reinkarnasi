@@ -212,7 +212,11 @@ jobs:
           export/android/java_sdk_path = "$JDK"
           EOT
           cat ~/.config/godot/editor_settings-4.6.tres
+          command -v unzip >/dev/null 2>&1 || { apt-get update -qq && apt-get install -y -qq unzip; }
+          command -v curl >/dev/null 2>&1 || { apt-get update -qq && apt-get install -y -qq curl; }
           TPL="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          echo "unzip=$(command -v unzip) curl=$(command -v curl)"
+          ls -la "$TPL" 2>&1 | head -5
           if [ ! -f "$TPL/android_source.zip" ]; then
             mkdir -p "$TPL" && cd "$RUNNER_TEMP"
             curl -fsSL -o templates.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
