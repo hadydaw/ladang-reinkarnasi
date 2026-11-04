@@ -52,9 +52,9 @@ if 'signingConfigs' not in g:
             def ksPath = System.getenv("ANDROID_KEYSTORE_PATH")
             if (ksPath) {
                 storeFile file(ksPath)
-                storePassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
-                keyAlias System.getenv("ANDROID_KEY_ALIAS")
-                keyPassword System.getenv("ANDROID_KEY_PASSWORD")
+                storePassword (System.getenv("ANDROID_KEYSTORE_PASSWORD") ?: "")
+                keyAlias (System.getenv("ANDROID_KEY_ALIAS") ?: "")
+                keyPassword (System.getenv("ANDROID_KEY_PASSWORD") ?: "")
             }
         }
     }
