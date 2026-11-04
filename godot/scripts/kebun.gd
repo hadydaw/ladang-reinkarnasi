@@ -67,7 +67,9 @@ func _ready() -> void:
 	hud.tampilkan("Geser joystick untuk berjalan. Pakai untuk mencangkul atau bicara.")
 
 func _process(delta: float) -> void:
-	pemain.gerak(delta, World.N)
+	World.k = clampf(get_viewport_rect().size.x / 420.0 * 1.25, 1.0, 1.8)
+	dunia.set_pusat(pemain.grid)
+	pemain.gerak(delta, World.W)
 	kamera.position = pemain.position + Vector2(0, -80)
 
 func do_pakai() -> void:

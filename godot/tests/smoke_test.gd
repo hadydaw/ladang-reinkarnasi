@@ -13,10 +13,11 @@ func _initialize() -> void:
 func _process(_delta: float) -> bool:
 	frame += 1
 	if frame == 2:
-		var ts: TileSet = kebun.dunia.ts
-		_cek("TileSet isometrik ukuran 256x155", ts.tile_size == Vector2i(256, 155) and ts.tile_shape == TileSet.TILE_SHAPE_ISOMETRIC)
-		_cek("TileSet punya sumber rumput, garap, dan basah", ts.get_source_count() >= 7)
-		_cek("proyeksi tile: langkah 128 x 77.5 px", kebun.dunia.ke_layar(Vector2(1, 0)) == Vector2(128, 77.5))
+		var w: World = kebun.dunia
+		_cek("proyeksi isometrik sama dengan game lama (langkah x = TW/2, y = TH/2)", w.ke_layar(Vector2(1, 0)).is_equal_approx(Vector2(World.tw() * 0.5, World.th() * 0.5)))
+		_cek("TW = 44k dan TH = 30k", is_equal_approx(World.tw(), 44.0 * World.k) and is_equal_approx(World.th(), 30.0 * World.k))
+		_cek("tekstur rumput asli termuat (5 varian)", w.tekstur_grass.size() == 5 and w.tekstur_grass[0] != null)
+		_cek("tekstur tanah garap asli termuat", w.tekstur_farm.size() == 2 and w.tekstur_farm[0] != null)
 	elif frame == 3:
 		posisi_awal = kebun.pemain.grid
 		kebun.uji_masukan(Vector2(1, 0))

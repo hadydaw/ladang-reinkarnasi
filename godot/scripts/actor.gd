@@ -34,7 +34,7 @@ func world_ke_layar(g: Vector2) -> Vector2:
 	return ke_layar_peta(g)
 
 static func ke_layar_peta(g: Vector2) -> Vector2:
-	return Vector2((g.x - g.y) * 128.0, (g.x + g.y) * 77.5)
+	return World.ke_layar(g)
 
 # Arah layar (x kanan, y bawah) dipetakan ke salah satu gambar hadap.
 static func arah_gambar(v: Vector2) -> String:
@@ -63,8 +63,9 @@ func gerak(delta: float, batas: float) -> void:
 		jalan = false
 		return
 	var v := masukan.normalized() * minf(masukan.length(), 1.0)
-	var a := 128.0
-	var b := 77.5
+	# kebalikan dari World.ke_layar: x - y = sx / (TW/2), x + y = sy / (TH/2)
+	var a := World.tw() * 0.5
+	var b := World.th() * 0.5
 	var dunia := Vector2((v.x / a + v.y / b) * 0.5, (v.y / b - v.x / a) * 0.5).normalized()
 	arah_dunia = dunia
 	grid += dunia * KECEPATAN * v.length() * delta
