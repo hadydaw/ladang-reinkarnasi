@@ -28,14 +28,17 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Android SDK bawaan runner - pasang build-tools dan platform
+      - name: Android SDK baru di direktori sendiri (build-tools, platform, platform-tools)
         run: |
-          SDK="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
-          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
-          SDKMANAGER=$(ls -d "$SDK"/cmdline-tools/*/bin | head -1)/sdkmanager
-          yes | "$SDKMANAGER" --licenses >/dev/null 2>&1 || true
-          "$SDKMANAGER" --install "build-tools;${BUILD_TOOLS}" "platforms;android-35" "platform-tools"
+          SDK="$RUNNER_TEMP/android-sdk"
+          mkdir -p "$SDK/cmdline-tools" && cd "$RUNNER_TEMP"
+          curl -fsSL -o cmdtools.zip https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+          unzip -o -q cmdtools.zip -d "$SDK/cmdline-tools" && mv "$SDK/cmdline-tools/cmdline-tools" "$SDK/cmdline-tools/latest"
+          SDKMANAGER="$SDK/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$SDKMANAGER" --sdk_root="$SDK" --licenses >/dev/null 2>&1 || true
+          "$SDKMANAGER" --sdk_root="$SDK" --install "build-tools;${BUILD_TOOLS}" "platforms;android-35" "platform-tools" >/dev/null
           ls "$SDK/build-tools/${BUILD_TOOLS}/apksigner"
+          echo "ANDROID_SDK_DIR=$SDK" >> "$GITHUB_ENV"
 
       - name: Cache Godot dan export templates
         id: cache-godot
@@ -74,7 +77,7 @@ jobs:
           [gd_resource type="EditorSettings" format=3]
 
           [resource]
-          export/android/android_sdk_path = "$ANDROID_HOME"
+          export/android/android_sdk_path = "$ANDROID_SDK_DIR"
           export/android/java_sdk_path = "$JAVA_HOME"
           EOT
 
@@ -106,13 +109,15 @@ jobs:
 
       - name: Diagnostik SDK dan Java
         run: |
+          cat ~/.config/godot/editor_settings-4.6.tres
+          echo "ANDROID_SDK_DIR=$ANDROID_SDK_DIR"
           echo "JAVA: $(java -version 2>&1 | head -1)"
-          ls -la "$ANDROID_HOME/build-tools/${BUILD_TOOLS}/" | head -20
-          ls -la "$ANDROID_HOME/platform-tools/" | head -5
-          "$ANDROID_HOME/build-tools/${BUILD_TOOLS}/apksigner" --version 2>&1 | head -3 || true
-          "$ANDROID_HOME/platform-tools/adb" kill-server >/dev/null 2>&1 || true
-          "$ANDROID_HOME/platform-tools/adb" start-server 2>&1 | tail -2 || true
-          "$ANDROID_HOME/platform-tools/adb" version 2>&1 | head -2 || true
+          ls -la "$ANDROID_SDK_DIR/build-tools/${BUILD_TOOLS}/" | head -20
+          ls -la "$ANDROID_SDK_DIR/platform-tools/" | head -5
+          "$ANDROID_SDK_DIR/build-tools/${BUILD_TOOLS}/apksigner" --version 2>&1 | head -3 || true
+          "$ANDROID_SDK_DIR/platform-tools/adb" kill-server >/dev/null 2>&1 || true
+          "$ANDROID_SDK_DIR/platform-tools/adb" start-server 2>&1 | tail -2 || true
+          "$ANDROID_SDK_DIR/platform-tools/adb" version 2>&1 | head -2 || true
 
       - name: Build APK rilis
         working-directory: godot
@@ -127,7 +132,7 @@ jobs:
           G=~/godot-cache/Godot_v${GODOT_VERSION}-stable_linux.x86_64
           mkdir -p ../build
           set +e
-          $G --headless --verbose --export-release "Android" ../build/ladang-reinkarnasi-godot.apk > ../build/export-log.txt 2>&1
+          $G --headless --export-release "Android" ../build/ladang-reinkarnasi-godot.apk > ../build/export-log.txt 2>&1
           RC=$?
           set -e
           grep -vE "^\s*$" ../build/export-log.txt | tail -80
@@ -145,7 +150,7 @@ jobs:
             echo "--- Pustaka native Godot ---"
             unzip -l "$APK" | grep -E "lib/.*\.so" || echo "(tidak ada)"
             echo "--- Tanda tangan ---"
-            "$ANDROID_HOME/build-tools/${BUILD_TOOLS}/apksigner" verify --print-certs "$APK" | grep -E "Signer|SHA-256" || true
+            "$ANDROID_SDK_DIR/build-tools/${BUILD_TOOLS}/apksigner" verify --print-certs "$APK" | grep -E "Signer|SHA-256" || true
           } | tee "$BUKTI"
 
       - name: Unggah artefak
