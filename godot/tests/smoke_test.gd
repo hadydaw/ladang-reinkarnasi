@@ -12,7 +12,12 @@ func _initialize() -> void:
 
 func _process(_delta: float) -> bool:
 	frame += 1
-	if frame == 3:
+	if frame == 2:
+		var ts: TileSet = kebun.dunia.ts
+		_cek("TileSet isometrik ukuran 256x155", ts.tile_size == Vector2i(256, 155) and ts.tile_shape == TileSet.TILE_SHAPE_ISOMETRIC)
+		_cek("TileSet punya sumber rumput, garap, dan basah", ts.get_source_count() >= 7)
+		_cek("proyeksi tile: langkah 128 x 77.5 px", kebun.dunia.ke_layar(Vector2(1, 0)) == Vector2(128, 77.5))
+	elif frame == 3:
 		posisi_awal = kebun.pemain.grid
 		kebun.uji_masukan(Vector2(1, 0))
 	elif frame == 40:
