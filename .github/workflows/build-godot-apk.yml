@@ -101,6 +101,9 @@ jobs:
           ls -la "$ANDROID_HOME/build-tools/${BUILD_TOOLS}/" | head -20
           ls -la "$ANDROID_HOME/platform-tools/" | head -5
           "$ANDROID_HOME/build-tools/${BUILD_TOOLS}/apksigner" --version 2>&1 | head -3 || true
+          "$ANDROID_HOME/platform-tools/adb" kill-server >/dev/null 2>&1 || true
+          "$ANDROID_HOME/platform-tools/adb" start-server 2>&1 | tail -2 || true
+          "$ANDROID_HOME/platform-tools/adb" version 2>&1 | head -2 || true
 
       - name: Build APK rilis
         working-directory: godot
