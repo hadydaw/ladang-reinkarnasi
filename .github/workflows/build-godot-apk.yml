@@ -119,6 +119,19 @@ jobs:
           "$ANDROID_SDK_DIR/platform-tools/adb" start-server 2>&1 | tail -2 || true
           "$ANDROID_SDK_DIR/platform-tools/adb" version 2>&1 | head -2 || true
 
+      - name: Import Godot terpisah (log dan exit code)
+        working-directory: godot
+        run: |
+          G=~/godot-cache/Godot_v${GODOT_VERSION}-stable_linux.x86_64
+          mkdir -p "$GITHUB_WORKSPACE/artifacts"
+          set +e
+          $G --headless --import > "$GITHUB_WORKSPACE/artifacts/import-log.txt" 2>&1
+          RC=$?
+          set -e
+          echo "IMPORT_EXIT=$RC" | tee -a "$GITHUB_WORKSPACE/artifacts/import-log.txt"
+          cat "$GITHUB_WORKSPACE/artifacts/import-log.txt" | tail -120
+          exit $RC
+
       - name: Build APK rilis
         working-directory: godot
         env:
@@ -130,19 +143,20 @@ jobs:
           GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
         run: |
           G=~/godot-cache/Godot_v${GODOT_VERSION}-stable_linux.x86_64
-          mkdir -p ../build
+          mkdir -p ../artifacts
           set +e
-          $G --headless --export-release "Android" ../build/ladang-reinkarnasi-godot.apk > ../build/export-log.txt 2>&1
+          $G --headless --export-release "Android" ../artifacts/ladang-reinkarnasi-godot.apk > ../artifacts/export-log.txt 2>&1
           RC=$?
           set -e
-          grep -vE "^\s*$" ../build/export-log.txt | tail -80
-          ls -l ../build/
+          echo "EXPORT_EXIT=$RC" | tee -a ../artifacts/export-log.txt
+          grep -vE "^\s*$" ../artifacts/export-log.txt | tail -80
+          ls -l ../artifacts/
           exit $RC
 
       - name: Bukti APK (ukuran, isi, tanda tangan, tanpa WebView)
         run: |
-          APK=build/ladang-reinkarnasi-godot.apk
-          BUKTI=build/bukti-apk.txt
+          APK=artifacts/ladang-reinkarnasi-godot.apk
+          BUKTI=artifacts/bukti-apk.txt
           {
             echo "Ukuran: $(stat -c %s "$APK") byte"
             echo "--- Isi APK yang berkaitan dengan WebView atau Capacitor (harus kosong) ---"
@@ -159,7 +173,8 @@ jobs:
         with:
           name: ladang-reinkarnasi-godot-apk
           path: |
-            build/ladang-reinkarnasi-godot.apk
-            build/bukti-apk.txt
-            build/export-log.txt
+            artifacts/ladang-reinkarnasi-godot.apk
+            artifacts/bukti-apk.txt
+            artifacts/export-log.txt
+            artifacts/import-log.txt
           if-no-files-found: warn
