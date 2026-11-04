@@ -824,6 +824,27 @@ html[data-orient="landscape"] #npc-menu .nm-box { margin: auto; }
 #wb-pick .wb-req.lack { color: #b3261e; }
 #wb-pick .wb-btn { background: linear-gradient(#c17a3a, #7a4219 60%, #6a3814); color: #fff3cf; border: 2px solid #e0b25a; border-radius: 10px; box-shadow: 0 3px 0 #3a1e08; text-shadow: 0 2px 0 #3a1e08; font-weight: 900; font-size: .85rem; }
 #wb-pick .wb-close { background: linear-gradient(#fff4d8, #f0d9a8); color: #5a2e12; border: 2px solid #c9934a; border-radius: 12px; box-shadow: 0 3px 0 #8a5a2a; font-weight: 900; font-size: 1rem; padding: 10px; }
+/* ===== Makanan, Buat Alat, Meja Kerja: lebar dan berbentuk kotak seperti panel Alat (tidak memanjang ke bawah) ===== */
+#eat-pick .tp-panel, #craft-pick .tp-panel, #wb-pick .tp-panel { width: min(560px, 96vw); }
+#eat-pick .tp-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+#eat-pick .tp-list button { flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 4px; min-height: 96px; font-size: .75rem; line-height: 1.15; padding: 6px 4px; }
+#eat-pick .tp-list button img { width: 2.6em !important; height: 2.6em !important; }
+#craft-pick .cr-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+#craft-pick .cr-row { flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+#craft-pick .cr-ico { width: 3rem; height: 3rem; font-size: 2.4rem; }
+#craft-pick .cr-info { width: 100%; }
+#craft-pick .cr-req { justify-content: center; }
+#craft-pick .cr-go { width: 100%; }
+#wb-pick .wb-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+#wb-pick .wb-row { min-width: 0; padding: 8px 6px; }
+#wb-pick .wb-row > div:last-child { min-width: 0; }
+#wb-pick .wb-row > div:last-child button { min-width: 0; font-size: .78rem; padding: 6px 2px; }
+#wb-pick .wb-info small { font-size: .72rem; }
+#wb-pick .wb-list > p { grid-column: 1 / -1; margin: 0 0 4px !important; }
+#wb-pick .wb-row { flex-direction: column; align-items: center; text-align: center; margin-bottom: 0; }
+#wb-pick .wb-info { text-align: center; width: 100%; }
+#wb-pick .wb-row > div:last-child { flex-direction: row !important; width: 100%; }
+#wb-pick .wb-row > div:last-child button { flex: 1; }
 </style>
 
 <main class="screen" id="menu-screen">
