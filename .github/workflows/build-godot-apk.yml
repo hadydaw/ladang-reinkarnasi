@@ -178,3 +178,87 @@ jobs:
             artifacts/export-log.txt
             artifacts/import-log.txt
           if-no-files-found: warn
+
+  build-docker:
+    # Opsi 1: export di dalam image resmi Godot 4.6.3 (Godot + template + Android SDK sudah terpasang).
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    container:
+      image: barichello/godot-ci:4.6.3
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lingkungan image (Godot, SDK, JDK)
+        run: |
+          command -v godot || true
+          godot --version || true
+          echo "ANDROID_HOME=${ANDROID_HOME:-}  ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT:-}  JAVA_HOME=${JAVA_HOME:-}"
+          ls "${ANDROID_HOME:-/opt/android-sdk}" 2>&1 | head -20 || true
+
+      - name: Keystore rilis (dari GitHub Secrets)
+        env:
+          KS_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          echo "$KS_B64" | base64 -d > "$RUNNER_TEMP/ladang-release.jks"
+          test -s "$RUNNER_TEMP/ladang-release.jks"
+
+      - name: Keystore debug sementara (hanya validasi Godot)
+        run: |
+          keytool -genkey -v -keystore "$RUNNER_TEMP/debug.keystore" -storepass android -keypass android \
+            -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US" >/dev/null 2>&1
+          test -s "$RUNNER_TEMP/debug.keystore"
+
+      - name: Import Godot (log dan exit code)
+        working-directory: godot
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/artifacts"
+          set +e
+          godot --headless --import > "$GITHUB_WORKSPACE/artifacts/docker-import-log.txt" 2>&1
+          RC=$?
+          set -e
+          echo "IMPORT_EXIT=$RC"
+          tail -40 "$GITHUB_WORKSPACE/artifacts/docker-import-log.txt"
+          exit $RC
+
+      - name: Build APK rilis (Docker)
+        working-directory: godot
+        env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: ${{ runner.temp }}/debug.keystore
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
+          GODOT_ANDROID_KEYSTORE_RELEASE_PATH: ${{ runner.temp }}/ladang-release.jks
+          GODOT_ANDROID_KEYSTORE_RELEASE_USER: ${{ secrets.ANDROID_KEY_ALIAS }}
+          GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          set +e
+          godot --headless --export-release "Android" ../artifacts/ladang-reinkarnasi-godot.apk > ../artifacts/docker-export-log.txt 2>&1
+          RC=$?
+          set -e
+          echo "EXPORT_EXIT=$RC"
+          grep -vE "^\s*$" ../artifacts/docker-export-log.txt | tail -80
+          ls -l ../artifacts/
+          exit $RC
+
+      - name: Bukti APK (ukuran, isi, tanda tangan, tanpa WebView)
+        if: always()
+        run: |
+          APK=artifacts/ladang-reinkarnasi-godot.apk
+          BUKTI=artifacts/bukti-apk-docker.txt
+          test -f "$APK" || { echo "APK tidak terbentuk" | tee "$BUKTI"; exit 0; }
+          {
+            echo "Ukuran: $(stat -c %s "$APK") byte"
+            echo "--- Isi APK terkait WebView/Capacitor (harus kosong) ---"
+            unzip -l "$APK" | grep -iE "index\.html|capacitor|webview|cordova" || echo "(tidak ada)"
+            echo "--- Pustaka native Godot ---"
+            unzip -l "$APK" | grep -E "lib/.*\.so" || echo "(tidak ada)"
+          } | tee "$BUKTI"
+
+      - name: Unggah artefak (Docker)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ladang-reinkarnasi-godot-apk-docker
+          path: |
+            artifacts/
+          if-no-files-found: warn
