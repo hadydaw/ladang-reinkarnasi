@@ -1,0 +1,7126 @@
+{
+ "versi": 1,
+ "catatan": "Pemetaan nama hash (lama) ke nama deskriptif (baru). Nama baru disusun dari sumber konstanta di kode dan urutan kemunculan; perlu ditinjau bertahap.",
+ "aset": [
+  {
+   "lama": "assets/images/20cf3cd703.webp",
+   "baru": "assets/images/bangunan/batu_loncat_001.webp",
+   "kategori": "bangunan",
+   "sumber": "BATU_LONCAT",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/496b9d216a.webp",
+   "baru": "assets/images/bangunan/coop_int_001.webp",
+   "kategori": "bangunan",
+   "sumber": "COOP_INT",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/66f7ba6406.webp",
+   "baru": "assets/images/bangunan/coop_views_001.webp",
+   "kategori": "bangunan",
+   "sumber": "COOP_VIEWS",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/1bdaf80de1.webp",
+   "baru": "assets/images/bangunan/coop_views_002.webp",
+   "kategori": "bangunan",
+   "sumber": "COOP_VIEWS",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/97be05618f.webp",
+   "baru": "assets/images/bangunan/coop_views_003.webp",
+   "kategori": "bangunan",
+   "sumber": "COOP_VIEWS",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/d674a8f3c9.webp",
+   "baru": "assets/images/bangunan/coop_views_004.webp",
+   "kategori": "bangunan",
+   "sumber": "COOP_VIEWS",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/1ffea8b1b8.webp",
+   "baru": "assets/images/bangunan/house_views_001.webp",
+   "kategori": "bangunan",
+   "sumber": "HOUSE_VIEWS",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/1a9070d2db.webp",
+   "baru": "assets/images/bangunan/house_views_002.webp",
+   "kategori": "bangunan",
+   "sumber": "HOUSE_VIEWS",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/82aadf56b1.webp",
+   "baru": "assets/images/bangunan/house_views_003.webp",
+   "kategori": "bangunan",
+   "sumber": "HOUSE_VIEWS",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/2e927eef6f.webp",
+   "baru": "assets/images/bangunan/house_views_004.webp",
+   "kategori": "bangunan",
+   "sumber": "HOUSE_VIEWS",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/b1842cfe96.webp",
+   "baru": "assets/images/bangunan/interior_img_001.webp",
+   "kategori": "bangunan",
+   "sumber": "INTERIOR_IMG",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8bd08093e1.webp",
+   "baru": "assets/images/bangunan/mill_views_001.webp",
+   "kategori": "bangunan",
+   "sumber": "MILL_VIEWS",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/b04dd4e491.webp",
+   "baru": "assets/images/bangunan/mill_views_002.webp",
+   "kategori": "bangunan",
+   "sumber": "MILL_VIEWS",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/af71bdd32c.webp",
+   "baru": "assets/images/bangunan/mill_views_003.webp",
+   "kategori": "bangunan",
+   "sumber": "MILL_VIEWS",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/b6338b6cb0.webp",
+   "baru": "assets/images/bangunan/mill_views_004.webp",
+   "kategori": "bangunan",
+   "sumber": "MILL_VIEWS",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/a686eabea8.webp",
+   "baru": "assets/images/bangunan/trap_icon_001.webp",
+   "kategori": "bangunan",
+   "sumber": "TRAP_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/2fb5f1f9ce.webp",
+   "baru": "assets/images/bangunan/trap_img_001.webp",
+   "kategori": "bangunan",
+   "sumber": "TRAP_IMG",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/5ed0d902aa.webp",
+   "baru": "assets/images/bangunan/trap_img_002.webp",
+   "kategori": "bangunan",
+   "sumber": "TRAP_IMG",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/f3e7b1bd05.webp",
+   "baru": "assets/images/bangunan/trap_img_003.webp",
+   "kategori": "bangunan",
+   "sumber": "TRAP_IMG",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/07172c5a1e.webp",
+   "baru": "assets/images/bangunan/tree_assets_001.webp",
+   "kategori": "bangunan",
+   "sumber": "TREE_ASSETS",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/c0daf5829d.webp",
+   "baru": "assets/images/bangunan/tree_assets_002.webp",
+   "kategori": "bangunan",
+   "sumber": "TREE_ASSETS",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/ae7fae6a3a.webp",
+   "baru": "assets/images/bangunan/tree_assets_003.webp",
+   "kategori": "bangunan",
+   "sumber": "TREE_ASSETS",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/c1add0124c.webp",
+   "baru": "assets/images/bangunan/tree_assets_004.webp",
+   "kategori": "bangunan",
+   "sumber": "TREE_ASSETS",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/430edb2523.webp",
+   "baru": "assets/images/bangunan/tree_assets_005.webp",
+   "kategori": "bangunan",
+   "sumber": "TREE_ASSETS",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/9f730e23f1.webp",
+   "baru": "assets/images/bangunan/tree_assets_006.webp",
+   "kategori": "bangunan",
+   "sumber": "TREE_ASSETS",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/c7526e3bb7.webp",
+   "baru": "assets/images/bangunan/tree_assets_007.webp",
+   "kategori": "bangunan",
+   "sumber": "TREE_ASSETS",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/3ec342377f.webp",
+   "baru": "assets/images/dekorasi/decor_defs_001.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/61011885b3.webp",
+   "baru": "assets/images/dekorasi/decor_defs_002.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/6c0e93fbba.webp",
+   "baru": "assets/images/dekorasi/decor_defs_003.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/3b6d78b59f.webp",
+   "baru": "assets/images/dekorasi/decor_defs_004.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/700fc1952a.webp",
+   "baru": "assets/images/dekorasi/decor_defs_005.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/d135c43fde.webp",
+   "baru": "assets/images/dekorasi/decor_defs_006.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/356004db79.webp",
+   "baru": "assets/images/dekorasi/decor_defs_007.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/806694c6a5.webp",
+   "baru": "assets/images/dekorasi/decor_defs_008.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/af36b0e6da.webp",
+   "baru": "assets/images/dekorasi/decor_defs_009.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/b957256406.webp",
+   "baru": "assets/images/dekorasi/decor_defs_010.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/2716de068f.webp",
+   "baru": "assets/images/dekorasi/decor_defs_011.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/70738ddf77.webp",
+   "baru": "assets/images/dekorasi/decor_defs_012.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/ecc862c382.webp",
+   "baru": "assets/images/dekorasi/decor_defs_013.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/3faf631578.webp",
+   "baru": "assets/images/dekorasi/decor_defs_014.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/ad7ba34011.webp",
+   "baru": "assets/images/dekorasi/decor_defs_015.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/075fbb707d.webp",
+   "baru": "assets/images/dekorasi/decor_defs_016.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/6b2cee2005.webp",
+   "baru": "assets/images/dekorasi/decor_defs_017.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/8e17e5dea2.webp",
+   "baru": "assets/images/dekorasi/decor_defs_018.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/372335f713.webp",
+   "baru": "assets/images/dekorasi/decor_defs_019.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/3f12955113.webp",
+   "baru": "assets/images/dekorasi/decor_defs_020.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/2f7b478f90.webp",
+   "baru": "assets/images/dekorasi/decor_defs_021.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 21
+  },
+  {
+   "lama": "assets/images/13fd31838f.webp",
+   "baru": "assets/images/dekorasi/decor_defs_022.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 22
+  },
+  {
+   "lama": "assets/images/fefd399cfb.webp",
+   "baru": "assets/images/dekorasi/decor_defs_023.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 23
+  },
+  {
+   "lama": "assets/images/5a4afb88e4.webp",
+   "baru": "assets/images/dekorasi/decor_defs_024.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 24
+  },
+  {
+   "lama": "assets/images/d130c91a18.webp",
+   "baru": "assets/images/dekorasi/decor_defs_025.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 25
+  },
+  {
+   "lama": "assets/images/6fd3e90a11.webp",
+   "baru": "assets/images/dekorasi/decor_defs_026.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 26
+  },
+  {
+   "lama": "assets/images/3e8e2b4366.webp",
+   "baru": "assets/images/dekorasi/decor_defs_027.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 27
+  },
+  {
+   "lama": "assets/images/9ac19c9999.webp",
+   "baru": "assets/images/dekorasi/decor_defs_028.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_DEFS",
+   "kunci": null,
+   "urutan": 28
+  },
+  {
+   "lama": "assets/images/6533dbde33.webp",
+   "baru": "assets/images/dekorasi/decor_icon_001.webp",
+   "kategori": "dekorasi",
+   "sumber": "DECOR_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/4165040155.webp",
+   "baru": "assets/images/efek/arrow_fx_img_001.webp",
+   "kategori": "efek",
+   "sumber": "ARROW_FX_IMG",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/ca1566d7ac.webp",
+   "baru": "assets/images/efek/axefx_001.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8dfb7d1d56.webp",
+   "baru": "assets/images/efek/axefx_002.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/bc4a66e16c.webp",
+   "baru": "assets/images/efek/axefx_003.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/44fc1ebc0a.webp",
+   "baru": "assets/images/efek/axefx_004.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/2f4f79e559.webp",
+   "baru": "assets/images/efek/axefx_005.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/4559684508.webp",
+   "baru": "assets/images/efek/axefx_006.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/193c8c1d0c.webp",
+   "baru": "assets/images/efek/axefx_007.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/7bf1eb85d9.webp",
+   "baru": "assets/images/efek/axefx_008.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/8ec644a4ea.webp",
+   "baru": "assets/images/efek/axefx_009.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/5cc4da27ef.webp",
+   "baru": "assets/images/efek/axefx_010.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/64900aa331.webp",
+   "baru": "assets/images/efek/axefx_011.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/47f87ddaaf.webp",
+   "baru": "assets/images/efek/axefx_012.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/71a50a9698.webp",
+   "baru": "assets/images/efek/axefx_013.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/e703ad7618.webp",
+   "baru": "assets/images/efek/axefx_014.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/df88b2c4c8.webp",
+   "baru": "assets/images/efek/axefx_015.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/43dde1846c.webp",
+   "baru": "assets/images/efek/axefx_016.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/4f9a32dffb.webp",
+   "baru": "assets/images/efek/axefx_017.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/ac5536911a.webp",
+   "baru": "assets/images/efek/axefx_018.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/f91fb5a53d.webp",
+   "baru": "assets/images/efek/axefx_019.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/a3fad4c8fd.webp",
+   "baru": "assets/images/efek/axefx_020.webp",
+   "kategori": "efek",
+   "sumber": "AXEFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/34ee02b7f3.webp",
+   "baru": "assets/images/efek/bowfx_001.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/c4164342f6.webp",
+   "baru": "assets/images/efek/bowfx_002.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/e316583315.webp",
+   "baru": "assets/images/efek/bowfx_003.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/6ea57e0254.webp",
+   "baru": "assets/images/efek/bowfx_004.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/f970d7c18e.webp",
+   "baru": "assets/images/efek/bowfx_005.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/636d432502.webp",
+   "baru": "assets/images/efek/bowfx_006.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/de31c3d49d.webp",
+   "baru": "assets/images/efek/bowfx_007.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/446db3745b.webp",
+   "baru": "assets/images/efek/bowfx_008.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/9127feb031.webp",
+   "baru": "assets/images/efek/bowfx_009.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/75bc08558d.webp",
+   "baru": "assets/images/efek/bowfx_010.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/9cd8933265.webp",
+   "baru": "assets/images/efek/bowfx_011.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/48fd2c9932.webp",
+   "baru": "assets/images/efek/bowfx_012.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/7709285d05.webp",
+   "baru": "assets/images/efek/bowfx_013.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/64e03e0f66.webp",
+   "baru": "assets/images/efek/bowfx_014.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/04a1b7c3a3.webp",
+   "baru": "assets/images/efek/bowfx_015.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/0c46c7b031.webp",
+   "baru": "assets/images/efek/bowfx_016.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/7e4a56cd28.webp",
+   "baru": "assets/images/efek/bowfx_017.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/3797716dce.webp",
+   "baru": "assets/images/efek/bowfx_018.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/f918305d52.webp",
+   "baru": "assets/images/efek/bowfx_019.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/ce2b1091d8.webp",
+   "baru": "assets/images/efek/bowfx_020.webp",
+   "kategori": "efek",
+   "sumber": "BOWFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/e4565dd2fc.webp",
+   "baru": "assets/images/efek/canfx_001.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/600273b610.webp",
+   "baru": "assets/images/efek/canfx_002.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/4881939285.webp",
+   "baru": "assets/images/efek/canfx_003.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/ba938f53f7.webp",
+   "baru": "assets/images/efek/canfx_004.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/453a7f3d8a.webp",
+   "baru": "assets/images/efek/canfx_005.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/db3821ac5d.webp",
+   "baru": "assets/images/efek/canfx_006.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/8f877f0a01.webp",
+   "baru": "assets/images/efek/canfx_007.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/8ea4d3018c.webp",
+   "baru": "assets/images/efek/canfx_008.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/c6ba73ab35.webp",
+   "baru": "assets/images/efek/canfx_009.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/a560a5dffa.webp",
+   "baru": "assets/images/efek/canfx_010.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/11bd939e14.webp",
+   "baru": "assets/images/efek/canfx_011.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/182f73336b.webp",
+   "baru": "assets/images/efek/canfx_012.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/cd3a991946.webp",
+   "baru": "assets/images/efek/canfx_013.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/2e3bfa4ea4.webp",
+   "baru": "assets/images/efek/canfx_014.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/3c6dd87f03.webp",
+   "baru": "assets/images/efek/canfx_015.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/a67f14ec69.webp",
+   "baru": "assets/images/efek/canfx_016.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/efe803f03b.webp",
+   "baru": "assets/images/efek/canfx_017.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/eaebe4383b.webp",
+   "baru": "assets/images/efek/canfx_018.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/74c4880062.webp",
+   "baru": "assets/images/efek/canfx_019.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/6502b84d4e.webp",
+   "baru": "assets/images/efek/canfx_020.webp",
+   "kategori": "efek",
+   "sumber": "CANFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/10b34a492a.webp",
+   "baru": "assets/images/efek/carryfx_001.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/5faf7b8756.webp",
+   "baru": "assets/images/efek/carryfx_002.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/d49fc13842.webp",
+   "baru": "assets/images/efek/carryfx_003.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/3ba4df8ddb.webp",
+   "baru": "assets/images/efek/carryfx_004.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/b398ddea7e.webp",
+   "baru": "assets/images/efek/carryfx_005.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/6feeb0c05d.webp",
+   "baru": "assets/images/efek/carryfx_006.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/d5028cff0b.webp",
+   "baru": "assets/images/efek/carryfx_007.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/67f4e8343a.webp",
+   "baru": "assets/images/efek/carryfx_008.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/a28443f38e.webp",
+   "baru": "assets/images/efek/carryfx_009.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/64e9867a05.webp",
+   "baru": "assets/images/efek/carryfx_010.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/4b2065c17f.webp",
+   "baru": "assets/images/efek/carryfx_011.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/8ac3f09c2c.webp",
+   "baru": "assets/images/efek/carryfx_012.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/b4f7f1cef4.webp",
+   "baru": "assets/images/efek/carryfx_013.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/c7a1499492.webp",
+   "baru": "assets/images/efek/carryfx_014.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/eda16ce3b0.webp",
+   "baru": "assets/images/efek/carryfx_015.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/50bbf14344.webp",
+   "baru": "assets/images/efek/carryfx_016.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/b752914757.webp",
+   "baru": "assets/images/efek/carryfx_017.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/ab6baf1cba.webp",
+   "baru": "assets/images/efek/carryfx_018.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/6508a6ce08.webp",
+   "baru": "assets/images/efek/carryfx_019.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/8845385cb5.webp",
+   "baru": "assets/images/efek/carryfx_020.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/6a399634d2.webp",
+   "baru": "assets/images/efek/carryfx_021.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 21
+  },
+  {
+   "lama": "assets/images/2059dd43fa.webp",
+   "baru": "assets/images/efek/carryfx_022.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 22
+  },
+  {
+   "lama": "assets/images/6704774d8c.webp",
+   "baru": "assets/images/efek/carryfx_023.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 23
+  },
+  {
+   "lama": "assets/images/ccc0b50d96.webp",
+   "baru": "assets/images/efek/carryfx_024.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 24
+  },
+  {
+   "lama": "assets/images/c8f3b174e5.webp",
+   "baru": "assets/images/efek/carryfx_025.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 25
+  },
+  {
+   "lama": "assets/images/e75d0ad1df.webp",
+   "baru": "assets/images/efek/carryfx_026.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 26
+  },
+  {
+   "lama": "assets/images/9f0056c395.webp",
+   "baru": "assets/images/efek/carryfx_027.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 27
+  },
+  {
+   "lama": "assets/images/9684b79aa1.webp",
+   "baru": "assets/images/efek/carryfx_028.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 28
+  },
+  {
+   "lama": "assets/images/68c5cf464a.webp",
+   "baru": "assets/images/efek/carryfx_029.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 29
+  },
+  {
+   "lama": "assets/images/4387645fa4.webp",
+   "baru": "assets/images/efek/carryfx_030.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 30
+  },
+  {
+   "lama": "assets/images/1664d95a59.webp",
+   "baru": "assets/images/efek/carryfx_031.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 31
+  },
+  {
+   "lama": "assets/images/f097f804d2.webp",
+   "baru": "assets/images/efek/carryfx_032.webp",
+   "kategori": "efek",
+   "sumber": "CARRYFX",
+   "kunci": null,
+   "urutan": 32
+  },
+  {
+   "lama": "assets/images/009b3056d6.webp",
+   "baru": "assets/images/efek/fallfx_001.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/93862dcf47.webp",
+   "baru": "assets/images/efek/fallfx_002.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/f1db66cfe3.webp",
+   "baru": "assets/images/efek/fallfx_003.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/462e2a0f96.webp",
+   "baru": "assets/images/efek/fallfx_004.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/c45373e2b9.webp",
+   "baru": "assets/images/efek/fallfx_005.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/ef0bac1339.webp",
+   "baru": "assets/images/efek/fallfx_006.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/93871d24d8.webp",
+   "baru": "assets/images/efek/fallfx_007.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/b598f1a214.webp",
+   "baru": "assets/images/efek/fallfx_008.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/067af38c00.webp",
+   "baru": "assets/images/efek/fallfx_009.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/ef331f0ad5.webp",
+   "baru": "assets/images/efek/fallfx_010.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/bd17813556.webp",
+   "baru": "assets/images/efek/fallfx_011.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/72abfb6e99.webp",
+   "baru": "assets/images/efek/fallfx_012.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/7aaa81c10f.webp",
+   "baru": "assets/images/efek/fallfx_013.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/236a076460.webp",
+   "baru": "assets/images/efek/fallfx_014.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/8309cb59c9.webp",
+   "baru": "assets/images/efek/fallfx_015.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/5b0755c3db.webp",
+   "baru": "assets/images/efek/fallfx_016.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/ce4743bf07.webp",
+   "baru": "assets/images/efek/fallfx_017.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/2f50d11ae0.webp",
+   "baru": "assets/images/efek/fallfx_018.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/78b70ae06f.webp",
+   "baru": "assets/images/efek/fallfx_019.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/3aa93d260b.webp",
+   "baru": "assets/images/efek/fallfx_020.webp",
+   "kategori": "efek",
+   "sumber": "FALLFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/f7fd8878bb.webp",
+   "baru": "assets/images/efek/fxf_001.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/97fdaaae36.webp",
+   "baru": "assets/images/efek/fxf_002.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/1f981fd8b4.webp",
+   "baru": "assets/images/efek/fxf_003.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/e3a2f01f00.webp",
+   "baru": "assets/images/efek/fxf_004.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/93a8b36d48.webp",
+   "baru": "assets/images/efek/fxf_005.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/8c8a1d7c8e.webp",
+   "baru": "assets/images/efek/fxf_006.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/ef98008fb6.webp",
+   "baru": "assets/images/efek/fxf_007.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/3af1361fc3.webp",
+   "baru": "assets/images/efek/fxf_008.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/87a8286297.webp",
+   "baru": "assets/images/efek/fxf_009.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/116a645d54.webp",
+   "baru": "assets/images/efek/fxf_010.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/e6987d376f.webp",
+   "baru": "assets/images/efek/fxf_011.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/ca1c4f5570.webp",
+   "baru": "assets/images/efek/fxf_012.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/3672bc3d7d.webp",
+   "baru": "assets/images/efek/fxf_013.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/30e09d11fc.webp",
+   "baru": "assets/images/efek/fxf_014.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/3c011dfc0a.webp",
+   "baru": "assets/images/efek/fxf_015.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/799338a476.webp",
+   "baru": "assets/images/efek/fxf_016.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/f31f90a9ac.webp",
+   "baru": "assets/images/efek/fxf_017.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/4c1cab5963.webp",
+   "baru": "assets/images/efek/fxf_018.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/e2517c4484.webp",
+   "baru": "assets/images/efek/fxf_019.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/a8922c0dda.webp",
+   "baru": "assets/images/efek/fxf_020.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/ada07bf4ad.webp",
+   "baru": "assets/images/efek/fxf_021.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 21
+  },
+  {
+   "lama": "assets/images/cd23f86563.webp",
+   "baru": "assets/images/efek/fxf_022.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 22
+  },
+  {
+   "lama": "assets/images/9075eae61e.webp",
+   "baru": "assets/images/efek/fxf_023.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 23
+  },
+  {
+   "lama": "assets/images/89979c71c6.webp",
+   "baru": "assets/images/efek/fxf_024.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 24
+  },
+  {
+   "lama": "assets/images/97525981ba.webp",
+   "baru": "assets/images/efek/fxf_025.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 25
+  },
+  {
+   "lama": "assets/images/995b57f9ed.webp",
+   "baru": "assets/images/efek/fxf_026.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 26
+  },
+  {
+   "lama": "assets/images/bce7cba35d.webp",
+   "baru": "assets/images/efek/fxf_027.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 27
+  },
+  {
+   "lama": "assets/images/f240b52978.webp",
+   "baru": "assets/images/efek/fxf_028.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 28
+  },
+  {
+   "lama": "assets/images/32687bffb4.webp",
+   "baru": "assets/images/efek/fxf_029.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 29
+  },
+  {
+   "lama": "assets/images/6e87091a16.webp",
+   "baru": "assets/images/efek/fxf_030.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 30
+  },
+  {
+   "lama": "assets/images/a68bd2d775.webp",
+   "baru": "assets/images/efek/fxf_031.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 31
+  },
+  {
+   "lama": "assets/images/a36075b556.webp",
+   "baru": "assets/images/efek/fxf_032.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 32
+  },
+  {
+   "lama": "assets/images/300e502339.webp",
+   "baru": "assets/images/efek/fxf_033.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 33
+  },
+  {
+   "lama": "assets/images/0d1ec18d0c.webp",
+   "baru": "assets/images/efek/fxf_034.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 34
+  },
+  {
+   "lama": "assets/images/c5e5638678.webp",
+   "baru": "assets/images/efek/fxf_035.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 35
+  },
+  {
+   "lama": "assets/images/8a2b9a4132.webp",
+   "baru": "assets/images/efek/fxf_036.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 36
+  },
+  {
+   "lama": "assets/images/8065639bde.webp",
+   "baru": "assets/images/efek/fxf_037.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 37
+  },
+  {
+   "lama": "assets/images/f9f782fe13.webp",
+   "baru": "assets/images/efek/fxf_038.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 38
+  },
+  {
+   "lama": "assets/images/434bb41153.webp",
+   "baru": "assets/images/efek/fxf_039.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 39
+  },
+  {
+   "lama": "assets/images/90edd0da32.webp",
+   "baru": "assets/images/efek/fxf_040.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 40
+  },
+  {
+   "lama": "assets/images/0076ad22f9.webp",
+   "baru": "assets/images/efek/fxf_041.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 41
+  },
+  {
+   "lama": "assets/images/823e69ec8c.webp",
+   "baru": "assets/images/efek/fxf_042.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 42
+  },
+  {
+   "lama": "assets/images/cb81dc7170.webp",
+   "baru": "assets/images/efek/fxf_043.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 43
+  },
+  {
+   "lama": "assets/images/0ad115276b.webp",
+   "baru": "assets/images/efek/fxf_044.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 44
+  },
+  {
+   "lama": "assets/images/83adc2e874.webp",
+   "baru": "assets/images/efek/fxf_045.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 45
+  },
+  {
+   "lama": "assets/images/220b76ba10.webp",
+   "baru": "assets/images/efek/fxf_046.webp",
+   "kategori": "efek",
+   "sumber": "FXF",
+   "kunci": null,
+   "urutan": 46
+  },
+  {
+   "lama": "assets/images/93f95fe3b5.webp",
+   "baru": "assets/images/efek/fxm_tabur_001.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/2e5af31f73.webp",
+   "baru": "assets/images/efek/fxm_tabur_002.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/361fd9362c.webp",
+   "baru": "assets/images/efek/fxm_tabur_003.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/483952e6a0.webp",
+   "baru": "assets/images/efek/fxm_tabur_004.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/e206599488.webp",
+   "baru": "assets/images/efek/fxm_tabur_005.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/659b4e4b98.webp",
+   "baru": "assets/images/efek/fxm_tabur_006.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/f61dbdd987.webp",
+   "baru": "assets/images/efek/fxm_tabur_007.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/eef234e789.webp",
+   "baru": "assets/images/efek/fxm_tabur_008.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/edd2e82bc7.webp",
+   "baru": "assets/images/efek/fxm_tabur_009.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/428e71d6bf.webp",
+   "baru": "assets/images/efek/fxm_tabur_010.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/149079dbf4.webp",
+   "baru": "assets/images/efek/fxm_tabur_011.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/24e44dea37.webp",
+   "baru": "assets/images/efek/fxm_tabur_012.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/68b05cc52d.webp",
+   "baru": "assets/images/efek/fxm_tabur_013.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/d86e6c49c7.webp",
+   "baru": "assets/images/efek/fxm_tabur_014.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/71e3eae065.webp",
+   "baru": "assets/images/efek/fxm_tabur_015.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/721ec5c513.webp",
+   "baru": "assets/images/efek/fxm_tabur_016.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/c0b24c2e0c.webp",
+   "baru": "assets/images/efek/fxm_tabur_017.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/f66f56a1d7.webp",
+   "baru": "assets/images/efek/fxm_tabur_018.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/fc7f18e4b9.webp",
+   "baru": "assets/images/efek/fxm_tabur_019.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/0553372269.webp",
+   "baru": "assets/images/efek/fxm_tabur_020.webp",
+   "kategori": "efek",
+   "sumber": "FXM_TABUR",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/ced457f546.webp",
+   "baru": "assets/images/efek/hammerfx_001.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/487c1e5359.webp",
+   "baru": "assets/images/efek/hammerfx_002.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/d329f610c3.webp",
+   "baru": "assets/images/efek/hammerfx_003.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/67ac8d8b44.webp",
+   "baru": "assets/images/efek/hammerfx_004.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/22981fa557.webp",
+   "baru": "assets/images/efek/hammerfx_005.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/674af0899f.webp",
+   "baru": "assets/images/efek/hammerfx_006.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/65eb26520b.webp",
+   "baru": "assets/images/efek/hammerfx_007.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/ed905a1007.webp",
+   "baru": "assets/images/efek/hammerfx_008.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/9039099076.webp",
+   "baru": "assets/images/efek/hammerfx_009.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/fe74239fa1.webp",
+   "baru": "assets/images/efek/hammerfx_010.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/724a55e425.webp",
+   "baru": "assets/images/efek/hammerfx_011.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/273c8fbe90.webp",
+   "baru": "assets/images/efek/hammerfx_012.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/e0695c9dd2.webp",
+   "baru": "assets/images/efek/hammerfx_013.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/e37b908c27.webp",
+   "baru": "assets/images/efek/hammerfx_014.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/0e066e0560.webp",
+   "baru": "assets/images/efek/hammerfx_015.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/429b259cd8.webp",
+   "baru": "assets/images/efek/hammerfx_016.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/6c4ef6570e.webp",
+   "baru": "assets/images/efek/hammerfx_017.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/0f3ead4499.webp",
+   "baru": "assets/images/efek/hammerfx_018.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/192097457f.webp",
+   "baru": "assets/images/efek/hammerfx_019.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/fa2e51cbb3.webp",
+   "baru": "assets/images/efek/hammerfx_020.webp",
+   "kategori": "efek",
+   "sumber": "HAMMERFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/8a96055480.webp",
+   "baru": "assets/images/efek/hoefx_001.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/47081bbd7a.webp",
+   "baru": "assets/images/efek/hoefx_002.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/fcfaa051f7.webp",
+   "baru": "assets/images/efek/hoefx_003.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/2ef615c39c.webp",
+   "baru": "assets/images/efek/hoefx_004.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/e0179c51fe.webp",
+   "baru": "assets/images/efek/hoefx_005.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/e18ca6a6ea.webp",
+   "baru": "assets/images/efek/hoefx_006.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/bbe8b45b11.webp",
+   "baru": "assets/images/efek/hoefx_007.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/c0d25fbd5c.webp",
+   "baru": "assets/images/efek/hoefx_008.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/459f4e8028.webp",
+   "baru": "assets/images/efek/hoefx_009.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/ff1ceeefca.webp",
+   "baru": "assets/images/efek/hoefx_010.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/bbb4ae9a3d.webp",
+   "baru": "assets/images/efek/hoefx_011.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/de598f70a2.webp",
+   "baru": "assets/images/efek/hoefx_012.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/c4078d2c42.webp",
+   "baru": "assets/images/efek/hoefx_013.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/9c82fd32b5.webp",
+   "baru": "assets/images/efek/hoefx_014.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/71e200b136.webp",
+   "baru": "assets/images/efek/hoefx_015.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/a2b32649dc.webp",
+   "baru": "assets/images/efek/hoefx_016.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/bdffb74dda.webp",
+   "baru": "assets/images/efek/hoefx_017.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/a9571e8d0c.webp",
+   "baru": "assets/images/efek/hoefx_018.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/5b79a135f3.webp",
+   "baru": "assets/images/efek/hoefx_019.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/efb81c9bd0.webp",
+   "baru": "assets/images/efek/hoefx_020.webp",
+   "kategori": "efek",
+   "sumber": "HOEFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/46d0838ce7.webp",
+   "baru": "assets/images/efek/pickfx_001.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/5f7ea71cc1.webp",
+   "baru": "assets/images/efek/pickfx_002.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/09ff124227.webp",
+   "baru": "assets/images/efek/pickfx_003.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/e2ebceb92f.webp",
+   "baru": "assets/images/efek/pickfx_004.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/c1ae2a1bb4.webp",
+   "baru": "assets/images/efek/pickfx_005.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/a573af9a0d.webp",
+   "baru": "assets/images/efek/pickfx_006.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/e3a614b40f.webp",
+   "baru": "assets/images/efek/pickfx_007.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/b8120a2ada.webp",
+   "baru": "assets/images/efek/pickfx_008.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/c4bc7a9f6c.webp",
+   "baru": "assets/images/efek/pickfx_009.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/5cb9141109.webp",
+   "baru": "assets/images/efek/pickfx_010.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/859792cd1a.webp",
+   "baru": "assets/images/efek/pickfx_011.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/abcd2ff9b6.webp",
+   "baru": "assets/images/efek/pickfx_012.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/6f40154c86.webp",
+   "baru": "assets/images/efek/pickfx_013.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/4477397234.webp",
+   "baru": "assets/images/efek/pickfx_014.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/e42aae6bee.webp",
+   "baru": "assets/images/efek/pickfx_015.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/eeef136d0b.webp",
+   "baru": "assets/images/efek/pickfx_016.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/bb85a23e26.webp",
+   "baru": "assets/images/efek/pickfx_017.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/a31508a3c6.webp",
+   "baru": "assets/images/efek/pickfx_018.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/1779b04b40.webp",
+   "baru": "assets/images/efek/pickfx_019.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/37dc42d30c.webp",
+   "baru": "assets/images/efek/pickfx_020.webp",
+   "kategori": "efek",
+   "sumber": "PICKFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/3e3fc649f5.webp",
+   "baru": "assets/images/efek/rain_001.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/50f71748f3.webp",
+   "baru": "assets/images/efek/rain_002.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/f2af53065a.webp",
+   "baru": "assets/images/efek/rain_003.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/c9d55b99d6.webp",
+   "baru": "assets/images/efek/rain_004.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/72bcf18fa2.webp",
+   "baru": "assets/images/efek/rain_005.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/fdc3c98207.webp",
+   "baru": "assets/images/efek/rain_006.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/3883aa15b5.webp",
+   "baru": "assets/images/efek/rain_007.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/4fe7da85c0.webp",
+   "baru": "assets/images/efek/rain_008.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/d60e331f89.webp",
+   "baru": "assets/images/efek/rain_009.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/cafbab7ec6.webp",
+   "baru": "assets/images/efek/rain_010.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/9b08cfb8a9.webp",
+   "baru": "assets/images/efek/rain_011.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/a380fd99bb.webp",
+   "baru": "assets/images/efek/rain_012.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/6bb9039676.webp",
+   "baru": "assets/images/efek/rain_013.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/b56607fc00.webp",
+   "baru": "assets/images/efek/rain_014.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/19bd61d620.webp",
+   "baru": "assets/images/efek/rain_015.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/8c174b0047.webp",
+   "baru": "assets/images/efek/rain_drop_001.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": "drop",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/b7847932ec.webp",
+   "baru": "assets/images/efek/rain_puddle_001.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": "puddle",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8c54c98f2e.webp",
+   "baru": "assets/images/efek/rain_splash_001.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": "splash",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/234e84e449.webp",
+   "baru": "assets/images/efek/rain_streak_001.webp",
+   "kategori": "efek",
+   "sumber": "RAIN",
+   "kunci": "streak",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/27939627ce.webp",
+   "baru": "assets/images/efek/sicklefx_001.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/007e79eb08.webp",
+   "baru": "assets/images/efek/sicklefx_002.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/2aebdcbef7.webp",
+   "baru": "assets/images/efek/sicklefx_003.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/d4182af9e2.webp",
+   "baru": "assets/images/efek/sicklefx_004.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/d32333574c.webp",
+   "baru": "assets/images/efek/sicklefx_005.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/4ec3eb4438.webp",
+   "baru": "assets/images/efek/sicklefx_006.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/43cd025b74.webp",
+   "baru": "assets/images/efek/sicklefx_007.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/6735ad868e.webp",
+   "baru": "assets/images/efek/sicklefx_008.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/4a19985372.webp",
+   "baru": "assets/images/efek/sicklefx_009.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/31f349bd7f.webp",
+   "baru": "assets/images/efek/sicklefx_010.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/ca0a15fa9f.webp",
+   "baru": "assets/images/efek/sicklefx_011.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/5654934bbd.webp",
+   "baru": "assets/images/efek/sicklefx_012.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/89f4fb776f.webp",
+   "baru": "assets/images/efek/sicklefx_013.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/f7611d4e6f.webp",
+   "baru": "assets/images/efek/sicklefx_014.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/2bc58356d5.webp",
+   "baru": "assets/images/efek/sicklefx_015.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/d5712380ee.webp",
+   "baru": "assets/images/efek/sicklefx_016.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/71d5a95eb3.webp",
+   "baru": "assets/images/efek/sicklefx_017.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/7027ff3ff5.webp",
+   "baru": "assets/images/efek/sicklefx_018.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/ff18d1af36.webp",
+   "baru": "assets/images/efek/sicklefx_019.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/1b7585d651.webp",
+   "baru": "assets/images/efek/sicklefx_020.webp",
+   "kategori": "efek",
+   "sumber": "SICKLEFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/86dfdf7fa2.png",
+   "baru": "assets/images/efek/torch_hand_001.png",
+   "kategori": "efek",
+   "sumber": "TORCH_HAND",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/cdcb2e1b5d.png",
+   "baru": "assets/images/efek/torch_icon_001.png",
+   "kategori": "efek",
+   "sumber": "TORCH_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/1fa4844034.webp",
+   "baru": "assets/images/efek/torchfx_001.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/7e6e9f0697.webp",
+   "baru": "assets/images/efek/torchfx_002.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/351b5630b5.webp",
+   "baru": "assets/images/efek/torchfx_003.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/9f3f0ab780.webp",
+   "baru": "assets/images/efek/torchfx_004.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/0a40a5f081.webp",
+   "baru": "assets/images/efek/torchfx_005.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/298fcefb38.webp",
+   "baru": "assets/images/efek/torchfx_006.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/1f96a299d1.webp",
+   "baru": "assets/images/efek/torchfx_007.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/f9b51fa5ce.webp",
+   "baru": "assets/images/efek/torchfx_008.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/7381034009.webp",
+   "baru": "assets/images/efek/torchfx_009.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/10ae804586.webp",
+   "baru": "assets/images/efek/torchfx_010.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/ab6bdb9c8b.webp",
+   "baru": "assets/images/efek/torchfx_011.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/10247b5248.webp",
+   "baru": "assets/images/efek/torchfx_012.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/bf4f958d5e.webp",
+   "baru": "assets/images/efek/torchfx_013.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/8cc03420b6.webp",
+   "baru": "assets/images/efek/torchfx_014.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/71033d45e8.webp",
+   "baru": "assets/images/efek/torchfx_015.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/386aa62e77.webp",
+   "baru": "assets/images/efek/torchfx_016.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/5d4b2b99a7.webp",
+   "baru": "assets/images/efek/torchfx_017.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/6b30f7b28e.webp",
+   "baru": "assets/images/efek/torchfx_018.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/672eec6acd.webp",
+   "baru": "assets/images/efek/torchfx_019.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/f0ea2eb570.webp",
+   "baru": "assets/images/efek/torchfx_020.webp",
+   "kategori": "efek",
+   "sumber": "TORCHFX",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/58e4120dfb.webp",
+   "baru": "assets/images/hud/_hud_arrowl_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-arrowl",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/96e91f85e1.webp",
+   "baru": "assets/images/hud/_hud_arrowr_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-arrowr",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/ee8a33eee3.webp",
+   "baru": "assets/images/hud/_hud_gold_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-gold",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/6ea3d092a6.webp",
+   "baru": "assets/images/hud/_hud_heart_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-heart",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/06f0656105.webp",
+   "baru": "assets/images/hud/_hud_hotbar_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-hotbar",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/2e11ed0535.webp",
+   "baru": "assets/images/hud/_hud_hotbar_empty_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-hotbar-empty",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8c5c4a8178.webp",
+   "baru": "assets/images/hud/_hud_menu_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-menu",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/00a26fe56c.webp",
+   "baru": "assets/images/hud/_hud_slot_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-slot",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/066936b6f0.webp",
+   "baru": "assets/images/hud/_hud_slot_002.webp",
+   "kategori": "hud",
+   "sumber": "--hud-slot",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/e912847641.webp",
+   "baru": "assets/images/hud/_hud_slotsel_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-slotsel",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/50a71f68e6.webp",
+   "baru": "assets/images/hud/_hud_time_001.webp",
+   "kategori": "hud",
+   "sumber": "--hud-time",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/9380683a70.webp",
+   "baru": "assets/images/item/arrow_icon_001.webp",
+   "kategori": "item",
+   "sumber": "ARROW_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/a1045a32e9.webp",
+   "baru": "assets/images/item/bagicon_001.webp",
+   "kategori": "item",
+   "sumber": "bagIcon",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/be56e93050.webp",
+   "baru": "assets/images/item/bambu_item_001.webp",
+   "kategori": "item",
+   "sumber": "BAMBU_ITEM",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/3b81fd8cf7.webp",
+   "baru": "assets/images/item/build_icon_001.webp",
+   "kategori": "item",
+   "sumber": "BUILD_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/a1ae3611a7.webp",
+   "baru": "assets/images/item/busur_icon_001.webp",
+   "kategori": "item",
+   "sumber": "BUSUR_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/014623737d.webp",
+   "baru": "assets/images/item/coco_item_001.webp",
+   "kategori": "item",
+   "sumber": "COCO_ITEM",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/dc8bdd1adc.webp",
+   "baru": "assets/images/item/craft_icon_001.webp",
+   "kategori": "item",
+   "sumber": "CRAFT_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/03aaa9cdec.webp",
+   "baru": "assets/images/item/food_slot_icon_001.webp",
+   "kategori": "item",
+   "sumber": "FOOD_SLOT_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/c301cf662e.webp",
+   "baru": "assets/images/item/frond_item_001.webp",
+   "kategori": "item",
+   "sumber": "FROND_ITEM",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/7612258d4c.png",
+   "baru": "assets/images/item/ikan_bakar_icon_001.png",
+   "kategori": "item",
+   "sumber": "IKAN_BAKAR_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/a254e68082.webp",
+   "baru": "assets/images/item/logs_001.webp",
+   "kategori": "item",
+   "sumber": "LOGS",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/2b4bc857fd.webp",
+   "baru": "assets/images/item/logs_002.webp",
+   "kategori": "item",
+   "sumber": "LOGS",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/8a436b7a23.webp",
+   "baru": "assets/images/item/logs_003.webp",
+   "kategori": "item",
+   "sumber": "LOGS",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/091d889d72.webp",
+   "baru": "assets/images/item/logs_004.webp",
+   "kategori": "item",
+   "sumber": "LOGS",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/9c0b24a8c1.webp",
+   "baru": "assets/images/item/logs_005.webp",
+   "kategori": "item",
+   "sumber": "LOGS",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/d0f5101f3a.webp",
+   "baru": "assets/images/item/logs_006.webp",
+   "kategori": "item",
+   "sumber": "LOGS",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/3cfecbb02a.webp",
+   "baru": "assets/images/item/meat_icon_001.webp",
+   "kategori": "item",
+   "sumber": "MEAT_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/6d1aa45f75.webp",
+   "baru": "assets/images/item/pakan_icon_001.webp",
+   "kategori": "item",
+   "sumber": "PAKAN_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/2c9f6ce59f.png",
+   "baru": "assets/images/item/pancing_icon_001.png",
+   "kategori": "item",
+   "sumber": "PANCING_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/43c1a468db.webp",
+   "baru": "assets/images/item/produce_icon_bayam_001.webp",
+   "kategori": "item",
+   "sumber": "PRODUCE_ICON",
+   "kunci": "bayam",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/5cb9390677.webp",
+   "baru": "assets/images/item/produce_icon_bulan_001.webp",
+   "kategori": "item",
+   "sumber": "PRODUCE_ICON",
+   "kunci": "bulan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/0a6671f281.webp",
+   "baru": "assets/images/item/produce_icon_kentang_001.webp",
+   "kategori": "item",
+   "sumber": "PRODUCE_ICON",
+   "kunci": "kentang",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/92727a403f.webp",
+   "baru": "assets/images/item/produce_icon_kubis_001.webp",
+   "kategori": "item",
+   "sumber": "PRODUCE_ICON",
+   "kunci": "kubis",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/efad1a5cc9.webp",
+   "baru": "assets/images/item/produce_icon_lobak_001.webp",
+   "kategori": "item",
+   "sumber": "PRODUCE_ICON",
+   "kunci": "lobak",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/d88566566c.webp",
+   "baru": "assets/images/item/rebung_item_001.webp",
+   "kategori": "item",
+   "sumber": "REBUNG_ITEM",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8aada91273.webp",
+   "baru": "assets/images/item/sawit_item_001.webp",
+   "kategori": "item",
+   "sumber": "SAWIT_ITEM",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/17cfda05fe.webp",
+   "baru": "assets/images/item/sawit_leaf_001.webp",
+   "kategori": "item",
+   "sumber": "SAWIT_LEAF",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/255b73785b.webp",
+   "baru": "assets/images/item/seeds_001.webp",
+   "kategori": "item",
+   "sumber": "SEEDS",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/4d7a74d657.webp",
+   "baru": "assets/images/item/seeds_002.webp",
+   "kategori": "item",
+   "sumber": "SEEDS",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/386c0d2861.webp",
+   "baru": "assets/images/item/seeds_003.webp",
+   "kategori": "item",
+   "sumber": "SEEDS",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/7612427162.webp",
+   "baru": "assets/images/item/seeds_004.webp",
+   "kategori": "item",
+   "sumber": "SEEDS",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/0d4514cce4.webp",
+   "baru": "assets/images/item/seeds_005.webp",
+   "kategori": "item",
+   "sumber": "SEEDS",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/298f3d2b8f.webp",
+   "baru": "assets/images/item/seeds_006.webp",
+   "kategori": "item",
+   "sumber": "SEEDS",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/03e0786bcf.webp",
+   "baru": "assets/images/item/seeds_007.webp",
+   "kategori": "item",
+   "sumber": "SEEDS",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/130177456b.webp",
+   "baru": "assets/images/item/seeds_008.webp",
+   "kategori": "item",
+   "sumber": "SEEDS",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/3a610d8927.webp",
+   "baru": "assets/images/item/tool_group_001.webp",
+   "kategori": "item",
+   "sumber": "TOOL_GROUP",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/d44a86424c.webp",
+   "baru": "assets/images/item/tool_group_002.webp",
+   "kategori": "item",
+   "sumber": "TOOL_GROUP",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/3ddf829995.webp",
+   "baru": "assets/images/item/tool_group_003.webp",
+   "kategori": "item",
+   "sumber": "TOOL_GROUP",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/0e955c346d.webp",
+   "baru": "assets/images/item/tool_group_004.webp",
+   "kategori": "item",
+   "sumber": "TOOL_GROUP",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/e152ed5f8a.webp",
+   "baru": "assets/images/item/tool_group_005.webp",
+   "kategori": "item",
+   "sumber": "TOOL_GROUP",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/2078eb6cc5.webp",
+   "baru": "assets/images/lainnya/bag_slot_001.webp",
+   "kategori": "lainnya",
+   "sumber": "BAG_SLOT",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/09a2a6eb59.webp",
+   "baru": "assets/images/lainnya/bar_001.webp",
+   "kategori": "lainnya",
+   "sumber": "bar",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/83a897f5c7.webp",
+   "baru": "assets/images/lainnya/face_img_female_001.webp",
+   "kategori": "lainnya",
+   "sumber": "FACE_IMG",
+   "kunci": "female",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/39b7f4ff2e.webp",
+   "baru": "assets/images/lainnya/face_img_male_001.webp",
+   "kategori": "lainnya",
+   "sumber": "FACE_IMG",
+   "kunci": "male",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8a311074f9.png",
+   "baru": "assets/images/lainnya/fish_img_ikan_gabus_001.png",
+   "kategori": "lainnya",
+   "sumber": "FISH_IMG",
+   "kunci": "ikan_gabus",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/e03e31a5d8.png",
+   "baru": "assets/images/lainnya/fish_img_ikan_gurami_001.png",
+   "kategori": "lainnya",
+   "sumber": "FISH_IMG",
+   "kunci": "ikan_gurami",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/5cf7a56803.png",
+   "baru": "assets/images/lainnya/fish_img_ikan_lele_001.png",
+   "kategori": "lainnya",
+   "sumber": "FISH_IMG",
+   "kunci": "ikan_lele",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/745f63eefa.png",
+   "baru": "assets/images/lainnya/fish_img_ikan_nila_001.png",
+   "kategori": "lainnya",
+   "sumber": "FISH_IMG",
+   "kunci": "ikan_nila",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/5fa9aa7ff6.png",
+   "baru": "assets/images/lainnya/fish_img_ikan_patin_001.png",
+   "kategori": "lainnya",
+   "sumber": "FISH_IMG",
+   "kunci": "ikan_patin",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/74ca7bf9d7.webp",
+   "baru": "assets/images/lainnya/gambar_001.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/7c3bc3d016.webp",
+   "baru": "assets/images/lainnya/gambar_002.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/5aac4cb344.webp",
+   "baru": "assets/images/lainnya/gambar_003.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/bb600a8d92.webp",
+   "baru": "assets/images/lainnya/gambar_004.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/ddd1607e7d.webp",
+   "baru": "assets/images/lainnya/gambar_005.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/7d5e042be7.webp",
+   "baru": "assets/images/lainnya/gambar_006.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/19cd4d3e7c.webp",
+   "baru": "assets/images/lainnya/gambar_007.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/2b9b06a730.webp",
+   "baru": "assets/images/lainnya/gambar_008.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/f84b0bdf22.webp",
+   "baru": "assets/images/lainnya/gambar_009.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/396017a847.webp",
+   "baru": "assets/images/lainnya/gambar_010.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/400a0a79f9.webp",
+   "baru": "assets/images/lainnya/gambar_011.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/633b50444f.webp",
+   "baru": "assets/images/lainnya/gambar_012.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/2d693d1b30.webp",
+   "baru": "assets/images/lainnya/gambar_013.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/c4ca770445.webp",
+   "baru": "assets/images/lainnya/gambar_014.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/8bd8467df3.webp",
+   "baru": "assets/images/lainnya/gambar_015.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/c74ed289dc.webp",
+   "baru": "assets/images/lainnya/gambar_016.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/4dceb08785.webp",
+   "baru": "assets/images/lainnya/gambar_017.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/31dabffe8c.webp",
+   "baru": "assets/images/lainnya/gambar_018.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/0850183f90.webp",
+   "baru": "assets/images/lainnya/gambar_019.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/a0564cfaa2.webp",
+   "baru": "assets/images/lainnya/gambar_020.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/a98b81558a.webp",
+   "baru": "assets/images/lainnya/gambar_021.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 21
+  },
+  {
+   "lama": "assets/images/9df6e4d578.webp",
+   "baru": "assets/images/lainnya/gambar_022.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 22
+  },
+  {
+   "lama": "assets/images/e1316eabd3.webp",
+   "baru": "assets/images/lainnya/gambar_023.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 23
+  },
+  {
+   "lama": "assets/images/d79cf22c34.webp",
+   "baru": "assets/images/lainnya/gambar_024.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 24
+  },
+  {
+   "lama": "assets/images/a2b10ec476.webp",
+   "baru": "assets/images/lainnya/gambar_025.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 25
+  },
+  {
+   "lama": "assets/images/c43a231c64.webp",
+   "baru": "assets/images/lainnya/gambar_026.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 26
+  },
+  {
+   "lama": "assets/images/4d32df352e.webp",
+   "baru": "assets/images/lainnya/gambar_027.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 27
+  },
+  {
+   "lama": "assets/images/d26a5f430b.webp",
+   "baru": "assets/images/lainnya/gambar_028.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 28
+  },
+  {
+   "lama": "assets/images/078e5efd92.webp",
+   "baru": "assets/images/lainnya/gambar_029.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 29
+  },
+  {
+   "lama": "assets/images/81b2f41f33.webp",
+   "baru": "assets/images/lainnya/gambar_030.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 30
+  },
+  {
+   "lama": "assets/images/0c5a8d74e1.webp",
+   "baru": "assets/images/lainnya/gambar_031.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 31
+  },
+  {
+   "lama": "assets/images/2378844231.webp",
+   "baru": "assets/images/lainnya/gambar_032.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 32
+  },
+  {
+   "lama": "assets/images/ce9806772e.webp",
+   "baru": "assets/images/lainnya/gambar_033.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 33
+  },
+  {
+   "lama": "assets/images/5d15e460ec.webp",
+   "baru": "assets/images/lainnya/gambar_034.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 34
+  },
+  {
+   "lama": "assets/images/5100613a69.webp",
+   "baru": "assets/images/lainnya/gambar_035.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 35
+  },
+  {
+   "lama": "assets/images/1509079875.webp",
+   "baru": "assets/images/lainnya/gambar_036.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 36
+  },
+  {
+   "lama": "assets/images/55d4611949.webp",
+   "baru": "assets/images/lainnya/gambar_037.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 37
+  },
+  {
+   "lama": "assets/images/69be5af9a8.webp",
+   "baru": "assets/images/lainnya/gambar_038.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 38
+  },
+  {
+   "lama": "assets/images/453a6f9cd5.webp",
+   "baru": "assets/images/lainnya/gambar_039.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 39
+  },
+  {
+   "lama": "assets/images/b3d0be16fe.webp",
+   "baru": "assets/images/lainnya/gambar_040.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 40
+  },
+  {
+   "lama": "assets/images/6c4465f83f.webp",
+   "baru": "assets/images/lainnya/gambar_041.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 41
+  },
+  {
+   "lama": "assets/images/39420797ae.webp",
+   "baru": "assets/images/lainnya/gambar_042.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 42
+  },
+  {
+   "lama": "assets/images/49bb81fefe.webp",
+   "baru": "assets/images/lainnya/gambar_043.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 43
+  },
+  {
+   "lama": "assets/images/d0b045063a.webp",
+   "baru": "assets/images/lainnya/gambar_044.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 44
+  },
+  {
+   "lama": "assets/images/432ab90ee9.webp",
+   "baru": "assets/images/lainnya/gambar_045.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 45
+  },
+  {
+   "lama": "assets/images/e37e2dbe2d.webp",
+   "baru": "assets/images/lainnya/gambar_046.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 46
+  },
+  {
+   "lama": "assets/images/fb230d2e17.webp",
+   "baru": "assets/images/lainnya/gambar_047.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 47
+  },
+  {
+   "lama": "assets/images/2eb07fd826.webp",
+   "baru": "assets/images/lainnya/gambar_048.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 48
+  },
+  {
+   "lama": "assets/images/378e3f6720.webp",
+   "baru": "assets/images/lainnya/gambar_049.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 49
+  },
+  {
+   "lama": "assets/images/1e99fd1b91.webp",
+   "baru": "assets/images/lainnya/gambar_050.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 50
+  },
+  {
+   "lama": "assets/images/65b9911651.webp",
+   "baru": "assets/images/lainnya/gambar_051.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 51
+  },
+  {
+   "lama": "assets/images/7d1dc833b1.webp",
+   "baru": "assets/images/lainnya/gambar_052.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 52
+  },
+  {
+   "lama": "assets/images/0ee0bc4569.webp",
+   "baru": "assets/images/lainnya/gambar_053.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 53
+  },
+  {
+   "lama": "assets/images/6d84c2dd91.webp",
+   "baru": "assets/images/lainnya/gambar_054.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 54
+  },
+  {
+   "lama": "assets/images/d00b06fc23.webp",
+   "baru": "assets/images/lainnya/gambar_055.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 55
+  },
+  {
+   "lama": "assets/images/b6ef359d61.webp",
+   "baru": "assets/images/lainnya/gambar_056.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 56
+  },
+  {
+   "lama": "assets/images/9fb4fa54d2.webp",
+   "baru": "assets/images/lainnya/gambar_057.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 57
+  },
+  {
+   "lama": "assets/images/a78ad8c6cd.webp",
+   "baru": "assets/images/lainnya/gambar_058.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 58
+  },
+  {
+   "lama": "assets/images/a45179d061.webp",
+   "baru": "assets/images/lainnya/gambar_059.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 59
+  },
+  {
+   "lama": "assets/images/26ea3ae380.webp",
+   "baru": "assets/images/lainnya/gambar_060.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 60
+  },
+  {
+   "lama": "assets/images/6ff39a54e6.webp",
+   "baru": "assets/images/lainnya/gambar_061.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 61
+  },
+  {
+   "lama": "assets/images/a5c8d9399c.webp",
+   "baru": "assets/images/lainnya/gambar_062.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 62
+  },
+  {
+   "lama": "assets/images/ef7ffd57ef.webp",
+   "baru": "assets/images/lainnya/gambar_063.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 63
+  },
+  {
+   "lama": "assets/images/d62bfb39f8.webp",
+   "baru": "assets/images/lainnya/gambar_064.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 64
+  },
+  {
+   "lama": "assets/images/132d78bfa1.webp",
+   "baru": "assets/images/lainnya/gambar_065.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 65
+  },
+  {
+   "lama": "assets/images/b7b226a173.webp",
+   "baru": "assets/images/lainnya/gambar_066.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 66
+  },
+  {
+   "lama": "assets/images/d3ea242406.webp",
+   "baru": "assets/images/lainnya/gambar_067.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 67
+  },
+  {
+   "lama": "assets/images/1d51a291b6.webp",
+   "baru": "assets/images/lainnya/gambar_068.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 68
+  },
+  {
+   "lama": "assets/images/44c4960d46.webp",
+   "baru": "assets/images/lainnya/gambar_069.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 69
+  },
+  {
+   "lama": "assets/images/d3eac8d2ee.webp",
+   "baru": "assets/images/lainnya/gambar_070.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 70
+  },
+  {
+   "lama": "assets/images/210faf42fc.webp",
+   "baru": "assets/images/lainnya/gambar_071.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 71
+  },
+  {
+   "lama": "assets/images/9c499022a2.webp",
+   "baru": "assets/images/lainnya/gambar_072.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 72
+  },
+  {
+   "lama": "assets/images/49ba772a4a.webp",
+   "baru": "assets/images/lainnya/gambar_073.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 73
+  },
+  {
+   "lama": "assets/images/1a33bffebf.webp",
+   "baru": "assets/images/lainnya/gambar_074.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 74
+  },
+  {
+   "lama": "assets/images/e43f8cf14d.webp",
+   "baru": "assets/images/lainnya/gambar_075.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 75
+  },
+  {
+   "lama": "assets/images/068729aa8f.webp",
+   "baru": "assets/images/lainnya/gambar_076.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 76
+  },
+  {
+   "lama": "assets/images/1901fdf58d.webp",
+   "baru": "assets/images/lainnya/gambar_077.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 77
+  },
+  {
+   "lama": "assets/images/f48411a5ec.webp",
+   "baru": "assets/images/lainnya/gambar_078.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 78
+  },
+  {
+   "lama": "assets/images/11d92fd5c2.webp",
+   "baru": "assets/images/lainnya/gambar_079.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 79
+  },
+  {
+   "lama": "assets/images/5c774d8529.webp",
+   "baru": "assets/images/lainnya/gambar_080.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 80
+  },
+  {
+   "lama": "assets/images/3c5100e645.webp",
+   "baru": "assets/images/lainnya/gambar_081.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 81
+  },
+  {
+   "lama": "assets/images/853c8b0d4a.webp",
+   "baru": "assets/images/lainnya/gambar_082.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 82
+  },
+  {
+   "lama": "assets/images/9491b401d1.webp",
+   "baru": "assets/images/lainnya/gambar_083.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 83
+  },
+  {
+   "lama": "assets/images/ebeef01aad.webp",
+   "baru": "assets/images/lainnya/gambar_084.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 84
+  },
+  {
+   "lama": "assets/images/f63fb3b495.webp",
+   "baru": "assets/images/lainnya/gambar_085.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 85
+  },
+  {
+   "lama": "assets/images/a730aa7a31.webp",
+   "baru": "assets/images/lainnya/gambar_086.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 86
+  },
+  {
+   "lama": "assets/images/a87d361157.webp",
+   "baru": "assets/images/lainnya/gambar_087.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 87
+  },
+  {
+   "lama": "assets/images/1c3a70f085.webp",
+   "baru": "assets/images/lainnya/gambar_088.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 88
+  },
+  {
+   "lama": "assets/images/f567aaa0b1.webp",
+   "baru": "assets/images/lainnya/gambar_089.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 89
+  },
+  {
+   "lama": "assets/images/b5404869d6.webp",
+   "baru": "assets/images/lainnya/gambar_090.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 90
+  },
+  {
+   "lama": "assets/images/334ff12e4d.webp",
+   "baru": "assets/images/lainnya/gambar_091.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 91
+  },
+  {
+   "lama": "assets/images/f0f77ac590.webp",
+   "baru": "assets/images/lainnya/gambar_092.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 92
+  },
+  {
+   "lama": "assets/images/cbdb46332b.webp",
+   "baru": "assets/images/lainnya/gambar_093.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 93
+  },
+  {
+   "lama": "assets/images/bad81e8d79.webp",
+   "baru": "assets/images/lainnya/gambar_094.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 94
+  },
+  {
+   "lama": "assets/images/e4be6a2abd.webp",
+   "baru": "assets/images/lainnya/gambar_095.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 95
+  },
+  {
+   "lama": "assets/images/4096cc6fce.webp",
+   "baru": "assets/images/lainnya/gambar_096.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 96
+  },
+  {
+   "lama": "assets/images/9c57d24922.webp",
+   "baru": "assets/images/lainnya/gambar_097.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 97
+  },
+  {
+   "lama": "assets/images/ae469b0b0f.webp",
+   "baru": "assets/images/lainnya/gambar_098.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 98
+  },
+  {
+   "lama": "assets/images/6a2e8d4c9e.webp",
+   "baru": "assets/images/lainnya/gambar_099.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 99
+  },
+  {
+   "lama": "assets/images/10c05fdf57.webp",
+   "baru": "assets/images/lainnya/gambar_100.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 100
+  },
+  {
+   "lama": "assets/images/6ebe740e16.webp",
+   "baru": "assets/images/lainnya/gambar_101.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 101
+  },
+  {
+   "lama": "assets/images/f760dcc19a.webp",
+   "baru": "assets/images/lainnya/gambar_102.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 102
+  },
+  {
+   "lama": "assets/images/3db6bff689.webp",
+   "baru": "assets/images/lainnya/gambar_103.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 103
+  },
+  {
+   "lama": "assets/images/c5c5740e95.webp",
+   "baru": "assets/images/lainnya/gambar_104.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 104
+  },
+  {
+   "lama": "assets/images/4b74747cca.webp",
+   "baru": "assets/images/lainnya/gambar_105.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 105
+  },
+  {
+   "lama": "assets/images/19253ec586.webp",
+   "baru": "assets/images/lainnya/gambar_106.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 106
+  },
+  {
+   "lama": "assets/images/86793ac5a7.webp",
+   "baru": "assets/images/lainnya/gambar_107.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 107
+  },
+  {
+   "lama": "assets/images/c365759b6d.webp",
+   "baru": "assets/images/lainnya/gambar_108.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 108
+  },
+  {
+   "lama": "assets/images/f09b497bbd.webp",
+   "baru": "assets/images/lainnya/gambar_109.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 109
+  },
+  {
+   "lama": "assets/images/31d292ada6.webp",
+   "baru": "assets/images/lainnya/gambar_110.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 110
+  },
+  {
+   "lama": "assets/images/5cb26f9a82.webp",
+   "baru": "assets/images/lainnya/gambar_111.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 111
+  },
+  {
+   "lama": "assets/images/3d35189999.webp",
+   "baru": "assets/images/lainnya/gambar_112.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 112
+  },
+  {
+   "lama": "assets/images/75735aad1c.webp",
+   "baru": "assets/images/lainnya/gambar_113.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 113
+  },
+  {
+   "lama": "assets/images/1f22f3dea1.webp",
+   "baru": "assets/images/lainnya/gambar_114.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 114
+  },
+  {
+   "lama": "assets/images/d9206faa05.webp",
+   "baru": "assets/images/lainnya/gambar_115.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 115
+  },
+  {
+   "lama": "assets/images/3b8c353d82.webp",
+   "baru": "assets/images/lainnya/gambar_116.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 116
+  },
+  {
+   "lama": "assets/images/9819845227.webp",
+   "baru": "assets/images/lainnya/gambar_117.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 117
+  },
+  {
+   "lama": "assets/images/c493c0fb8b.webp",
+   "baru": "assets/images/lainnya/gambar_118.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 118
+  },
+  {
+   "lama": "assets/images/49b1dc7d01.webp",
+   "baru": "assets/images/lainnya/gambar_119.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 119
+  },
+  {
+   "lama": "assets/images/e8c0964935.webp",
+   "baru": "assets/images/lainnya/gambar_120.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 120
+  },
+  {
+   "lama": "assets/images/75da3fe25c.webp",
+   "baru": "assets/images/lainnya/gambar_121.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 121
+  },
+  {
+   "lama": "assets/images/39268fbdf1.webp",
+   "baru": "assets/images/lainnya/gambar_122.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 122
+  },
+  {
+   "lama": "assets/images/948ae86443.webp",
+   "baru": "assets/images/lainnya/gambar_123.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 123
+  },
+  {
+   "lama": "assets/images/4656323e98.webp",
+   "baru": "assets/images/lainnya/gambar_124.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 124
+  },
+  {
+   "lama": "assets/images/78d7c73cd8.webp",
+   "baru": "assets/images/lainnya/gambar_125.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 125
+  },
+  {
+   "lama": "assets/images/bd39acfbb5.webp",
+   "baru": "assets/images/lainnya/gambar_126.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 126
+  },
+  {
+   "lama": "assets/images/07eb744bfe.webp",
+   "baru": "assets/images/lainnya/gambar_127.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 127
+  },
+  {
+   "lama": "assets/images/3bb0770323.webp",
+   "baru": "assets/images/lainnya/gambar_128.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 128
+  },
+  {
+   "lama": "assets/images/4a28821b86.webp",
+   "baru": "assets/images/lainnya/gambar_129.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 129
+  },
+  {
+   "lama": "assets/images/2eb9c6022d.webp",
+   "baru": "assets/images/lainnya/gambar_130.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 130
+  },
+  {
+   "lama": "assets/images/6bd89949d9.webp",
+   "baru": "assets/images/lainnya/gambar_131.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 131
+  },
+  {
+   "lama": "assets/images/7cc2f86f89.webp",
+   "baru": "assets/images/lainnya/gambar_132.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 132
+  },
+  {
+   "lama": "assets/images/f89b8fbd05.webp",
+   "baru": "assets/images/lainnya/gambar_133.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 133
+  },
+  {
+   "lama": "assets/images/9ddfcf19cb.webp",
+   "baru": "assets/images/lainnya/gambar_134.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 134
+  },
+  {
+   "lama": "assets/images/bb4f9a9be8.webp",
+   "baru": "assets/images/lainnya/gambar_135.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 135
+  },
+  {
+   "lama": "assets/images/78a3030608.webp",
+   "baru": "assets/images/lainnya/gambar_136.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 136
+  },
+  {
+   "lama": "assets/images/1798627d6f.webp",
+   "baru": "assets/images/lainnya/gambar_137.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 137
+  },
+  {
+   "lama": "assets/images/e2b2f391e6.webp",
+   "baru": "assets/images/lainnya/gambar_138.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 138
+  },
+  {
+   "lama": "assets/images/5fd8867f50.webp",
+   "baru": "assets/images/lainnya/gambar_139.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 139
+  },
+  {
+   "lama": "assets/images/7bf47d9e07.webp",
+   "baru": "assets/images/lainnya/gambar_140.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 140
+  },
+  {
+   "lama": "assets/images/ebe0f30916.webp",
+   "baru": "assets/images/lainnya/gambar_141.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 141
+  },
+  {
+   "lama": "assets/images/c4a9f693c6.webp",
+   "baru": "assets/images/lainnya/gambar_142.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 142
+  },
+  {
+   "lama": "assets/images/dcd9d9e672.webp",
+   "baru": "assets/images/lainnya/gambar_143.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 143
+  },
+  {
+   "lama": "assets/images/46fa3fec86.webp",
+   "baru": "assets/images/lainnya/gambar_144.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 144
+  },
+  {
+   "lama": "assets/images/4f25190365.webp",
+   "baru": "assets/images/lainnya/gambar_145.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 145
+  },
+  {
+   "lama": "assets/images/3010da9c08.webp",
+   "baru": "assets/images/lainnya/gambar_146.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 146
+  },
+  {
+   "lama": "assets/images/7421fc545e.webp",
+   "baru": "assets/images/lainnya/gambar_147.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 147
+  },
+  {
+   "lama": "assets/images/05dbfe7fd5.webp",
+   "baru": "assets/images/lainnya/gambar_148.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 148
+  },
+  {
+   "lama": "assets/images/447f786312.webp",
+   "baru": "assets/images/lainnya/gambar_149.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 149
+  },
+  {
+   "lama": "assets/images/17660b1ad6.webp",
+   "baru": "assets/images/lainnya/gambar_150.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 150
+  },
+  {
+   "lama": "assets/images/2a4bdce5bf.webp",
+   "baru": "assets/images/lainnya/gambar_151.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 151
+  },
+  {
+   "lama": "assets/images/f04030bf9c.webp",
+   "baru": "assets/images/lainnya/gambar_152.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 152
+  },
+  {
+   "lama": "assets/images/a1fbede088.webp",
+   "baru": "assets/images/lainnya/gambar_153.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 153
+  },
+  {
+   "lama": "assets/images/c1eaad5f8a.webp",
+   "baru": "assets/images/lainnya/gambar_154.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 154
+  },
+  {
+   "lama": "assets/images/363344d6a5.webp",
+   "baru": "assets/images/lainnya/gambar_155.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 155
+  },
+  {
+   "lama": "assets/images/2836281168.webp",
+   "baru": "assets/images/lainnya/gambar_156.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 156
+  },
+  {
+   "lama": "assets/images/409392177f.webp",
+   "baru": "assets/images/lainnya/gambar_157.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 157
+  },
+  {
+   "lama": "assets/images/44a5c33433.webp",
+   "baru": "assets/images/lainnya/gambar_158.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 158
+  },
+  {
+   "lama": "assets/images/aeeb46ceef.webp",
+   "baru": "assets/images/lainnya/gambar_159.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 159
+  },
+  {
+   "lama": "assets/images/83f77b23c7.webp",
+   "baru": "assets/images/lainnya/gambar_160.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 160
+  },
+  {
+   "lama": "assets/images/2d86319800.webp",
+   "baru": "assets/images/lainnya/gambar_161.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 161
+  },
+  {
+   "lama": "assets/images/7eba783d02.webp",
+   "baru": "assets/images/lainnya/gambar_162.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 162
+  },
+  {
+   "lama": "assets/images/bd3868b740.webp",
+   "baru": "assets/images/lainnya/gambar_163.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 163
+  },
+  {
+   "lama": "assets/images/cc59d7863e.webp",
+   "baru": "assets/images/lainnya/gambar_164.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 164
+  },
+  {
+   "lama": "assets/images/16083199f9.webp",
+   "baru": "assets/images/lainnya/gambar_165.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 165
+  },
+  {
+   "lama": "assets/images/bc360a6ac2.webp",
+   "baru": "assets/images/lainnya/gambar_166.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 166
+  },
+  {
+   "lama": "assets/images/b7f206276c.webp",
+   "baru": "assets/images/lainnya/gambar_167.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 167
+  },
+  {
+   "lama": "assets/images/7b5b1cd4a3.webp",
+   "baru": "assets/images/lainnya/gambar_168.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 168
+  },
+  {
+   "lama": "assets/images/6f10d9380c.webp",
+   "baru": "assets/images/lainnya/gambar_169.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 169
+  },
+  {
+   "lama": "assets/images/fb02fdebff.webp",
+   "baru": "assets/images/lainnya/gambar_170.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 170
+  },
+  {
+   "lama": "assets/images/3987342ee2.webp",
+   "baru": "assets/images/lainnya/gambar_171.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 171
+  },
+  {
+   "lama": "assets/images/145e8b5f22.webp",
+   "baru": "assets/images/lainnya/gambar_172.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 172
+  },
+  {
+   "lama": "assets/images/c5cd0009b0.webp",
+   "baru": "assets/images/lainnya/gambar_173.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 173
+  },
+  {
+   "lama": "assets/images/e49f79647f.webp",
+   "baru": "assets/images/lainnya/gambar_174.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 174
+  },
+  {
+   "lama": "assets/images/ee15233222.webp",
+   "baru": "assets/images/lainnya/gambar_175.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 175
+  },
+  {
+   "lama": "assets/images/0f64e7726f.webp",
+   "baru": "assets/images/lainnya/gambar_176.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 176
+  },
+  {
+   "lama": "assets/images/954f8b1703.webp",
+   "baru": "assets/images/lainnya/gambar_177.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 177
+  },
+  {
+   "lama": "assets/images/f9707b3440.webp",
+   "baru": "assets/images/lainnya/gambar_178.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 178
+  },
+  {
+   "lama": "assets/images/b1223d2f4c.webp",
+   "baru": "assets/images/lainnya/gambar_179.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 179
+  },
+  {
+   "lama": "assets/images/be934795d8.webp",
+   "baru": "assets/images/lainnya/gambar_180.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 180
+  },
+  {
+   "lama": "assets/images/6c5438adb8.webp",
+   "baru": "assets/images/lainnya/gambar_181.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 181
+  },
+  {
+   "lama": "assets/images/fee11fdf34.webp",
+   "baru": "assets/images/lainnya/gambar_182.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 182
+  },
+  {
+   "lama": "assets/images/4936c06a9c.webp",
+   "baru": "assets/images/lainnya/gambar_183.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 183
+  },
+  {
+   "lama": "assets/images/0feaf26eaa.webp",
+   "baru": "assets/images/lainnya/gambar_184.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 184
+  },
+  {
+   "lama": "assets/images/a9843a6835.webp",
+   "baru": "assets/images/lainnya/gambar_185.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 185
+  },
+  {
+   "lama": "assets/images/5910bc646e.webp",
+   "baru": "assets/images/lainnya/gambar_186.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 186
+  },
+  {
+   "lama": "assets/images/25696656b7.webp",
+   "baru": "assets/images/lainnya/gambar_187.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 187
+  },
+  {
+   "lama": "assets/images/8dd577faec.webp",
+   "baru": "assets/images/lainnya/gambar_188.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 188
+  },
+  {
+   "lama": "assets/images/b93c3731b3.webp",
+   "baru": "assets/images/lainnya/gambar_189.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 189
+  },
+  {
+   "lama": "assets/images/2754031aef.webp",
+   "baru": "assets/images/lainnya/gambar_190.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 190
+  },
+  {
+   "lama": "assets/images/03c63a4654.webp",
+   "baru": "assets/images/lainnya/gambar_191.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 191
+  },
+  {
+   "lama": "assets/images/e6e8ff2777.webp",
+   "baru": "assets/images/lainnya/gambar_192.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 192
+  },
+  {
+   "lama": "assets/images/39227b972e.webp",
+   "baru": "assets/images/lainnya/gambar_193.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 193
+  },
+  {
+   "lama": "assets/images/008b9ce68f.webp",
+   "baru": "assets/images/lainnya/gambar_194.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 194
+  },
+  {
+   "lama": "assets/images/952d77b702.webp",
+   "baru": "assets/images/lainnya/gambar_195.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 195
+  },
+  {
+   "lama": "assets/images/e2ed7f33e2.webp",
+   "baru": "assets/images/lainnya/gambar_196.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 196
+  },
+  {
+   "lama": "assets/images/4bdf8532d8.webp",
+   "baru": "assets/images/lainnya/gambar_197.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 197
+  },
+  {
+   "lama": "assets/images/cd8208181f.webp",
+   "baru": "assets/images/lainnya/gambar_198.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 198
+  },
+  {
+   "lama": "assets/images/d4a55cbbca.webp",
+   "baru": "assets/images/lainnya/gambar_199.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 199
+  },
+  {
+   "lama": "assets/images/3f4ded1992.webp",
+   "baru": "assets/images/lainnya/gambar_200.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 200
+  },
+  {
+   "lama": "assets/images/96da9e1747.webp",
+   "baru": "assets/images/lainnya/gambar_201.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 201
+  },
+  {
+   "lama": "assets/images/348a2d5443.webp",
+   "baru": "assets/images/lainnya/gambar_202.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 202
+  },
+  {
+   "lama": "assets/images/0df1811b24.webp",
+   "baru": "assets/images/lainnya/gambar_203.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 203
+  },
+  {
+   "lama": "assets/images/9d4a160842.webp",
+   "baru": "assets/images/lainnya/gambar_204.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 204
+  },
+  {
+   "lama": "assets/images/e1373697da.webp",
+   "baru": "assets/images/lainnya/gambar_205.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 205
+  },
+  {
+   "lama": "assets/images/d5cc831b5a.webp",
+   "baru": "assets/images/lainnya/gambar_206.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 206
+  },
+  {
+   "lama": "assets/images/220b8da9d6.webp",
+   "baru": "assets/images/lainnya/gambar_207.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 207
+  },
+  {
+   "lama": "assets/images/cada12a7ac.webp",
+   "baru": "assets/images/lainnya/gambar_208.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 208
+  },
+  {
+   "lama": "assets/images/ba42e7c217.webp",
+   "baru": "assets/images/lainnya/gambar_209.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 209
+  },
+  {
+   "lama": "assets/images/c2411d5d89.webp",
+   "baru": "assets/images/lainnya/gambar_210.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 210
+  },
+  {
+   "lama": "assets/images/22f79e6c4f.webp",
+   "baru": "assets/images/lainnya/gambar_211.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 211
+  },
+  {
+   "lama": "assets/images/0e91591623.webp",
+   "baru": "assets/images/lainnya/gambar_212.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 212
+  },
+  {
+   "lama": "assets/images/6cd9162db9.webp",
+   "baru": "assets/images/lainnya/gambar_213.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 213
+  },
+  {
+   "lama": "assets/images/e620b93442.webp",
+   "baru": "assets/images/lainnya/gambar_214.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 214
+  },
+  {
+   "lama": "assets/images/3cda3454ed.webp",
+   "baru": "assets/images/lainnya/gambar_215.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 215
+  },
+  {
+   "lama": "assets/images/0e4f362495.webp",
+   "baru": "assets/images/lainnya/gambar_216.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 216
+  },
+  {
+   "lama": "assets/images/d1986a822d.webp",
+   "baru": "assets/images/lainnya/gambar_217.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 217
+  },
+  {
+   "lama": "assets/images/fac6ed48a7.webp",
+   "baru": "assets/images/lainnya/gambar_218.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 218
+  },
+  {
+   "lama": "assets/images/8e2021ec64.webp",
+   "baru": "assets/images/lainnya/gambar_219.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 219
+  },
+  {
+   "lama": "assets/images/3065b9e1a2.webp",
+   "baru": "assets/images/lainnya/gambar_220.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 220
+  },
+  {
+   "lama": "assets/images/290cd48558.webp",
+   "baru": "assets/images/lainnya/gambar_221.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 221
+  },
+  {
+   "lama": "assets/images/02f08ca6b6.webp",
+   "baru": "assets/images/lainnya/gambar_222.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 222
+  },
+  {
+   "lama": "assets/images/678bd3e584.webp",
+   "baru": "assets/images/lainnya/gambar_223.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 223
+  },
+  {
+   "lama": "assets/images/f03e04aa75.webp",
+   "baru": "assets/images/lainnya/gambar_224.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 224
+  },
+  {
+   "lama": "assets/images/11c8e91f22.webp",
+   "baru": "assets/images/lainnya/gambar_225.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 225
+  },
+  {
+   "lama": "assets/images/84fe0f48ef.webp",
+   "baru": "assets/images/lainnya/gambar_226.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 226
+  },
+  {
+   "lama": "assets/images/b6a8f43efb.webp",
+   "baru": "assets/images/lainnya/gambar_227.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 227
+  },
+  {
+   "lama": "assets/images/70d27711ad.webp",
+   "baru": "assets/images/lainnya/gambar_228.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 228
+  },
+  {
+   "lama": "assets/images/782b8c0c3b.webp",
+   "baru": "assets/images/lainnya/gambar_229.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 229
+  },
+  {
+   "lama": "assets/images/1014953834.webp",
+   "baru": "assets/images/lainnya/gambar_230.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 230
+  },
+  {
+   "lama": "assets/images/ff577585dc.webp",
+   "baru": "assets/images/lainnya/gambar_231.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 231
+  },
+  {
+   "lama": "assets/images/350fffc861.webp",
+   "baru": "assets/images/lainnya/gambar_232.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 232
+  },
+  {
+   "lama": "assets/images/80bcb8f173.webp",
+   "baru": "assets/images/lainnya/gambar_233.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 233
+  },
+  {
+   "lama": "assets/images/4105c52dbb.webp",
+   "baru": "assets/images/lainnya/gambar_234.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 234
+  },
+  {
+   "lama": "assets/images/6269d6e144.webp",
+   "baru": "assets/images/lainnya/gambar_235.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 235
+  },
+  {
+   "lama": "assets/images/329d356a55.webp",
+   "baru": "assets/images/lainnya/gambar_236.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 236
+  },
+  {
+   "lama": "assets/images/d07802fc63.webp",
+   "baru": "assets/images/lainnya/gambar_237.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 237
+  },
+  {
+   "lama": "assets/images/a80398da4b.webp",
+   "baru": "assets/images/lainnya/gambar_238.webp",
+   "kategori": "lainnya",
+   "sumber": null,
+   "kunci": null,
+   "urutan": 238
+  },
+  {
+   "lama": "assets/images/9285fb01c3.webp",
+   "baru": "assets/images/lainnya/inorch_001.webp",
+   "kategori": "lainnya",
+   "sumber": "inOrch",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/02601566a6.webp",
+   "baru": "assets/images/lainnya/inorch_002.webp",
+   "kategori": "lainnya",
+   "sumber": "inOrch",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/f043e5c6eb.webp",
+   "baru": "assets/images/lainnya/kenangan_001.webp",
+   "kategori": "lainnya",
+   "sumber": "kenangan",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/4a59d0678d.webp",
+   "baru": "assets/images/lainnya/kenangan_002.webp",
+   "kategori": "lainnya",
+   "sumber": "kenangan",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/9802103af7.webp",
+   "baru": "assets/images/lainnya/pupus_face_001.webp",
+   "kategori": "lainnya",
+   "sumber": "PUPUS_FACE",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/abde65cb40.webp",
+   "baru": "assets/images/lainnya/story_img_dunia_001.webp",
+   "kategori": "lainnya",
+   "sumber": "STORY_IMG",
+   "kunci": "dunia",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/705102399e.webp",
+   "baru": "assets/images/lainnya/story_img_gelap_001.webp",
+   "kategori": "lainnya",
+   "sumber": "STORY_IMG",
+   "kunci": "gelap",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/880199a5eb.webp",
+   "baru": "assets/images/lainnya/story_img_kota_001.webp",
+   "kategori": "lainnya",
+   "sumber": "STORY_IMG",
+   "kunci": "kota",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/897bc95114.webp",
+   "baru": "assets/images/lainnya/story_img_laci_001.webp",
+   "kategori": "lainnya",
+   "sumber": "STORY_IMG",
+   "kunci": "laci",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/1d22a3ff27.webp",
+   "baru": "assets/images/lainnya/story_img_portal_001.webp",
+   "kategori": "lainnya",
+   "sumber": "STORY_IMG",
+   "kunci": "portal",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/edbb456c09.webp",
+   "baru": "assets/images/lainnya/story_img_surat_001.webp",
+   "kategori": "lainnya",
+   "sumber": "STORY_IMG",
+   "kunci": "surat",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/69dd915d88.webp",
+   "baru": "assets/images/lainnya/story_img_tanam_001.webp",
+   "kategori": "lainnya",
+   "sumber": "STORY_IMG",
+   "kunci": "tanam",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/62ad7767ba.webp",
+   "baru": "assets/images/lainnya/ui_art_bingkai_panel_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "bingkai_panel",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/edb871f264.webp",
+   "baru": "assets/images/lainnya/ui_art_bingkai_potret_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "bingkai_potret",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/fb70ed45dc.webp",
+   "baru": "assets/images/lainnya/ui_art_bintang_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "bintang",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/edaeb0481f.webp",
+   "baru": "assets/images/lainnya/ui_art_buku_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "buku",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/70c3662540.webp",
+   "baru": "assets/images/lainnya/ui_art_hati_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "hati",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/b38f063d7b.webp",
+   "baru": "assets/images/lainnya/ui_art_koin_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "koin",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/02ccacb87f.webp",
+   "baru": "assets/images/lainnya/ui_art_lengan_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "lengan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8a3763c676.webp",
+   "baru": "assets/images/lainnya/ui_art_panah_kanan_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "panah_kanan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/673d28a3ba.webp",
+   "baru": "assets/images/lainnya/ui_art_panah_kiri_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "panah_kiri",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/d2e1593cf6.webp",
+   "baru": "assets/images/lainnya/ui_art_petir_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "petir",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/e53a76b769.webp",
+   "baru": "assets/images/lainnya/ui_art_piala_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "piala",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8aa0fef31c.webp",
+   "baru": "assets/images/lainnya/ui_art_pita_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "pita",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/e934eb2e5b.webp",
+   "baru": "assets/images/lainnya/ui_art_profil_chibi_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "profil_chibi",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/971cfe36c8.webp",
+   "baru": "assets/images/lainnya/ui_art_roda_gigi_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "roda_gigi",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/d3e9e1df68.webp",
+   "baru": "assets/images/lainnya/ui_art_rumah_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "rumah",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/c48b5e1fb5.webp",
+   "baru": "assets/images/lainnya/ui_art_slot_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "slot",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/00f60f3da8.webp",
+   "baru": "assets/images/lainnya/ui_art_tas_001.webp",
+   "kategori": "lainnya",
+   "sumber": "UI_ART",
+   "kunci": "tas",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/e4d4c48c1b.webp",
+   "baru": "assets/images/sprite/art_batuhutan_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_batuHutan",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/3baa0b316c.webp",
+   "baru": "assets/images/sprite/art_cahaya_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_CAHAYA",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/edb5f5861e.webp",
+   "baru": "assets/images/sprite/art_cahaya_002.webp",
+   "kategori": "sprite",
+   "sumber": "ART_CAHAYA",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/ef5daeb79a.webp",
+   "baru": "assets/images/sprite/art_cahaya_003.webp",
+   "kategori": "sprite",
+   "sumber": "ART_CAHAYA",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/ab169735a2.webp",
+   "baru": "assets/images/sprite/art_cahaya_004.webp",
+   "kategori": "sprite",
+   "sumber": "ART_cahaya",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/5ea9deb389.webp",
+   "baru": "assets/images/sprite/art_dinding_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_dinding",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/e6b9c0d795.webp",
+   "baru": "assets/images/sprite/art_gubuk_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_gubuk",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/748266d862.webp",
+   "baru": "assets/images/sprite/art_jejak_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_jejak",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/85172ee42b.webp",
+   "baru": "assets/images/sprite/art_jembatan_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_jembatan",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/265996015e.webp",
+   "baru": "assets/images/sprite/art_kotakbuka_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_kotakBuka",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/927922c45b.webp",
+   "baru": "assets/images/sprite/art_kotaktutup_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_kotakTutup",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/2afb9e5d67.webp",
+   "baru": "assets/images/sprite/art_pengawas_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_pengawas",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/3f671e46db.webp",
+   "baru": "assets/images/sprite/art_penjaga_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_penjaga",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/6275174c08.webp",
+   "baru": "assets/images/sprite/art_pohonhutan_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_pohonHutan",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/7966a7be8b.webp",
+   "baru": "assets/images/sprite/art_prasasti_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_prasasti",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/9089db634e.webp",
+   "baru": "assets/images/sprite/art_tanah_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_tanah",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8bd1aa1a9f.webp",
+   "baru": "assets/images/sprite/art_terb_001.webp",
+   "kategori": "sprite",
+   "sumber": "ART_TERB",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/59ddca184c.webp",
+   "baru": "assets/images/sprite/art_terb_002.webp",
+   "kategori": "sprite",
+   "sumber": "ART_TERB",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/f1e54e3595.webp",
+   "baru": "assets/images/sprite/art_terb_003.webp",
+   "kategori": "sprite",
+   "sumber": "ART_TERB",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/bd35f5415b.webp",
+   "baru": "assets/images/sprite/art_terb_004.webp",
+   "kategori": "sprite",
+   "sumber": "ART_TERB",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/d4317e77a4.webp",
+   "baru": "assets/images/sprite/art_terb_005.webp",
+   "kategori": "sprite",
+   "sumber": "ART_TERB",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/5d774968c6.webp",
+   "baru": "assets/images/sprite/art_terb_006.webp",
+   "kategori": "sprite",
+   "sumber": "ART_TERB",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/7af0d4f490.webp",
+   "baru": "assets/images/sprite/art_terb_007.webp",
+   "kategori": "sprite",
+   "sumber": "ART_TERB",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/ee4eaa5d17.webp",
+   "baru": "assets/images/sprite/ayam_bakar_icon_001.webp",
+   "kategori": "sprite",
+   "sumber": "AYAM_BAKAR_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/254ad12715.webp",
+   "baru": "assets/images/sprite/ayam_icon_001.webp",
+   "kategori": "sprite",
+   "sumber": "AYAM_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/173f30b2ad.webp",
+   "baru": "assets/images/sprite/ayam_sheet_001.webp",
+   "kategori": "sprite",
+   "sumber": "AYAM_SHEET",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/e7ab9e37e3.webp",
+   "baru": "assets/images/sprite/cherry_icon_001.webp",
+   "kategori": "sprite",
+   "sumber": "CHERRY_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/00fba6bf95.webp",
+   "baru": "assets/images/sprite/cherry_panen_001.webp",
+   "kategori": "sprite",
+   "sumber": "CHERRY_PANEN",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/72490d9ce1.webp",
+   "baru": "assets/images/sprite/crop_spr_001.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/bf604f0b6a.webp",
+   "baru": "assets/images/sprite/crop_spr_002.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/4e7af4d581.webp",
+   "baru": "assets/images/sprite/crop_spr_003.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/9f0b16a52c.webp",
+   "baru": "assets/images/sprite/crop_spr_004.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/2f0a97537e.webp",
+   "baru": "assets/images/sprite/crop_spr_005.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/0fe3f4fec3.webp",
+   "baru": "assets/images/sprite/crop_spr_006.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/f715bc3223.webp",
+   "baru": "assets/images/sprite/crop_spr_007.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/ffc505a4d0.webp",
+   "baru": "assets/images/sprite/crop_spr_008.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/2872aa7216.webp",
+   "baru": "assets/images/sprite/crop_spr_009.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/0179f6ad3d.webp",
+   "baru": "assets/images/sprite/crop_spr_010.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/c51a9ae2f7.webp",
+   "baru": "assets/images/sprite/crop_spr_011.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/ef91089c44.webp",
+   "baru": "assets/images/sprite/crop_spr_012.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/5ab4b023f4.webp",
+   "baru": "assets/images/sprite/crop_spr_013.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/241441094b.webp",
+   "baru": "assets/images/sprite/crop_spr_014.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/bab66c785e.webp",
+   "baru": "assets/images/sprite/crop_spr_015.webp",
+   "kategori": "sprite",
+   "sumber": "CROP_SPR",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/3c6bd05501.webp",
+   "baru": "assets/images/sprite/kelinci_bakar_icon_001.webp",
+   "kategori": "sprite",
+   "sumber": "KELINCI_BAKAR_ICON",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/286f6e32ef.webp",
+   "baru": "assets/images/sprite/mounds_spr_001.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/e933a41337.webp",
+   "baru": "assets/images/sprite/mounds_spr_002.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/b609e71644.webp",
+   "baru": "assets/images/sprite/mounds_spr_003.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/33b5c2f075.webp",
+   "baru": "assets/images/sprite/mounds_spr_004.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/bd8d8b4a4f.webp",
+   "baru": "assets/images/sprite/mounds_spr_005.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/5f33675ed4.webp",
+   "baru": "assets/images/sprite/mounds_spr_006.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/ea6d2c4922.webp",
+   "baru": "assets/images/sprite/mounds_spr_007.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/4d59933da6.webp",
+   "baru": "assets/images/sprite/mounds_spr_008.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/bdf129a3b6.webp",
+   "baru": "assets/images/sprite/mounds_spr_009.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/0ccdb85d82.webp",
+   "baru": "assets/images/sprite/mounds_spr_010.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/64b76b7790.webp",
+   "baru": "assets/images/sprite/mounds_spr_011.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/b9a90e4e8f.webp",
+   "baru": "assets/images/sprite/mounds_spr_012.webp",
+   "kategori": "sprite",
+   "sumber": "MOUNDS_SPR",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/7edcd95fa8.webp",
+   "baru": "assets/images/sprite/rabbit_meat_001.webp",
+   "kategori": "sprite",
+   "sumber": "RABBIT_MEAT",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/ffcba442c8.webp",
+   "baru": "assets/images/sprite/rabbit_sheet_001.webp",
+   "kategori": "sprite",
+   "sumber": "RABBIT_SHEET",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/573e414456.webp",
+   "baru": "assets/images/sprite/sap_spr_001.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/cb37c0e04b.webp",
+   "baru": "assets/images/sprite/sap_spr_002.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/969a7de715.webp",
+   "baru": "assets/images/sprite/sap_spr_003.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/0c0bd897f2.webp",
+   "baru": "assets/images/sprite/sap_spr_004.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/d9c7cab8df.webp",
+   "baru": "assets/images/sprite/sap_spr_005.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/c91476a468.webp",
+   "baru": "assets/images/sprite/sap_spr_006.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/03e3861511.webp",
+   "baru": "assets/images/sprite/sap_spr_007.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/60df4344b1.webp",
+   "baru": "assets/images/sprite/sap_spr_008.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/6910c00123.webp",
+   "baru": "assets/images/sprite/sap_spr_009.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/d6a8650f95.webp",
+   "baru": "assets/images/sprite/sap_spr_010.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/d015c6edc3.webp",
+   "baru": "assets/images/sprite/sap_spr_011.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/8f258b5b1c.webp",
+   "baru": "assets/images/sprite/sap_spr_012.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/9f15ccfce4.webp",
+   "baru": "assets/images/sprite/sap_spr_013.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/9ac8371b09.webp",
+   "baru": "assets/images/sprite/sap_spr_014.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/011ea4212b.webp",
+   "baru": "assets/images/sprite/sap_spr_015.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/77128d52f2.webp",
+   "baru": "assets/images/sprite/sap_spr_016.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/8b825163d1.webp",
+   "baru": "assets/images/sprite/sap_spr_017.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/657bfc53ea.webp",
+   "baru": "assets/images/sprite/sap_spr_018.webp",
+   "kategori": "sprite",
+   "sumber": "SAP_SPR",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/d6feda1639.webp",
+   "baru": "assets/images/sprite/sleep_f_001.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_F",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/f07ba646ff.webp",
+   "baru": "assets/images/sprite/sleep_f_002.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_F",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/b44b4a2ed1.webp",
+   "baru": "assets/images/sprite/sleep_f_003.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_F",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/16b6ca06a7.webp",
+   "baru": "assets/images/sprite/sleep_f_004.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_F",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/262dc8c17c.webp",
+   "baru": "assets/images/sprite/sleep_f_005.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_F",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/90882c752a.webp",
+   "baru": "assets/images/sprite/sleep_f_006.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_F",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/655ea4078c.webp",
+   "baru": "assets/images/sprite/sleep_f_007.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_F",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/1f584e2fec.webp",
+   "baru": "assets/images/sprite/sleep_f_008.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_F",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/461f0c81bb.webp",
+   "baru": "assets/images/sprite/sleep_m_001.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_M",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/f029bcc243.webp",
+   "baru": "assets/images/sprite/sleep_m_002.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_M",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/3122f74ad4.webp",
+   "baru": "assets/images/sprite/sleep_m_003.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_M",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/062b7a0d56.webp",
+   "baru": "assets/images/sprite/sleep_m_004.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_M",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/344a29001a.webp",
+   "baru": "assets/images/sprite/sleep_m_005.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_M",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/7c1575179a.webp",
+   "baru": "assets/images/sprite/sleep_m_006.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_M",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/5b800644ae.webp",
+   "baru": "assets/images/sprite/sleep_m_007.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_M",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/adc995bdf4.webp",
+   "baru": "assets/images/sprite/sleep_m_008.webp",
+   "kategori": "sprite",
+   "sumber": "SLEEP_M",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/d88b86ffb9.webp",
+   "baru": "assets/images/sprite/sprite_walk_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/4a1cf610cb.webp",
+   "baru": "assets/images/sprite/sprite_walk_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/9d9ea4eb0a.webp",
+   "baru": "assets/images/sprite/sprite_walk_003.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/ed6f8861b9.webp",
+   "baru": "assets/images/sprite/sprite_walk_004.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/aa5b0938bc.webp",
+   "baru": "assets/images/sprite/sprite_walk_005.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/072c6e3faa.webp",
+   "baru": "assets/images/sprite/sprite_walk_006.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/1238a3bbe0.webp",
+   "baru": "assets/images/sprite/sprite_walk_007.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/0ba78690a4.webp",
+   "baru": "assets/images/sprite/sprite_walk_008.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/c9de02d262.webp",
+   "baru": "assets/images/sprite/sprite_walk_009.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/d90607118f.webp",
+   "baru": "assets/images/sprite/sprite_walk_010.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/2cc4ca5ecc.webp",
+   "baru": "assets/images/sprite/sprite_walk_011.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/d552d9f79d.webp",
+   "baru": "assets/images/sprite/sprite_walk_012.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/9d0fd30416.webp",
+   "baru": "assets/images/sprite/sprite_walk_belakang_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "belakang",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/7ea1c5453d.webp",
+   "baru": "assets/images/sprite/sprite_walk_belakang_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "belakang",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/0b9ef4895d.webp",
+   "baru": "assets/images/sprite/sprite_walk_depan_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "depan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/d13da5823b.webp",
+   "baru": "assets/images/sprite/sprite_walk_depan_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "depan",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/4165398dc0.webp",
+   "baru": "assets/images/sprite/sprite_walk_kanan_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "kanan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/bba2920281.webp",
+   "baru": "assets/images/sprite/sprite_walk_kanan_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "kanan",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/f076b35bf3.webp",
+   "baru": "assets/images/sprite/sprite_walk_kiri_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "kiri",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/e95668537b.webp",
+   "baru": "assets/images/sprite/sprite_walk_kiri_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "kiri",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/e42a35b78a.webp",
+   "baru": "assets/images/sprite/sprite_walk_serongkanan_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "serongKanan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/56b8032510.webp",
+   "baru": "assets/images/sprite/sprite_walk_serongkanan_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "serongKanan",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/1396fcea5c.webp",
+   "baru": "assets/images/sprite/sprite_walk_serongkiri_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "serongKiri",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/526c2964d3.webp",
+   "baru": "assets/images/sprite/sprite_walk_serongkiri_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITE_WALK",
+   "kunci": "serongKiri",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/52c047e198.webp",
+   "baru": "assets/images/sprite/sprites_belakang_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "belakang",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/8c9a178c15.webp",
+   "baru": "assets/images/sprite/sprites_belakang_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "belakang",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/7b2a444f49.webp",
+   "baru": "assets/images/sprite/sprites_depan_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "depan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/73411eec3e.webp",
+   "baru": "assets/images/sprite/sprites_depan_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "depan",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/4b2aecb761.webp",
+   "baru": "assets/images/sprite/sprites_kanan_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "kanan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/53fce8c088.webp",
+   "baru": "assets/images/sprite/sprites_kanan_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "kanan",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/236d548a24.webp",
+   "baru": "assets/images/sprite/sprites_kiri_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "kiri",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/201aaa265a.webp",
+   "baru": "assets/images/sprite/sprites_kiri_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "kiri",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/2954a51c40.webp",
+   "baru": "assets/images/sprite/sprites_serongkanan_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "serongKanan",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/522601d328.webp",
+   "baru": "assets/images/sprite/sprites_serongkanan_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "serongKanan",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/c052e15354.webp",
+   "baru": "assets/images/sprite/sprites_serongkiri_001.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "serongKiri",
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/b10ebec00b.webp",
+   "baru": "assets/images/sprite/sprites_serongkiri_002.webp",
+   "kategori": "sprite",
+   "sumber": "SPRITES",
+   "kunci": "serongKiri",
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/59f071d187.webp",
+   "baru": "assets/images/terrain/bekas_img_001.webp",
+   "kategori": "terrain",
+   "sumber": "BEKAS_IMG",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/523921bf6c.webp",
+   "baru": "assets/images/terrain/jejak_img_001.webp",
+   "kategori": "terrain",
+   "sumber": "JEJAK_IMG",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/bbe3844a0b.webp",
+   "baru": "assets/images/terrain/river_tex_001.webp",
+   "kategori": "terrain",
+   "sumber": "RIVER_TEX",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/718a3b612b.webp",
+   "baru": "assets/images/terrain/terrain_001.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 1
+  },
+  {
+   "lama": "assets/images/ec8293b8e4.webp",
+   "baru": "assets/images/terrain/terrain_002.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 2
+  },
+  {
+   "lama": "assets/images/794ad63c61.webp",
+   "baru": "assets/images/terrain/terrain_003.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 3
+  },
+  {
+   "lama": "assets/images/cdd9d4e3b8.webp",
+   "baru": "assets/images/terrain/terrain_004.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 4
+  },
+  {
+   "lama": "assets/images/edeae220b4.webp",
+   "baru": "assets/images/terrain/terrain_005.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 5
+  },
+  {
+   "lama": "assets/images/a831f600e0.webp",
+   "baru": "assets/images/terrain/terrain_006.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 6
+  },
+  {
+   "lama": "assets/images/0c4ca6446d.webp",
+   "baru": "assets/images/terrain/terrain_007.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 7
+  },
+  {
+   "lama": "assets/images/968d767040.webp",
+   "baru": "assets/images/terrain/terrain_008.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 8
+  },
+  {
+   "lama": "assets/images/b61cd2efa3.webp",
+   "baru": "assets/images/terrain/terrain_009.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 9
+  },
+  {
+   "lama": "assets/images/6bb2eea64b.webp",
+   "baru": "assets/images/terrain/terrain_010.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 10
+  },
+  {
+   "lama": "assets/images/b6ab6444fb.webp",
+   "baru": "assets/images/terrain/terrain_011.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 11
+  },
+  {
+   "lama": "assets/images/0db5e80c6b.webp",
+   "baru": "assets/images/terrain/terrain_012.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 12
+  },
+  {
+   "lama": "assets/images/41811f44ae.webp",
+   "baru": "assets/images/terrain/terrain_013.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 13
+  },
+  {
+   "lama": "assets/images/c76816649f.webp",
+   "baru": "assets/images/terrain/terrain_014.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 14
+  },
+  {
+   "lama": "assets/images/c1cbb9b1a1.webp",
+   "baru": "assets/images/terrain/terrain_015.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 15
+  },
+  {
+   "lama": "assets/images/b2e09b3228.webp",
+   "baru": "assets/images/terrain/terrain_016.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 16
+  },
+  {
+   "lama": "assets/images/f407852584.webp",
+   "baru": "assets/images/terrain/terrain_017.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 17
+  },
+  {
+   "lama": "assets/images/f75c0ac2b3.webp",
+   "baru": "assets/images/terrain/terrain_018.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 18
+  },
+  {
+   "lama": "assets/images/84df2f9629.webp",
+   "baru": "assets/images/terrain/terrain_019.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 19
+  },
+  {
+   "lama": "assets/images/5465a523d2.webp",
+   "baru": "assets/images/terrain/terrain_020.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 20
+  },
+  {
+   "lama": "assets/images/0546ee967c.webp",
+   "baru": "assets/images/terrain/terrain_021.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 21
+  },
+  {
+   "lama": "assets/images/c15c6b793f.webp",
+   "baru": "assets/images/terrain/terrain_022.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 22
+  },
+  {
+   "lama": "assets/images/a071929915.webp",
+   "baru": "assets/images/terrain/terrain_023.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 23
+  },
+  {
+   "lama": "assets/images/5d9b0a3a1d.webp",
+   "baru": "assets/images/terrain/terrain_024.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 24
+  },
+  {
+   "lama": "assets/images/b30e175f6d.webp",
+   "baru": "assets/images/terrain/terrain_025.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 25
+  },
+  {
+   "lama": "assets/images/ec30cc699a.webp",
+   "baru": "assets/images/terrain/terrain_026.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 26
+  },
+  {
+   "lama": "assets/images/45e7827ab2.webp",
+   "baru": "assets/images/terrain/terrain_027.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 27
+  },
+  {
+   "lama": "assets/images/ceca8db79b.webp",
+   "baru": "assets/images/terrain/terrain_028.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 28
+  },
+  {
+   "lama": "assets/images/1096147952.webp",
+   "baru": "assets/images/terrain/terrain_029.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 29
+  },
+  {
+   "lama": "assets/images/fa57bb8516.webp",
+   "baru": "assets/images/terrain/terrain_030.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 30
+  },
+  {
+   "lama": "assets/images/69f8754720.webp",
+   "baru": "assets/images/terrain/terrain_031.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 31
+  },
+  {
+   "lama": "assets/images/5993ac5e4b.webp",
+   "baru": "assets/images/terrain/terrain_032.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 32
+  },
+  {
+   "lama": "assets/images/25b9229d5e.webp",
+   "baru": "assets/images/terrain/terrain_033.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 33
+  },
+  {
+   "lama": "assets/images/ac91996e2d.webp",
+   "baru": "assets/images/terrain/terrain_034.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 34
+  },
+  {
+   "lama": "assets/images/b839560b5c.webp",
+   "baru": "assets/images/terrain/terrain_035.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 35
+  },
+  {
+   "lama": "assets/images/99a12afa59.webp",
+   "baru": "assets/images/terrain/terrain_036.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 36
+  },
+  {
+   "lama": "assets/images/edf1e6cdbf.webp",
+   "baru": "assets/images/terrain/terrain_037.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 37
+  },
+  {
+   "lama": "assets/images/b8fca5bea4.webp",
+   "baru": "assets/images/terrain/terrain_038.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 38
+  },
+  {
+   "lama": "assets/images/c5054700db.webp",
+   "baru": "assets/images/terrain/terrain_039.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 39
+  },
+  {
+   "lama": "assets/images/a5a12cb3f1.webp",
+   "baru": "assets/images/terrain/terrain_040.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 40
+  },
+  {
+   "lama": "assets/images/9a365e6201.webp",
+   "baru": "assets/images/terrain/terrain_041.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 41
+  },
+  {
+   "lama": "assets/images/4ada5940f8.webp",
+   "baru": "assets/images/terrain/terrain_042.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 42
+  },
+  {
+   "lama": "assets/images/5a18e20a41.webp",
+   "baru": "assets/images/terrain/terrain_043.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 43
+  },
+  {
+   "lama": "assets/images/668390483f.webp",
+   "baru": "assets/images/terrain/terrain_044.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 44
+  },
+  {
+   "lama": "assets/images/7771c2d9f1.webp",
+   "baru": "assets/images/terrain/terrain_045.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 45
+  },
+  {
+   "lama": "assets/images/ceb0168c0b.webp",
+   "baru": "assets/images/terrain/terrain_046.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 46
+  },
+  {
+   "lama": "assets/images/cff52414c7.webp",
+   "baru": "assets/images/terrain/terrain_047.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 47
+  },
+  {
+   "lama": "assets/images/2ab49414b2.webp",
+   "baru": "assets/images/terrain/terrain_048.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 48
+  },
+  {
+   "lama": "assets/images/e6086bfc1e.webp",
+   "baru": "assets/images/terrain/terrain_049.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 49
+  },
+  {
+   "lama": "assets/images/6bf28bbc13.webp",
+   "baru": "assets/images/terrain/terrain_050.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 50
+  },
+  {
+   "lama": "assets/images/409a704b6a.webp",
+   "baru": "assets/images/terrain/terrain_051.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 51
+  },
+  {
+   "lama": "assets/images/2c1de654b5.webp",
+   "baru": "assets/images/terrain/terrain_052.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 52
+  },
+  {
+   "lama": "assets/images/aece887f18.webp",
+   "baru": "assets/images/terrain/terrain_053.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 53
+  },
+  {
+   "lama": "assets/images/c39238826b.webp",
+   "baru": "assets/images/terrain/terrain_054.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 54
+  },
+  {
+   "lama": "assets/images/87267d066a.webp",
+   "baru": "assets/images/terrain/terrain_055.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 55
+  },
+  {
+   "lama": "assets/images/186b5bd12f.webp",
+   "baru": "assets/images/terrain/terrain_056.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 56
+  },
+  {
+   "lama": "assets/images/8e58a7a286.webp",
+   "baru": "assets/images/terrain/terrain_057.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 57
+  },
+  {
+   "lama": "assets/images/fd847ea2da.webp",
+   "baru": "assets/images/terrain/terrain_058.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 58
+  },
+  {
+   "lama": "assets/images/67ed1eaa24.webp",
+   "baru": "assets/images/terrain/terrain_059.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 59
+  },
+  {
+   "lama": "assets/images/aca0e36734.webp",
+   "baru": "assets/images/terrain/terrain_060.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 60
+  },
+  {
+   "lama": "assets/images/a4d4528d96.webp",
+   "baru": "assets/images/terrain/terrain_061.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 61
+  },
+  {
+   "lama": "assets/images/e41959e9c5.webp",
+   "baru": "assets/images/terrain/terrain_062.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 62
+  },
+  {
+   "lama": "assets/images/73a97cef4a.webp",
+   "baru": "assets/images/terrain/terrain_063.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 63
+  },
+  {
+   "lama": "assets/images/ea4b1e20b7.webp",
+   "baru": "assets/images/terrain/terrain_064.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 64
+  },
+  {
+   "lama": "assets/images/21472a143d.webp",
+   "baru": "assets/images/terrain/terrain_065.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 65
+  },
+  {
+   "lama": "assets/images/7f782d8902.webp",
+   "baru": "assets/images/terrain/terrain_066.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 66
+  },
+  {
+   "lama": "assets/images/133b0041b9.webp",
+   "baru": "assets/images/terrain/terrain_067.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 67
+  },
+  {
+   "lama": "assets/images/1a178895f7.webp",
+   "baru": "assets/images/terrain/terrain_068.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 68
+  },
+  {
+   "lama": "assets/images/106b8b0722.webp",
+   "baru": "assets/images/terrain/terrain_069.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 69
+  },
+  {
+   "lama": "assets/images/1b8294612d.webp",
+   "baru": "assets/images/terrain/terrain_070.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 70
+  },
+  {
+   "lama": "assets/images/20332e0f47.webp",
+   "baru": "assets/images/terrain/terrain_071.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 71
+  },
+  {
+   "lama": "assets/images/e4b3158a40.webp",
+   "baru": "assets/images/terrain/terrain_072.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 72
+  },
+  {
+   "lama": "assets/images/70c6bdcad2.webp",
+   "baru": "assets/images/terrain/terrain_073.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 73
+  },
+  {
+   "lama": "assets/images/e2b58a6dea.webp",
+   "baru": "assets/images/terrain/terrain_074.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 74
+  },
+  {
+   "lama": "assets/images/f8dbd8c227.webp",
+   "baru": "assets/images/terrain/terrain_075.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 75
+  },
+  {
+   "lama": "assets/images/881a864966.webp",
+   "baru": "assets/images/terrain/terrain_076.webp",
+   "kategori": "terrain",
+   "sumber": "TERRAIN",
+   "kunci": null,
+   "urutan": 76
+  },
+  {
+   "lama": "assets/images/f7b3793da3.webp",
+   "baru": "assets/images/terrain/titik_img_001.webp",
+   "kategori": "terrain",
+   "sumber": "TITIK_IMG",
+   "kunci": null,
+   "urutan": 1
+  }
+ ]
+}

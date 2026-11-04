@@ -1,0 +1,10 @@
+{
+  "appId": "com.ladangreinkarnasi.game",
+  "appName": "Ladang Reinkarnasi",
+  "webDir": "dist/web",
+  "backgroundColor": "#2b1a0c",
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true
+  }
+}
