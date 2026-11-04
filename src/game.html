@@ -1282,7 +1282,8 @@ const SPRITES = {"female":{"depan":"assets/images/sprite/sprites_depan_001.webp"
   }
 
   async function saveCharacter() {
-    const name = draft.gender === "male" ? "Wang" : "Rose"; // dua karakter tetap: Wang (cowok) dan Rose (cewek)
+    const typedName = ($("#c-name").value || "").trim().slice(0, 16); // nama yang diketik pemain dipakai di cerita
+    const name = typedName || (draft.gender === "male" ? "Wang" : "Rose"); // kosong: pakai nama default
     const birth = birthPick ? { season: birthPick.season, day: birthPick.day, calendar: "ladang" } : null;
     if (!name) { $("#create-msg").textContent = t("nameReq"); return; }
     if (!birth) { $("#create-msg").textContent = t("birthReq"); return; }
@@ -5077,7 +5078,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     running = false;
     const o = document.createElement("div"); o.id = "gameover";
     o.style.cssText = "position:fixed;inset:0;z-index:90;background:#000d;color:#f3e6cf;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;font:700 16px sans-serif;text-align:center;padding:24px";
-    o.innerHTML = '<div style="font-size:54px">\u{1F635}\u{1F635}</div><div style="font-size:20px">Game Over</div><div>' + L("Wang dan Rose pingsan bersamaan, tak ada yang menolong.", "Wang and Rose fainted together. No one was left to help.") + '</div><button style="background:#d9a441;color:#2b2118;border:0;border-radius:10px;padding:12px 22px;font:700 15px sans-serif">New Game</button>';
+    o.innerHTML = '<div style="font-size:54px">\u{1F635}\u{1F635}</div><div style="font-size:20px">Game Over</div><div>' + L(playerName() + " dan " + charName(npcGender()) + " pingsan bersamaan, tak ada yang menolong.", playerName() + " and " + charName(npcGender()) + " fainted together. No one was left to help.") + '</div><button style="background:#d9a441;color:#2b2118;border:0;border-radius:10px;padding:12px 22px;font:700 15px sans-serif">New Game</button>';
     o.querySelector("button").onclick = () => { try { localStorage.removeItem(SAVE_KEY_LOCAL); } catch (e) {} location.reload(); };
     document.body.appendChild(o);
   }
@@ -7833,6 +7834,8 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
   };
   const charName = (g) => (g === "male" ? "Wang" : "Rose");
   const npcGender = () => (S && S.gender === "male" ? "female" : "male"); // karakter yang tidak dipilih jadi NPC pendamping
+  const playerName = () => (S && S.name) || charName(S && S.gender === "male" ? "male" : "female"); // nama pemain: yang diketik saat membuat karakter
+  const fillNames = (t) => String(t).replace(/\{n\}/g, playerName()).replace(/\{f\}/g, charName(npcGender()));
   let storyEl = null, storyOn = false;
   function storyCss() {
     if (document.getElementById("story-css")) return;
@@ -7920,7 +7923,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
   function openStory(onEnd, custom) {
     if (!S || storyOn) return;
     storyCss(); storyOn = true;
-    const g = S.gender === "male" ? "male" : "female", ng = npcGender(), nm = charName(g), fn = charName(ng), t0 = Date.now();
+    const g = S.gender === "male" ? "male" : "female", ng = npcGender(), nm = playerName(), fn = charName(ng), t0 = Date.now();
     const steps = custom ? custom.map((p) => (p.sc ? p : { tk: p })) : STORY.intro.map((p) => ({ sc: p })).concat(STORY.talk.map((p) => ({ tk: p })));
     if (!storyEl) {
       storyEl = document.createElement("div"); storyEl.id = "story-ov"; storyEl.hidden = true;
@@ -8458,7 +8461,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     const sx = dx - dy, sy = dx + dy;
     return Math.abs(sx) > Math.abs(sy) * 1.6 ? (sx > 0 ? "kanan" : "kiri") : sy > 0 ? (Math.abs(sx) > Math.abs(sy) * 0.5 ? (sx > 0 ? "serongKanan" : "serongKiri") : "depan") : (Math.abs(sx) > Math.abs(sy) * 0.5 ? (sx > 0 ? "kanan" : "kiri") : "belakang");
   }
-  function npcThink(txt) { const n = S.npc; if (!n || (n.say && !n.say.auto) || GAIN_RE.test(String(txt))) return; n.say = { lines: [txt], i: 0, t0: performance.now(), auto: true }; }
+  function npcThink(txt) { const n = S.npc; if (!n || (n.say && !n.say.auto) || GAIN_RE.test(String(txt))) return; n.say = { lines: [fillNames(txt)], i: 0, t0: performance.now(), auto: true }; }
   const npcBkey = (t) => (t.kind === "harvest" || t.kind === "water" ? t.x + "," + t.y : t.kind + ":" + t.x + "," + t.y);
   function npcBlocked(n, t) { return !!(n.bl && n.bl[npcBkey(t)] > Date.now()); }
   function npcBlock(n, t, ms) { n.bl = n.bl || {}; n.bl[npcBkey(t)] = Date.now() + (ms || 90000); }
@@ -9624,7 +9627,7 @@ const ART_dinding = new Image(); ART_dinding.src = "assets/images/sprite/art_din
     const ok = npcHintPool(); n.talk = (n.talk || 0) + 1;
     const h = ok[(n.talk - 1) % ok.length], nm = charName(S.gender === "male" ? "male" : "female");
     const cal = calOf(S.day || 1), dt = cal.dd % 5 === 0 ? TALK_STORY[cal.dd / 5 - 1] : (TALK_SEASON[cal.season.id] || TALK_SEASON.spring)[cal.dd - 1]; // topik musim, dan tiap tanggal kelipatan 5 obrolan cerita
-    n.say = { lines: [npcGreeting(), L(dt[0], dt[1])].concat(L(h.id, h.en).split(/(?<=[.!?])\s+/)), i: 0, t0: performance.now() }; // sapaan, topik tanggal, lalu petunjuk; tiap kalimat satu gelembung
+    n.say = { lines: [npcGreeting(), L(dt[0], dt[1])].concat(L(h.id, h.en).split(/(?<=[.!?])\s+/)).map(fillNames), i: 0, t0: performance.now() }; // sapaan, topik tanggal, lalu petunjuk; tiap kalimat satu gelembung
   }
   function wrapSay(text, maxW) {
     const words = text.split(" "), out = []; let line = "";
